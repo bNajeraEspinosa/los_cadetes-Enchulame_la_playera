@@ -1,0 +1,50 @@
+ @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0); 
+}
+
+/*
+.textocontorno {
+    font-size : 119px;
+    line-height : 33.3px;
+    outline : #000000;
+    outline : rgb(0, 0, 0);
+ }
+
+.textorosa {
+    font-size : 119px;
+    line-height : 33.3px;
+    color : #E7ADAC;
+    color : rgb(231, 173, 172);
+  }
+
+.textonaranjacontornonegro
+  {
+    font-family : Bebas;
+    font-size : 46px;
+    line-height : 12.91px;
+    color : #F7931E;
+    color : rgb(247, 147, 30);
+    outline : #000000;
+    outline : rgb(0, 0, 0);
+  }
+*/
+
+.nav.about-us {
+  background-color:#ACB2E7 ;
+}
+
+.nav .nav-link {
+  transition: all 0.6s ease-in-out;
+}
+
+.nav .nav-link:hover {
+  background-color: azure;
+}
+.nav.about-us.nav-link:hover {
+  color: #E7ADAC;
+}
