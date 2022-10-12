@@ -1,7 +1,6 @@
  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 body {
-  font-family: 'Bebas Neue', cursive;
   font-size: 20px;
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0); 
@@ -34,17 +33,34 @@ body {
   }
 */
 
+h1,h2{
+  font-family: 'Bebas Neue', cursive;
+}
+
 .nav.about-us {
   background-color:#ACB2E7 ;
 }
 
 .nav .nav-link {
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 600;
   transition: all 0.6s ease-in-out;
 }
 
 .nav .nav-link:hover {
   background-color: azure;
 }
-.nav.about-us.nav-link:hover {
-  color: #E7ADAC;
+.nav.about-us .nav-link:hover {
+  color: #ACB2E7;
+}
+
+.nav.icons{
+  color: #ACB2E7;
+  background-color: azure;
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: all 0.6s ease-in-out;
+
 }
