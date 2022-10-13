@@ -1,5 +1,6 @@
  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+ /* about us inicio */
 :root {
   --color-home: #E7ACAC;
   --color-products: #FFC6AD;
@@ -85,3 +86,5 @@ h1,h2{
   transition: all 0.6s ease-in-out;
 
 }
+
+/* about us fin */
