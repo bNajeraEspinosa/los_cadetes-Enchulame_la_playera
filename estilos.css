@@ -1,5 +1,17 @@
  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+:root {
+  --color-home: #E7ACAC;
+  --color-products: #FFC6AD;
+  --color-editor: #FDD9AE;
+  --color-about-us: #ACB2E7;
+  --color-login: #A2B864;
+  --color-contact: #FDAB60;
+  --color-register: #BDE1EC;
+  --color-text: #000000;
+  --color-background: #FFFFFF;
+}
+
 body {
   font-size: 20px;
   background-color: rgb(255, 255, 255);
@@ -38,7 +50,7 @@ h1,h2{
 }
 
 .nav.about-us {
-  background-color:#ACB2E7 ;
+  background-color: var(--color-about-us);
 }
 
 .nav .nav-link {
@@ -47,12 +59,12 @@ h1,h2{
   font-weight: 600;
   transition: all 0.6s ease-in-out;
 }
-
 .nav .nav-link:hover {
-  background-color: azure;
+  background-color: var(--color-background);
+  filter: brightness(1);
 }
 .nav.about-us .nav-link:hover {
-  color: #ACB2E7;
+  color: var(--color-about-us);
 }
 
 .nav.icons{
