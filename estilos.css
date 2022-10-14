@@ -87,4 +87,30 @@ h1,h2{
 
 }
 
+.our-border {
+  border: 2px solid #000;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1rem;
+  position: relative;
+}
+.our-border:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #F7931E;
+  border-radius: 5px;
+  z-index: 10;
+  transform: translate(5px, 5px);
+}
+
+.our-border--circle {
+  border-radius: 50%;
+}
+.our-border--circle:before {
+  border-radius: 50%;
+}
 /* about us fin */
