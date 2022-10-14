@@ -1,5 +1,6 @@
  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+ /* about us inicio */
 :root {
   --color-home: #E7ACAC;
   --color-products: #FFC6AD;
@@ -112,3 +113,4 @@ h1,h2{
 .our-border--circle:before {
   border-radius: 50%;
 }
+/* about us fin */
