@@ -1,0 +1,158 @@
+
+<!-- TIPO DE DOCUMENTOS -->
+
+<!DOCTYPE html>
+
+<!-- LENGUAJE -->
+
+<html lang="es">
+
+<!-- HEAD (compatibilidad)-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    
+<!-- BOOTSTRAP (css)-->
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<!-- FONTS -->
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+  rel="stylesheet"
+/>
+
+<!-- ESTILOS CSS -->
+
+    <link rel="stylesheet" href="./estilos.css" />
+    <link rel="stylesheet" href="estilos.css" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .columna {
+            float: left;
+            width: 40%;
+            padding-right: 5px;
+        }
+        .columna2 {
+            float: right;
+            width: 40%;
+            padding-right: 5px;
+        }
+        .fila::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        img {
+            /* Para que sea responsiva */
+            width: 100%;
+        }
+        .imagenhoodie1 {
+
+            width: 60%;
+        }
+    </style>
+
+
+</head>
+
+<!-- CIERRE HEAD -->
+
+
+<!-- CUERPO DE LA PÁGINA -->
+
+<body>
+
+
+<!-- CONTAINER GENERAL -->
+    <div class="container-fluid">
+        <div class="row">
+<!-- COLOR DE LA BARRA -->
+        <nav class="navbar navbar-expand-lg navbar-light justify-content-center px-3 py-2" style="background-color: #bb4efa;">
+<!-- CONTAINER BARRA DE NAVEGACION -->
+        <div class="container-fluid">
+<!-- INCRUSTACIÓN DEL LOGO -->
+            <a class="navbar-brand" href="#">
+            <img src="https://i.postimg.cc/TwKBhCqZ/logo-basico.png" alt="" width="65" height="40">
+              </a>
+<!-- BOTÓN DE RESPONSIVE -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav justify-content-end">
+
+<!-- LINKS DE LA NAV -->
+              <li class="nav-tabs">
+                <a class="nav-link text-white" href="#home" aria-current="page">Inicio</a>
+              </li>
+              <li class="nav-tabs">
+                <a class="nav-link text-white" href="#Personaliza" aria-current="page">Personaliza</a>
+              </li>
+              <li class="nav-tabs">
+                <a class="nav-link text-white" href="#Products" aria-current="page">Productos</a>
+              </li>
+              <li class="nav-tabs">
+                <a class="nav-link text-white" href="#Contact" aria-current="page">Contáctanos</a>
+              </li>
+              <li class="nav-tabs">
+                <a class="nav-link text-white" href="#Personaliza" aria-current="page">Personaliza</a>
+              </li>
+              <li class="nav-tabs">
+                <a class="nav-link text-white" href="#Acerca" aria-current="page">Acerca de nosotros</a>
+              </li>
+            </ul>
+
+<!-- ICONOS DE CARRITO Y LOGIN -->
+      <div class="align-content-center" id="icons">
+        <button class="btn rounded-circle text-white">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-cart-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+            />
+          </svg>
+        </button>
+
+        <button class="btn rounded-circle text-white">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-person-circle"
+            viewBox="0 0 16 16"
+            >
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+            <path
+              fill-rule="evenodd"
+              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+            />
+          </svg>
+        </button>
+      </div>
+        </div>
+        </div>
+          </div>
+        </div>
+      </nav>
+
+
+<!-- SCRIPT BOOTSTRAP -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
