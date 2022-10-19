@@ -88,3 +88,14 @@ h1,h2{
 }
 
 /* about us fin */
+
+/* navbar data */
+
+// this is a black icon with 50% opacity
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;..");
+}
+// this is a white icon with 50% opacity
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;..");
+}
