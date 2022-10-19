@@ -63,29 +63,43 @@
         </div>
     </nav>
 
-    <!-- Container para formulario de contáctanos -->
-    <section class="container-fluid text-center">
+    <div class="container my-5 pt-5">
         <div class="row">
-            <div class="col">
-                <p class="textonaranjacontornonegro">CONTÁCTANOS</p>
+            <div class="col text-center textonaranjacontornonegro m-auto">
+                <p class="my-5">CONTÁCTANOS</p>
+                
             </div>
             <div class="col">
-                <div class="row">
-                    <div class="col">Nombre</div>
-                    <div class="col">Apellido</div>
-                </div>
-                <div class="row">
-                    <div class="col">Correo</div>
-                </div>
-                <div class="row">
-                    <div class="col">Telefono</div>
-                </div>
-                <div class="row">
-                    <div class="col">Mensaje</div>
-                </div>
+                <!-- PLANTILLA FORMULARIO BOOTSTRAP -->
+                <form class="row g-3">
+                    <div class="col-6">
+                        <label for="input-nombre-contactanos" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="input-nombre-contactanos" placeholder="Nombre(s)" required>
+                      </div>
+                      <div class="col-6">
+                        <label for="input-apellido-contactanos" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="input-apellido-contactanos" placeholder="Apellido(s)" required>
+                      </div>
+                    <div class="col-md-12">
+                      <label for="input-correo-contactanos" class="form-label">Ingresa tu correo electrónico:</label>
+                      <input type="email" class="form-control" id="input-correo-contactanos" placeholder="correo@correo.com" required>
+                    </div>
+                    <div class="col-12">
+                      <label for="input-tel-contactanos" class="form-label">Ingresa tu número telefónico:</label>
+                      <input type="tel" class="form-control" id="input-tel-contactanos" placeholder="Teléfono" required>
+                    </div>
+                    <div class="col-12">
+                      <label for="input-mensaje-contactanos" class="form-label">Déjanos tu mensaje:</label>
+                      <br>
+                      <textarea name="input-mensaje-contactanos" id="input-mensaje-contactanos" minlength="50" maxlength="1000" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                  </form>
             </div>
         </div>
-    </section>
+    </div>
 
 
 
