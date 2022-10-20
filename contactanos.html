@@ -15,7 +15,8 @@
 
 <body>
     <!-- Barra de navegación -->
-    <nav class="nav nav-tabs px-3 py-2 align-items-center gap-3 justify-content-center about-us text-white" id="nav-contactanos">
+    <nav class="nav nav-tabs px-3 py-2 align-items-center gap-3 justify-content-center about-us text-white"
+        id="nav-contactanos">
         <div class="flex-grow-1" id="titulo-nav">
             <h2 class="m-0">Enchúlame la playera</h2>
         </div>
@@ -73,37 +74,57 @@
             <!-- Columna 2 con formulario -->
             <div class="col">
                 <!-- PLANTILLA FORMULARIO BOOTSTRAP -->
-                <form class="row g-3">
+                <form class="row g-3 needs-validation" novalidate>
                     <!-- Columna input nombre -->
                     <div class="col-6">
                         <label for="input-nombre-contactanos" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="input-nombre-contactanos" placeholder="Nombre(s)" required>
-                      </div>
-                      <!-- Columna input apellido -->
-                      <div class="col-6">
+                        <input type="text" class="form-control" id="input-nombre-contactanos" placeholder="Nombre(s)"
+                            required>
+                        <div class="invalid-feedback">
+                            Campo obligatorio
+                        </div>
+                    </div>
+                    <!-- Columna input apellido -->
+                    <div class="col-6">
                         <label for="input-apellido-contactanos" class="form-label">Apellido</label>
-                        <input type="text" class="form-control" id="input-apellido-contactanos" placeholder="Apellido(s)" required>
-                      </div>
-                      <!-- Columna input correo -->
+                        <input type="text" class="form-control" id="input-apellido-contactanos"
+                            placeholder="Apellido(s)" required>
+                        <div class="invalid-feedback">
+                            Campo obligatorio
+                        </div>
+                    </div>
+                    <!-- Columna input correo -->
                     <div class="col-md-12">
-                      <label for="input-correo-contactanos" class="form-label">Ingresa tu correo electrónico:</label>
-                      <input type="email" class="form-control" id="input-correo-contactanos" placeholder="correo@correo.com" required>
+                        <label for="input-correo-contactanos" class="form-label">Ingresa tu correo electrónico:</label>
+                        <input type="email" class="form-control" id="input-correo-contactanos"
+                            placeholder="correo@correo.com" required>
+                        <div class="invalid-feedback">
+                            Campo obligatorio. Ingresa un correo válido
+                        </div>
                     </div>
                     <!-- Columna input teléfono -->
                     <div class="col-12">
-                      <label for="input-tel-contactanos" class="form-label">Ingresa tu número telefónico:</label>
-                      <input type="tel" class="form-control" id="input-tel-contactanos" placeholder="Teléfono" required>
+                        <label for="input-tel-contactanos" class="form-label">Ingresa tu número telefónico:</label>
+                        <input type="tel" class="form-control" id="input-tel-contactanos" placeholder="Teléfono"
+                            required>
+                        <div class="invalid-feedback">
+                            Campo obligatorio
+                        </div>
                     </div>
                     <!-- Columna input mensaje -->
                     <div class="col-12">
-                      <label for="input-mensaje-contactanos" class="form-label">Déjanos tu mensaje:</label>
-                      <br>
-                      <textarea class="form-control" id="input-mensaje-contactanos" minlength="50" maxlength="1000" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                        <label for="input-mensaje-contactanos" class="form-label">Déjanos tu mensaje:</label>
+                        <br>
+                        <textarea class="form-control" id="input-mensaje-contactanos" minlength="50" maxlength="1000"
+                            placeholder="Escribe tu mensaje aquí..." required></textarea>
+                        <div class="invalid-feedback">
+                            Por favor ingrese un mensaje
+                        </div>
                     </div>
                     <div class="col-12 text-center">
-                      <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
                     </div>
-                  </form>
+                </form>
             </div>
         </div>
     </section>
@@ -111,6 +132,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
+    <script src="./contactanos.js"></script>
 </body>
 
 </html>
