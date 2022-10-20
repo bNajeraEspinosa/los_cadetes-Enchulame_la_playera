@@ -1,48 +1,54 @@
 function addItem(item){
     const itemHTML = '<div class="col">\n'+
     `<p>${item.name}</p>\n`+
-    `<img src="${item.img}">\n`+
+    `<img src="${item.img}" style="width: 40%;">\n`+
   '</div>\n';
     const itemsContainer = document.getElementById("hoodieProducto");
     itemsContainer.innerHTML += itemHTML;
 }
 
-addItem({'name':'playera1',
-    'img':'/los_cadetes-Enchulame_la_playera/assets/img/anime.png',
+
+addItem({'name':'MANGA',
+    'img':'/los_cadetes-Enchulame_la_playera/assets/img/MANGA.png',
     'description':'Orange and Apple juice fresh and delicious'});
 
-addItem({'name':'playera2',
-    'img':'/los_cadetes-Enchulame_la_playera/assets/img/anime.png',
+addItem({'name':'COMICS',
+    'img':'/los_cadetes-Enchulame_la_playera/assets/img/COMICS.png',
     'description':'Orange and Apple juice fresh and delicious'});
 
-    addItem({'name':'playera3',
-    'img':'/los_cadetes-Enchulame_la_playera/assets/img/anime.png',
+    addItem({'name':'TV SHOW',
+    'img':'/los_cadetes-Enchulame_la_playera/assets/img/TV SHOW.png',
     'description':'Orange and Apple juice fresh and delicious'});
 
-    addItem({'name':'playera4',
-    'img':'/los_cadetes-Enchulame_la_playera/assets/img/anime.png',
+    addItem({'name':'TV SHOW',
+    'img':'/los_cadetes-Enchulame_la_playera/assets/img/APPA.png',
     'description':'Orange and Apple juice fresh and delicious'});
 
-    addItem({'name':'playera5',
-    'img':'/los_cadetes-Enchulame_la_playera/assets/img/anime.png',
+    addItem({'name':'TV SHOW',
+    'img':'/los_cadetes-Enchulame_la_playera/assets/img/AVATAR.png',
     'description':'Orange and Apple juice fresh and delicious'});
 
-    addItem({'name':'playera6',
-    'img':'/los_cadetes-Enchulame_la_playera/assets/img/anime.png',
+
+    addItem({'name':'FAMOUS',
+    'img':'/los_cadetes-Enchulame_la_playera/assets/img/FAMOUS.png',
     'description':'Orange and Apple juice fresh and delicious'});
 
-    addItem({'name':'playera7',
-    'img':'/los_cadetes-Enchulame_la_playera/assets/img/anime.png',
+
+    addItem({'name':'FAMOUS',
+    'img':'/los_cadetes-Enchulame_la_playera/assets/img/BRUNO.png',
     'description':'Orange and Apple juice fresh and delicious'});
 
-    addItem({'name':'playera8',
-    'img':'/los_cadetes-Enchulame_la_playera/assets/img/anime.png',
+    addItem({'name':'FAMOUS',
+    'img':'/los_cadetes-Enchulame_la_playera/assets/img/BTS.png',
     'description':'Orange and Apple juice fresh and delicious'});
 
-    addItem({'name':'playera9',
-    'img':'/los_cadetes-Enchulame_la_playera/assets/img/anime.png',
+    addItem({'name':'RETRO',
+    'img':'/los_cadetes-Enchulame_la_playera/assets/img/RETRO.png',
     'description':'Orange and Apple juice fresh and delicious'});
 
-    addItem({'name':'playera10',
-    'img':'/los_cadetes-Enchulame_la_playera/assets/img/anime.png',
+    addItem({'name':'FRASES',
+    'img':'/los_cadetes-Enchulame_la_playera/assets/img/FRASE.png',
     'description':'Orange and Apple juice fresh and delicious'});
+
+
+
