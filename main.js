@@ -1,6 +1,6 @@
 const navLinks = [
   {
-    href: '/index.html',
+    href: '/',
     label: 'Home',
     style: 'home'
   },
@@ -52,11 +52,12 @@ const generateNavBtnIcon = (label, path) => `
   `
 
 const loadNavbar = () => {
-  const currentSite = navLinks.find((navLink) => navLink.href === window.location.pathname)
+  if (window.location.pathname === '/index.html') window.location.href = '/'
+  const currentSite = navLinks.find((navLink) => window.location.pathname === navLink.href)
   const navbarHTML = `
     <nav class="navbar nav ${currentSite.style} navbar-expand-lg navbar-light justify-content-center p-0" >
       <div class="container-fluid py-2">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
           <img
             src="https://i.postimg.cc/TwKBhCqZ/logo-basico.png"
             alt=""
