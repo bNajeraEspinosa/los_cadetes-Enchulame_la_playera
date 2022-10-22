@@ -22,11 +22,26 @@ body {
 .text-hightlight {
   color: var(--color-text);
   font-family: 'Bebas Neue', cursive;
-  font-size: 1.8rem;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
+
+.about-us-info p {
+  font-size: 1rem;
+  text-align: justify;
+}
+.about-us-info h2 {
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) { 
+  .about-us-info p {
+    font-size: 1.2rem;
+    text-align: left;
+  }
+}
+
 
 /*
 .textocontorno {
@@ -55,7 +70,7 @@ body {
   }
 */
 
-h1,h2{
+h1, h2{
   font-family: 'Bebas Neue', cursive;
 }
 
@@ -69,11 +84,13 @@ h1,h2{
   font-weight: 600;
   transition: all 0.6s ease-in-out;
 }
-.nav .nav-link:hover {
+.nav .nav-link:hover,
+.nav .nav-link--active {
   background-color: var(--color-background);
   filter: brightness(1);
 }
-.nav.about-us .nav-link:hover {
+
+.nav.about-us .nav-link:hover{
   color: var(--color-about-us);
 }
 
@@ -84,7 +101,58 @@ h1,h2{
   letter-spacing: 1px;
   font-weight: 600;
   transition: all 0.6s ease-in-out;
+}
 
+.word-break {
+  word-break: break-word;
+  word-spacing: 99999px;
+}
+
+
+.text-styled {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  position: relative;
+  background: transparent;
+  z-index: 0;
+  color:white;
+  font-size: 16rem;
+  line-height: .8;
+  letter-spacing: .04em;
+}
+@media (max-width: 768px) {
+  .text-styled {
+    font-size: 8rem;
+  }
+}
+.text-styled::before {
+  content: attr(title);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
+  
+  z-index: 10;
+}
+
+.w-90{
+  width: 90%;
+}
+
+.font-size--large {
+  font-size: 10rem;
+  line-height: 1.2;
+}
+
+.banner_about-us {
+  background-image: url('../assets/img/banner-2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  width: 100%;
 }
 .nav.iconsProd{
   color: #FFC5AD;
