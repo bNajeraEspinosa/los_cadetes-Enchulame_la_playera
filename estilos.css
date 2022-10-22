@@ -82,6 +82,9 @@ h1, h2{
 .nav.productos {
   background-color: var(--color-products);
 }
+.nav.home {
+  background-color: var(--color-home);
+}
 
 .nav .nav-link {
   color: #fff;
@@ -97,6 +100,9 @@ h1, h2{
 
 .nav.about-us .nav-link:hover{
   color: var(--color-about-us);
+}
+.nav.home .nav-link:hover{
+  color: var(--color-home);
 }
 .nav.contactanos .nav-link:hover{
   color: var(--color-contact);
