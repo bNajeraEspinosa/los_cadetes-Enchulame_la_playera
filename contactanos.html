@@ -65,11 +65,11 @@
     </nav>
 
     <!-- Container que guardará el formulario. El container es de 1 fila con 2 columnas, la primer columna contendrá solo texto, la segunda columna contendrá el formulario -->
-    <section class="container my-5 pt-5">
+    <section class="container my-5 pt-5" id="containerFormularioContacto">
         <div class="row">
             <!-- Columna 1. Texto "Contáctanos" -->
             <div class="col text-center m-auto">
-                <p class="my-5 textonaranjacontornonegro">CONTÁCTANOS</p>
+                <p class="pContactanos my-5">CONTÁCTANOS</p>
             </div>
             <!-- Columna 2 con formulario -->
             <div class="col">
@@ -78,7 +78,7 @@
                     <!-- Columna input nombre -->
                     <div class="col-6">
                         <label for="input-nombre-contactanos" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="input-nombre-contactanos" placeholder="Nombre(s)"
+                        <input type="text" class="inputs" id="input-nombre-contactanos" placeholder="Nombre(s)"
                             required>
                         <div class="invalid-feedback">
                             Campo obligatorio
@@ -87,8 +87,8 @@
                     <!-- Columna input apellido -->
                     <div class="col-6">
                         <label for="input-apellido-contactanos" class="form-label">Apellido</label>
-                        <input type="text" class="form-control" id="input-apellido-contactanos"
-                            placeholder="Apellido(s)" required>
+                        <input type="text" class="inputs" id="input-apellido-contactanos" placeholder="Apellido(s)"
+                            required>
                         <div class="invalid-feedback">
                             Campo obligatorio
                         </div>
@@ -96,8 +96,8 @@
                     <!-- Columna input correo -->
                     <div class="col-md-12">
                         <label for="input-correo-contactanos" class="form-label">Ingresa tu correo electrónico:</label>
-                        <input type="email" class="form-control" id="input-correo-contactanos"
-                            placeholder="correo@correo.com" required>
+                        <input type="email" class="inputs" id="input-correo-contactanos" placeholder="correo@correo.com"
+                            required>
                         <div class="invalid-feedback">
                             Campo obligatorio. Ingresa un correo válido
                         </div>
@@ -105,8 +105,7 @@
                     <!-- Columna input teléfono -->
                     <div class="col-12">
                         <label for="input-tel-contactanos" class="form-label">Ingresa tu número telefónico:</label>
-                        <input type="tel" class="form-control" id="input-tel-contactanos" placeholder="Teléfono"
-                            required>
+                        <input type="tel" class="inputs" id="input-tel-contactanos" placeholder="Teléfono" required>
                         <div class="invalid-feedback">
                             Campo obligatorio
                         </div>
@@ -114,15 +113,14 @@
                     <!-- Columna input mensaje -->
                     <div class="col-12">
                         <label for="input-mensaje-contactanos" class="form-label">Déjanos tu mensaje:</label>
-                        <br>
-                        <textarea class="form-control" id="input-mensaje-contactanos" minlength="50" maxlength="1000"
+                        <textarea class="inputs" id="input-mensaje-contactanos" minlength="50" maxlength="1000"
                             placeholder="Escribe tu mensaje aquí..." required></textarea>
                         <div class="invalid-feedback">
                             Por favor ingrese un mensaje
                         </div>
                     </div>
                     <div class="col-12 text-center">
-                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="submit" class="btn btn-primary" id="botonContactanos">Enviar</button>
                     </div>
                 </form>
             </div>
