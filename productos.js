@@ -18,7 +18,7 @@ function addItem(item) {
 addItem({
     name: "MANGA",
     img: "/assets/img/MANGA.png",
-    description: "Orange and Apple juice fresh and delicious",
+    description: "fresh,cool,tshirt/hoodie",
     url: "#",
     by: "By Alvaro"
 });
@@ -26,7 +26,7 @@ addItem({
 addItem({
     name: "COMICS",
     img: "/assets/img/COMICS.png",
-    description: "Orange and Apple juice fresh and delicious",
+    description: "fresh,cool,tshirt/hoodie",
     url: "#",
     by: "By Luis"
 });
@@ -34,7 +34,7 @@ addItem({
 addItem({
     name: "TV SHOW",
     img: "/assets/img/TV SHOW.png",
-    description: "Orange and Apple juice fresh and delicious",
+    description: "fresh,cool,tshirt/hoodie",
     url: "#",
     by: "By Alan"
 });
@@ -42,7 +42,7 @@ addItem({
 addItem({
     name: "TV SHOW",
     img: "/assets/img/APPA.png",
-    description: "Orange and Apple juice fresh and delicious",
+    description: "fresh,cool,tshirt/hoodie",
     url: "#",
     by: "By Anafer"
 });
@@ -50,7 +50,7 @@ addItem({
 addItem({
     name: "TV SHOW",
     img: "/assets/img/AVATAR.png",
-    description: "Orange and Apple juice fresh and delicious",
+    description: "fresh,cool,tshirt/hoodie",
     url: "#",
     by: "By Azucena"
 });
@@ -58,7 +58,7 @@ addItem({
 addItem({
     name: "FAMOUS",
     img: "/assets/img/FAMOUS.png",
-    description: "Orange and Apple juice fresh and delicious",
+    description: "fresh,cool,tshirt/hoodie",
     url: "#",
     by: "By Caro"
 });
@@ -66,7 +66,7 @@ addItem({
 addItem({
     name: "FAMOUS",
     img: "/assets/img/BRUNO.png",
-    description: "Orange and Apple juice fresh and delicious",
+    description: "fresh,cool,tshirt/hoodie",
     url: "#",
     by: "By Toño"
 });
@@ -74,7 +74,7 @@ addItem({
 addItem({
     name: "FAMOUS",
     img: "/assets/img/BTS.png",
-    description: "Orange and Apple juice fresh and delicious",
+    description: "fresh,cool,tshirt/hoodie",
     url: "#",
     by: "By Pepe"
 });
@@ -82,7 +82,7 @@ addItem({
 addItem({
     name: "RETRO",
     img: "/assets/img/RETRO.png",
-    description: "Orange and Apple juice fresh and delicious",
+    description: "fresh,cool,tshirt/hoodie",
     url: "#",
     by: "By Martin"
 });
@@ -90,7 +90,7 @@ addItem({
 addItem({
     name: "FRASES",
     img: "/assets/img/FRASE.png",
-    description: "Orange and Apple juice fresh and delicious",
+    description: "fresh,cool,tshirt/hoodie",
     url: "#",
     by: "By Sofia"
 });
