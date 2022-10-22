@@ -1,40 +1,68 @@
 const navLinks = [
   {
-    href: '#Home',
+    href: '/index.html',
     label: 'Home'
   },
   {
-    href: '#Personaliza',
+    href: '/',
     label: 'Personaliza'
   },
   {
     href: '/productos.html',
-    label: 'Productos'
+    label: 'Productos',
+    style: 'productos'
   },
   {
-    href: '/contactanos.html',
-    label: 'Contactanos'
+    href: '/contacto.html',
+    label: 'Contactanos',
+    style: 'contactanos'
   },
   {
     href: '/about-us.html',
-    label: 'Nosotros'
+    label: 'Nosotros',
+    style: 'about-us'
   },
 ]
-function loadNavbar(){
-  const navbarHTML = `<nav
-  class="navbar nav about-us navbar-expand-lg navbar-light justify-content-center px-3 py-0"
->
-  <!-- CONTAINER BARRA DE NAVEGACION -->
-  <div class="container-fluid py-2">
-    <!-- INCRUSTACIÓN DEL LOGO -->
-    <a class="navbar-brand" href="#">
-      <img
-        src="https://i.postimg.cc/TwKBhCqZ/logo-basico.png"
-        alt=""
-        width="65"
-        height="40"
-      />
+const pathIcons = [
+  {
+    label: 'Carrito',
+    path: '/assets/icons/cart-fill.svg'
+  },
+  {
+    label: 'Usuario',
+    path: '/assets/icons/person-circle.svg'
+  },
+]
+const generateNavLink = (href, label) => `
+  <li class="tab">
+    <a
+      class="nav-link fs-6 rounded"
+      href="${href}"
+    >
+      ${label}
     </a>
+  </li>`
+
+const generateNavBtnIcon = (label, path) => `
+  <div class="d-flex gap-2" style="cursor: pointer;">
+    <img class="w-100" style="filter: invert(1); scale: 1.5;" src="${path}" alt="${label}-icon" />
+    <p class="fw-semibold text-white f-6 m-0">${label}</p>
+  </div>
+  `
+
+const loadNavbar = () => {
+  const currentSite = navLinks.find((navLink) => navLink.href === window.location.pathname)
+  const navbarHTML = `
+    <nav class="navbar nav ${currentSite.style} navbar-expand-lg navbar-light justify-content-center p-0" >
+      <div class="container-fluid py-2">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://i.postimg.cc/TwKBhCqZ/logo-basico.png"
+            alt=""
+            width="65"
+            height="40"
+          />
+        </a>
 
     <!-- BOTÓN DE RESPONSIVE -->
     <button
@@ -61,65 +89,21 @@ function loadNavbar(){
     </button>
 
     <!-- LINKS DE LA NAV -->
-    <div
-      class="collapse navbar-collapse justify-content-end gap-2"
-      id="navbarSupportedContent"
-    >
+    <div class="collapse navbar-collapse justify-content-end gap-4" id="navbarSupportedContent">
       <ul class="navbar-nav nav text-center pb-3 pb-lg-0">
-      ${navLinks.map(link => generateNavLink(link.href,link.label)).join('')}
+      ${navLinks.map(link => generateNavLink(link.href, link.label)).join('')}
       </ul>
 
       <!-- ICONOS DE CARRITO Y LOGIN -->
-      <div class="d-flex justify-content-center gap-3 gap-lg-0" >
-        <button class="btn rounded-circle text-white">
-          <svg
-            width="24"
-            height="24"
-            fill="currentColor"
-            class="bi bi-cart-fill"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
-            />
-          </svg>
-          <span class="fw-semibold d-lg-none">Carrito</span>
-        </button>
-
-        <button class="btn rounded-circle text-white">
-          <svg
-            width="24"
-            height="24"
-            fill="currentColor"
-            class="bi bi-person-circle"
-            viewBox="0 0 16 16"
-          >
-            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-            <path
-              fill-rule="evenodd"
-              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
-            />
-          </svg>
-          <span class="fw-semibold d-lg-none">Perfil</span>
-        </button>
+        <div class="d-flex justify-content-center gap-3" >
+          ${pathIcons.map(icon => generateNavBtnIcon(icon.label, icon.path)).join('')}
+        </div>
       </div>
     </div>
-  </div>
-</nav>`
+  </nav>
+`
 
   document.getElementById('navbar').innerHTML = navbarHTML;
 }
 
 loadNavbar()
-
-function generateNavLink(href,label){
-  return `
-  <li class="tab">
-    <a
-      class="nav-link fs-6 rounded"
-      href="${href}"
-    >
-      ${label}
-    </a>
-  </li>`
-}
