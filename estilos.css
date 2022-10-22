@@ -1,6 +1,6 @@
- @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
- /* about us inicio */
+/* about us inicio */
 :root {
   --color-home: #E7ACAC;
   --color-products: #FFC6AD;
@@ -16,7 +16,7 @@
 body {
   font-size: 20px;
   background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0); 
+  color: rgb(0, 0, 0);
 }
 
 .text-hightlight {
@@ -29,7 +29,7 @@ body {
 }
 
 
-.textocontorno {
+/* .textocontorno {
     font-size : 119px;
     line-height : 33.3px;
     outline : #000000;
@@ -52,9 +52,10 @@ body {
     color : rgb(247, 147, 30);
     outline : #000000;
     outline : rgb(0, 0, 0);
-  }
+  } */
 
-h1,h2{
+h1,
+h2 {
   font-family: 'Bebas Neue', cursive;
 }
 
@@ -68,15 +69,17 @@ h1,h2{
   font-weight: 600;
   transition: all 0.6s ease-in-out;
 }
+
 .nav .nav-link:hover {
   background-color: var(--color-background);
   filter: brightness(1);
 }
+
 .nav.about-us .nav-link:hover {
   color: var(--color-about-us);
 }
 
-.nav.icons{
+.nav.icons {
   color: #ACB2E7;
   background-color: azure;
   color: #fff;
@@ -86,14 +89,6 @@ h1,h2{
 
 }
 
-#nav-contactanos {
-  background-color: var(--color-contact);
-}
-
-#nav-contactanos .nav-link:hover {
-  color: var(--color-contact);
-}
-
 .our-border {
   border: 2px solid #000;
   border-radius: 5px;
@@ -101,6 +96,7 @@ h1,h2{
   margin: 1rem;
   position: relative;
 }
+
 .our-border:before {
   content: "";
   position: absolute;
@@ -117,7 +113,64 @@ h1,h2{
 .our-border--circle {
   border-radius: 50%;
 }
+
 .our-border--circle:before {
   border-radius: 50%;
 }
+
 /* about us fin */
+
+/* inicio estilo pagina Contáctanos */
+
+#nav-contactanos {
+  background-color: var(--color-contact);
+}
+
+#nav-contactanos .nav-link:hover {
+  color: var(--color-contact);
+}
+
+.inputs {
+  border-top: 0;
+  border-left: 0;
+  border-color: #FDAB60;
+  border-width: 0.15rem;
+  margin: 0.5rem;
+  padding: 0.3rem;
+  width: 100%;
+}
+
+#containerFormularioContacto {
+  color: var(--color-text);
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.pContactanos {
+  font-family: 'Bebas Neue', cursive;
+  color: var(--color-contact);
+  font-size: 5rem;
+  font-weight: 600;
+  -webkit-text-stroke-width: 0.1rem;
+  -webkit-text-stroke-color: var(--color-text);
+}
+
+#botonContactanos {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.3rem;
+  --bs-btn-color: var(--color-text);
+  --bs-btn-bg: var(--color-contact);
+  --bs-btn-border-color: var(--color-text);
+  --bs-btn-border-radius: 2rem;
+  --bs-btn-hover-color: var(--color-contact);
+  --bs-btn-hover-bg: var(--color-text);
+  --bs-btn-hover-border-color: var(--color-text);
+  --bs-btn-padding-x: 3.5rem;
+  --bs-btn-padding-y: 0.5rem;
+  --bs-btn-border-width: 0.15rem;
+}
+
+/* fin estilo pagina Contáctanos */
