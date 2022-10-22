@@ -76,6 +76,12 @@ h1, h2{
 .nav.about-us {
   background-color: var(--color-about-us);
 }
+.nav.contactanos {
+  background-color: var(--color-contact);
+}
+.nav.productos {
+  background-color: var(--color-products);
+}
 
 .nav .nav-link {
   color: #fff;
@@ -91,6 +97,12 @@ h1, h2{
 
 .nav.about-us .nav-link:hover{
   color: var(--color-about-us);
+}
+.nav.contactanos .nav-link:hover{
+  color: var(--color-contact);
+}
+.nav.productos .nav-link:hover{
+  color: var(--color-products);
 }
 
 .nav.icons {

@@ -8,15 +8,15 @@ const navLinks = [
     label: 'Personaliza'
   },
   {
-    href: '#Products',
+    href: '/productos.html',
     label: 'Productos'
   },
   {
-    href: '#Contact',
+    href: '/contactanos.html',
     label: 'Contactanos'
   },
   {
-    href: '#About',
+    href: '/about-us.html',
     label: 'Nosotros'
   },
 ]
