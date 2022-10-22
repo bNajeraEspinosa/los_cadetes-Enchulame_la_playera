@@ -13,7 +13,7 @@ const navLinks = [
     style: 'productos'
   },
   {
-    href: '/contacto.html',
+    href: '/contactanos.html',
     label: 'Contactanos',
     style: 'contactanos'
   },
