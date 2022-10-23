@@ -88,6 +88,15 @@ h2 {
   transition: all 0.6s ease-in-out;
 
 }
+.nav.iconsProd{
+  color: #FFC5AD;
+  background-color: azure;
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: all 0.6s ease-in-out;
+
+}
 
 .our-border {
   border: 2px solid #000;
