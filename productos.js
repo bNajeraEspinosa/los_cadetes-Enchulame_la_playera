@@ -1,3 +1,5 @@
+"strict mode"
+
 function addItem(item) {
     const itemHTML = `
     <div class="col">
@@ -94,3 +96,8 @@ addItem({
     url: "#",
     by: "By Sofia"
 });
+
+
+
+
+
