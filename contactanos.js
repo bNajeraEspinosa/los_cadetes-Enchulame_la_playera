@@ -33,4 +33,5 @@ objFormCont.addEventListener('submit', event => {
     console.log("Correo: "+ correoCont);
     console.log("Teléfono: "+ telCont);
     console.log("Mensaje: "+ mensCont);
+    objFormCont.reset();
 });
