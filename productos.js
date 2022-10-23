@@ -1,9 +1,9 @@
 function addItem(item) {
     const itemHTML = `
     <div class="col">
-        <div>
+        <div class="d-flex flex-column">
             <p class="fw-bold fs-3 m-0">${item.name}</p>
-            <span class="fw-bold fs-6 d-block text-uppercase" style="translate: 30px -5px">${item.by}</span>
+            <span class="fw-bold fs-6text-uppercase">${item.by}</span>
         </div>
         <a href="${item.url}">
             <img class="w-50" src="${item.img}" >
