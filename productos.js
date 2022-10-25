@@ -43,7 +43,7 @@ addItem({
     description: "fresh,cool,tshirt/hoodie",
     url: "#",
     price:'$300 mxn',
-    by: "playera, con diseño cartoon/avatar"
+    by: "Playera, con diseño cartoon/avatar"
 });
 
 addItem({
@@ -61,7 +61,7 @@ addItem({
     description: "fresh,cool,tshirt/hoodie",
     url: "#",
     price:'$300 mxn',
-    by: "playera, con diseño cartoon/avatar"
+    by: "Playera, con diseño cartoon/avatar"
 });
 
 addItem({
@@ -79,7 +79,7 @@ addItem({
     description: "fresh,cool,tshirt/hoodie",
     url: "#",
     price:'$300 mxn',
-    by: "playera, con Treasure... digo Bruno Mars"
+    by: "Playera, con Treasure... digo Bruno Mars"
 });
 
 addItem({
@@ -97,7 +97,7 @@ addItem({
     description: "fresh,cool,tshirt/hoodie",
     url: "#",
     price:'$300 mxn',
-    by: "playera, con frase letras retro"
+    by: "Playera, con frase letras retro"
 });
 
 addItem({
@@ -106,8 +106,6 @@ addItem({
     description: "fresh,cool,tshirt/hoodie",
     url: "#",
     price:'$300 mxn',
-    by:"playera, con frase graciosa/cool"
+    by:"Playera, con frase graciosa/cool"
 });
-
-
 
