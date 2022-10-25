@@ -6,14 +6,15 @@ function addItem(item) {
     <div class="col">
     <div>
         <div>
-            <p class="fw-bold fs-3 m-0">${item.name}</p>
-            <span class="fw-bold fs-6 d-block text-uppercase" style="translate: 30px -5px">${item.by}</span>
+            <p class="fw-bold fs-3 m-0 my-1">${item.name}</p>
+            <span class="fw-bold fs-6 d-block text-uppercase">${item.by}</span>
         </div>
         <a href="${item.url}">
-            <img class="w-50" src="${item.img}" >
+            <img class="w-50 my-3 img-fluid" src="${item.img}" >
         </a>
     </div>
-    <button class="btn btn-outline-secondary"> ✧ ¿Deseas ver mas detalles? ✦ </button>
+    <p class="fw-bold fs-3 m-0 my-1">${item.price}</p>
+    <button class="btn my-3 btn-outline-secondary "> ✧ ¿Deseas ver mas detalles? ✦ </button>
     </div>
     `
 
