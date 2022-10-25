@@ -2,7 +2,7 @@
 
 function addItem(item) {
     const itemHTML = 
-`<div class="card-outline" style="width: 18rem;">
+`<div class="card-outline" style="width: 35rem;">
   <img src="${item.img}" class="card-img-top" alt="ropa/hoodie/playera/con diseño">
   <div class="card-body">
     <h5 class="card-title">${item.name}</h5>
