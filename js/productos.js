@@ -66,7 +66,7 @@ addItem({'name':'playera2',
 =======
 addItem({
     name: "MANGA",
-    img: "/assets/img/MANGA.png",
+    img: "../assets/img/MANGA.png",
     description: "Orange and Apple juice fresh and delicious",
     url: "#",
     by: "By Alvaro"
@@ -74,7 +74,7 @@ addItem({
 
 addItem({
     name: "COMICS",
-    img: "/assets/img/COMICS.png",
+    img: "../assets/img/COMICS.png",
     description: "Orange and Apple juice fresh and delicious",
     url: "#",
     by: "By Luis"
@@ -82,7 +82,7 @@ addItem({
 
 addItem({
     name: "TV SHOW",
-    img: "/assets/img/TV SHOW.png",
+    img: "../assets/img/TV SHOW.png",
     description: "Orange and Apple juice fresh and delicious",
     url: "#",
     by: "By Alan"
@@ -90,7 +90,7 @@ addItem({
 
 addItem({
     name: "TV SHOW",
-    img: "/assets/img/APPA.png",
+    img: "../assets/img/APPA.png",
     description: "Orange and Apple juice fresh and delicious",
     url: "#",
     by: "By Anafer"
@@ -98,7 +98,7 @@ addItem({
 
 addItem({
     name: "TV SHOW",
-    img: "/assets/img/AVATAR.png",
+    img: "../assets/img/AVATAR.png",
     description: "Orange and Apple juice fresh and delicious",
     url: "#",
     by: "By Azucena"
@@ -106,7 +106,7 @@ addItem({
 
 addItem({
     name: "FAMOUS",
-    img: "/assets/img/FAMOUS.png",
+    img: "../assets/img/FAMOUS.png",
     description: "Orange and Apple juice fresh and delicious",
     url: "#",
     by: "By Caro"
@@ -114,7 +114,7 @@ addItem({
 
 addItem({
     name: "FAMOUS",
-    img: "/assets/img/BRUNO.png",
+    img: "../assets/img/BRUNO.png",
     description: "Orange and Apple juice fresh and delicious",
     url: "#",
     by: "By Toño"
@@ -122,7 +122,7 @@ addItem({
 
 addItem({
     name: "FAMOUS",
-    img: "/assets/img/BTS.png",
+    img: "../assets/img/BTS.png",
     description: "Orange and Apple juice fresh and delicious",
     url: "#",
     by: "By Pepe"
@@ -130,7 +130,7 @@ addItem({
 
 addItem({
     name: "RETRO",
-    img: "/assets/img/RETRO.png",
+    img: "../assets/img/RETRO.png",
     description: "Orange and Apple juice fresh and delicious",
     url: "#",
     by: "By Martin"
@@ -138,7 +138,7 @@ addItem({
 
 addItem({
     name: "FRASES",
-    img: "/assets/img/FRASE.png",
+    img: "../assets/img/FRASE.png",
     description: "Orange and Apple juice fresh and delicious",
     url: "#",
     by: "By Sofia"
