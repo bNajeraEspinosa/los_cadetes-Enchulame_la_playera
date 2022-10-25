@@ -5,12 +5,13 @@ function addItem(item) {
     <div>
         <div>
             <p class="fw-bold fs-3 m-0">${item.name}</p>
-            <span class="fw-bold fs-6 d-block text-uppercase" style="translate: 30px -5px">${item.by}</span>
+            <span class="fw-bold fs-6 d-block text-uppercase">${item.by}</span>
         </div>
         <a href="${item.url}">
             <img class="w-50" src="${item.img}" >
         </a>
     </div>
+    <p class="fw-bold fs-3 m-0">${item.price}</p>
     <button class="btn btn-outline-secondary"> ✧ ¿Deseas ver mas detalles? ✦ </button>
     </div>
     `
