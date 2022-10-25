@@ -102,6 +102,22 @@ h1,h2{
   color: var(--color-about-us);
 }
 
+.nav.productos .nav-link:hover {
+  color: var(--color-products);
+}
+
+.nav.home .nav-link:hover {
+  color: var(--color-home);
+}
+
+.nav.editor .nav-link:hover {
+  color: var(--color-editors);
+}
+
+.nav.contactenos .nav-link:hover {
+  color: var(--color-contact);
+}
+
 .nav.icons{
   color: #ACB2E7;
   background-color: azure;
