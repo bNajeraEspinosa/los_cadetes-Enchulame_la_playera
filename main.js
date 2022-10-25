@@ -5,8 +5,9 @@ const navLinks = [
     style: 'home'
   },
   {
-    href: '/',
-    label: 'Personaliza'
+    href: '/editor.html',
+    label: 'Personaliza',
+    style: 'editor'
   },
   {
     href: '/productos.html',
@@ -23,11 +24,7 @@ const navLinks = [
     label: 'Nosotros',
     style: 'about-us'
   },
-  {
-    href: '/editor.html',
-    label: 'Personaliza',
-    style: 'editor'
-  }
+  
 ]
 const pathIcons = [
   {
