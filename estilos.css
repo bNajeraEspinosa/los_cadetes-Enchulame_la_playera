@@ -305,3 +305,17 @@ h1, h2{
   padding: 3rem;
   width: 100%;
 }
+.colores {
+  font-size: 20px;
+  padding: 10px;
+  text-size-adjust: 20px;
+  background-color:#F7931E;
+  margin-top: 2rem;
+  margin-left: 5rem;
+  margin-block-end: 2rem;
+  border-color: #000000;
+  border-radius: 0.7rem;
+}
+.card-footer {
+  background-color: var(--color-editor);
+}
