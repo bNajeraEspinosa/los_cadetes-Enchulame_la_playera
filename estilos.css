@@ -13,6 +13,17 @@
   --color-background: #FFFFFF;
 }
 
+.our-border {
+  border: #F7931E;
+}
+
+.container-width {
+  width: 95%;
+  max-width: 480px;
+  padding: 2rem 3rem;
+  margin: 0 auto;
+}
+
 body {
   font-size: 20px;
   background-color: rgb(255, 255, 255);
@@ -86,6 +97,9 @@ h1,h2{
 }
 .nav.editor {
   background-color: var(--color-editor);
+}
+.nav.login {
+  background-color: var(--color-login);
 }
 
 .nav .nav-link {
