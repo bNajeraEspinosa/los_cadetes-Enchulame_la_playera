@@ -1,17 +1,19 @@
 "strict mode"
 
 function addItem(item) {
-    const itemHTML = `
-    <div class="col">
-        <div>
-            <p class="fw-bold fs-3 m-0">${item.name}</p>
-            <span class="fw-bold fs-6 d-block text-uppercase" style="translate: 30px -5px">${item.by}</span>
-        </div>
-        <a href="${item.url}">
-            <img class="w-50" src="${item.img}" >
-        </a>
-    </div>
-    `
+    const itemHTML = 
+`<div class="card-outline" style="width: 18rem;">
+  <img src="${item.img}" class="card-img-top" alt="ropa/hoodie/playera/con diseño">
+  <div class="card-body">
+    <h5 class="card-title">${item.name}</h5>
+    <p class="card-text">${item.by}</p>
+    <p class="card-text">${item.price}</p>
+    <a href="#" class="btn btn-outline-secondary">Deseas ver mas detalles? <3</a>
+    <!--<a href="${item.url}">-->
+  </div>
+</div> `
+
+
 
     const itemsContainer = document.getElementById("hoodieProducto");
     itemsContainer.innerHTML += itemHTML;
@@ -22,7 +24,8 @@ addItem({
     img: "/assets/img/MANGA.png",
     description: "fresh,cool,tshirt/hoodie",
     url: "#",
-    by: "By Alvaro"
+    price:'$300 mxn',
+    by: "Hoodie, con diseño anime/manga"
 });
 
 addItem({
@@ -30,7 +33,8 @@ addItem({
     img: "/assets/img/COMICS.png",
     description: "fresh,cool,tshirt/hoodie",
     url: "#",
-    by: "By Luis"
+    price:'$300 mxn',
+    by: "Hoodie, con diseño comic/superhéroe"
 });
 
 addItem({
@@ -38,7 +42,8 @@ addItem({
     img: "/assets/img/TV SHOW.png",
     description: "fresh,cool,tshirt/hoodie",
     url: "#",
-    by: "By Alan"
+    price:'$300 mxn',
+    by: "playera, con diseño cartoon/avatar"
 });
 
 addItem({
@@ -46,7 +51,8 @@ addItem({
     img: "/assets/img/APPA.png",
     description: "fresh,cool,tshirt/hoodie",
     url: "#",
-    by: "By Anafer"
+    price:'$300 mxn',
+    by: "Hoodie, con diseño TV SERIE/Saul G."
 });
 
 addItem({
@@ -54,7 +60,8 @@ addItem({
     img: "/assets/img/AVATAR.png",
     description: "fresh,cool,tshirt/hoodie",
     url: "#",
-    by: "By Azucena"
+    price:'$300 mxn',
+    by: "playera, con diseño cartoon/avatar"
 });
 
 addItem({
@@ -62,7 +69,8 @@ addItem({
     img: "/assets/img/FAMOUS.png",
     description: "fresh,cool,tshirt/hoodie",
     url: "#",
-    by: "By Caro"
+    price:'$300 mxn',
+    by: "Hoodie, con diseño Película/4th Dimention"
 });
 
 addItem({
@@ -70,7 +78,8 @@ addItem({
     img: "/assets/img/BRUNO.png",
     description: "fresh,cool,tshirt/hoodie",
     url: "#",
-    by: "By Toño"
+    price:'$300 mxn',
+    by: "playera, con Treasure... digo Bruno Mars"
 });
 
 addItem({
@@ -78,7 +87,8 @@ addItem({
     img: "/assets/img/BTS.png",
     description: "fresh,cool,tshirt/hoodie",
     url: "#",
-    by: "By Pepe"
+    price:'$300 mxn',
+    by: "playera, con IDOLS... lol"
 });
 
 addItem({
@@ -86,7 +96,8 @@ addItem({
     img: "/assets/img/RETRO.png",
     description: "fresh,cool,tshirt/hoodie",
     url: "#",
-    by: "By Martin"
+    price:'$300 mxn',
+    by: "playera, con frase letras retro"
 });
 
 addItem({
@@ -94,7 +105,8 @@ addItem({
     img: "/assets/img/FRASE.png",
     description: "fresh,cool,tshirt/hoodie",
     url: "#",
-    by: "By Sofia"
+    price:'$300 mxn',
+    by:"playera, con frase graciosa/cool"
 });
 
 
