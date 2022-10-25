@@ -1,5 +1,3 @@
-"strict mode"
-
 function addItem(item) {
     const itemHTML = 
     `

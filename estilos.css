@@ -68,13 +68,27 @@ body {
     outline : #000000;
     outline : rgb(0, 0, 0);
   } */
+.elementos {
+    border: 1px solid;
+    width: 350px;
+    height: 350px;
+}
+
+.HOTSALE {
+  font-family : Bebas;
+  color : #ED1C24;
+  color : rgb(237, 28, 36);
+  text-outline : #000000;
+  text-outline : rgb(0, 0, 0);
+}
 
 h1, h2{
   font-family: 'Bebas Neue', cursive;
+  font-size : 120px;
 }
 
 .nav.about-us {
-  background-color: var(--color-about-us);
+  background-color: var(--color-home);
 }
 .nav.contactanos {
   background-color: var(--color-contact);
@@ -247,6 +261,15 @@ h1, h2{
 .pContactanos {
   font-family: 'Bebas Neue', cursive;
   color: var(--color-contact);
+  font-size: 5rem;
+  font-weight: 600;
+  -webkit-text-stroke-width: 0.1rem;
+  -webkit-text-stroke-color: var(--color-text);
+}
+
+.hotsale {
+  font-family: 'Bebas Neue', cursive;
+  color: #ED1C24;;
   font-size: 5rem;
   font-weight: 600;
   -webkit-text-stroke-width: 0.1rem;
