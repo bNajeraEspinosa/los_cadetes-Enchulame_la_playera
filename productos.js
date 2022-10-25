@@ -1,15 +1,19 @@
+"strict mode"
+
 function addItem(item) {
-    const itemHTML = `
-    <div class="col">
-        <div class="d-flex flex-column">
-            <p class="fw-bold fs-3 m-0">${item.name}</p>
-            <span class="fw-bold fs-6text-uppercase">${item.by}</span>
-        </div>
-        <a href="${item.url}">
-            <img class="w-50" src="${item.img}" >
-        </a>
-    </div>
-    `
+    const itemHTML = 
+`<div class="card-outline" style="width: 18rem;">
+  <img src="${item.img}" class="card-img-top" alt="ropa/hoodie/playera/con diseño">
+  <div class="card-body">
+    <h5 class="card-title">${item.name}</h5>
+    <p class="card-text">${item.by}</p>
+    <p class="card-text">${item.price}</p>
+    <a href="#" class="btn btn-outline-secondary">Deseas ver mas detalles? <3</a>
+    <!--<a href="${item.url}">-->
+  </div>
+</div> `
+
+
 
     const itemsContainer = document.getElementById("hoodieProducto");
     itemsContainer.innerHTML += itemHTML;
@@ -18,79 +22,92 @@ function addItem(item) {
 addItem({
     name: "MANGA",
     img: "/assets/img/MANGA.png",
-    description: "Orange and Apple juice fresh and delicious",
+    description: "fresh,cool,tshirt/hoodie",
     url: "#",
-    by: "By Alvaro"
+    price:'$300 mxn',
+    by: "Hoodie, con diseño anime/manga"
 });
 
 addItem({
     name: "COMICS",
     img: "/assets/img/COMICS.png",
-    description: "Orange and Apple juice fresh and delicious",
+    description: "fresh,cool,tshirt/hoodie",
     url: "#",
-    by: "By Luis"
+    price:'$300 mxn',
+    by: "Hoodie, con diseño comic/superhéroe"
 });
 
 addItem({
     name: "TV SHOW",
     img: "/assets/img/TV SHOW.png",
-    description: "Orange and Apple juice fresh and delicious",
+    description: "fresh,cool,tshirt/hoodie",
     url: "#",
-    by: "By Alan"
+    price:'$300 mxn',
+    by: "playera, con diseño cartoon/avatar"
 });
 
 addItem({
     name: "TV SHOW",
     img: "/assets/img/APPA.png",
-    description: "Orange and Apple juice fresh and delicious",
+    description: "fresh,cool,tshirt/hoodie",
     url: "#",
-    by: "By Anafer"
+    price:'$300 mxn',
+    by: "Hoodie, con diseño TV SERIE/Saul G."
 });
 
 addItem({
     name: "TV SHOW",
     img: "/assets/img/AVATAR.png",
-    description: "Orange and Apple juice fresh and delicious",
+    description: "fresh,cool,tshirt/hoodie",
     url: "#",
-    by: "By Azucena"
+    price:'$300 mxn',
+    by: "playera, con diseño cartoon/avatar"
 });
 
 addItem({
     name: "FAMOUS",
     img: "/assets/img/FAMOUS.png",
-    description: "Orange and Apple juice fresh and delicious",
+    description: "fresh,cool,tshirt/hoodie",
     url: "#",
-    by: "By Caro"
+    price:'$300 mxn',
+    by: "Hoodie, con diseño Película/4th Dimention"
 });
 
 addItem({
     name: "FAMOUS",
     img: "/assets/img/BRUNO.png",
-    description: "Orange and Apple juice fresh and delicious",
+    description: "fresh,cool,tshirt/hoodie",
     url: "#",
-    by: "By Toño"
+    price:'$300 mxn',
+    by: "playera, con Treasure... digo Bruno Mars"
 });
 
 addItem({
     name: "FAMOUS",
     img: "/assets/img/BTS.png",
-    description: "Orange and Apple juice fresh and delicious",
+    description: "fresh,cool,tshirt/hoodie",
     url: "#",
-    by: "By Pepe"
+    price:'$300 mxn',
+    by: "playera, con IDOLS... lol"
 });
 
 addItem({
     name: "RETRO",
     img: "/assets/img/RETRO.png",
-    description: "Orange and Apple juice fresh and delicious",
+    description: "fresh,cool,tshirt/hoodie",
     url: "#",
-    by: "By Martin"
+    price:'$300 mxn',
+    by: "playera, con frase letras retro"
 });
 
 addItem({
     name: "FRASES",
     img: "/assets/img/FRASE.png",
-    description: "Orange and Apple juice fresh and delicious",
+    description: "fresh,cool,tshirt/hoodie",
     url: "#",
-    by: "By Sofia"
+    price:'$300 mxn',
+    by:"playera, con frase graciosa/cool"
 });
+
+
+
