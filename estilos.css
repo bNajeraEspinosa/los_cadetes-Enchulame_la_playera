@@ -265,6 +265,15 @@ h1, h2{
   -webkit-text-stroke-color: var(--color-text);
 }
 
+.hotsale {
+  font-family: 'Bebas Neue', cursive;
+  color: #ED1C24;;
+  font-size: 5rem;
+  font-weight: 600;
+  -webkit-text-stroke-width: 0.1rem;
+  -webkit-text-stroke-color: var(--color-text);
+}
+
 #botonContactanos {
   font-family: 'Bebas Neue', cursive;
   font-size: 1.3rem;
