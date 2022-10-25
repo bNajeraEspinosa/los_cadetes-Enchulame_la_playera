@@ -68,13 +68,24 @@ body {
     outline : #000000;
     outline : rgb(0, 0, 0);
   } */
+  <style>
+  .elementos {
+    border: 1px solid;
+    width: 350px;
+    height: 350px;
+}
 
 h1, h2{
   font-family: 'Bebas Neue', cursive;
+  font-size : 120px;
+  color : #ED1C24;
+  color : rgb(237, 28, 36);
+  text-outline : #000000;
+  text-outline : rgb(0, 0, 0);
 }
 
 .nav.about-us {
-  background-color: var(--color-about-us);
+  background-color: var(--color-home);
 }
 .nav.contactanos {
   background-color: var(--color-contact);
