@@ -66,6 +66,7 @@ const loadNavbar = () => {
             width="80"
             height="40"
             class="img-fluid"
+            align="right"
           />
         </a>
 
