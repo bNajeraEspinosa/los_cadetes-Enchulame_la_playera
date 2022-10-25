@@ -8,7 +8,7 @@ function addItem(item) {
     <h5 class="card-title">${item.name}</h5>
     <p class="card-text">${item.by}</p>
     <p class="card-text">${item.price}</p>
-    <a href="#" class="btn btn-outline-secondary">Deseas ver mas detalles? <3</a>
+    <a href="#" class="btn btn-outline-secondary">✦ ¿Deseas ver mas detalles? ✧</a>
     <!--<a href="${item.url}">-->
   </div>
 </div> `
