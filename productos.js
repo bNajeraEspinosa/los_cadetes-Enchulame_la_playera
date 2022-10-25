@@ -1,15 +1,19 @@
 function addItem(item) {
     const itemHTML = 
-`<div class="card-outline" style="width: 35rem;">
-  <img src="${item.img}" class="card-img-top" alt="ropa/hoodie/playera/con diseño">
-  <div class="card-body">
-    <h5 class="card-title">${item.name}</h5>
-    <p class="card-text">${item.by}</p>
-    <p class="card-text">${item.price}</p>
-    <a href="#" class="btn btn-outline-secondary">✦ ¿Deseas ver mas detalles? ✧</a>
-    <!--<a href="${item.url}">-->
-  </div>
-</div> `
+    `
+    <div class="col">
+    <div>
+        <div>
+            <p class="fw-bold fs-3 m-0">${item.name}</p>
+            <span class="fw-bold fs-6 d-block text-uppercase" style="translate: 30px -5px">${item.by}</span>
+        </div>
+        <a href="${item.url}">
+            <img class="w-50" src="${item.img}" >
+        </a>
+    </div>
+    <button class="btn btn-outline-secondary"> ✧ ¿Deseas ver mas detalles? ✦ </button>
+    </div>
+    `
 
 
 
