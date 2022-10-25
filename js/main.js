@@ -9,17 +9,17 @@ const navLinks = [
     label: 'Personaliza'
   },
   {
-    href: '/productos.html',
+    href: '/HTML/productos.html',
     label: 'Productos',
     style: 'productos'
   },
   {
-    href: '/contactanos.html',
+    href: '/HTML/contactanos.html',
     label: 'Contactanos',
     style: 'contactanos'
   },
   {
-    href: '/about-us.html',
+    href: '/HTML/about-us.html',
     label: 'Nosotros',
     style: 'about-us'
   },
