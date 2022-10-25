@@ -75,13 +75,17 @@ body {
     height: 350px;
 }
 
-h1, h2{
-  font-family: 'Bebas Neue', cursive;
-  font-size : 120px;
+.HOTSALE {
+  font-family : Bebas;
   color : #ED1C24;
   color : rgb(237, 28, 36);
   text-outline : #000000;
   text-outline : rgb(0, 0, 0);
+}
+
+h1, h2{
+  font-family: 'Bebas Neue', cursive;
+  font-size : 120px;
 }
 
 .nav.about-us {
