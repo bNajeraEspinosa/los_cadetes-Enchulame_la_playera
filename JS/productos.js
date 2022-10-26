@@ -23,8 +23,8 @@ function addItem(item) {
 
 addItem({
     name: "MANGA",
-    img: "/assets/img/MANGA.png",
-    description: "fresh,cool,tshirt/hoodie",
+    img: "../assets/img/MANGA.png",
+    description: "Orange and Apple juice fresh and delicious",
     url: "#",
     price:'$300 mxn',
     by: "Hoodie, con diseño anime/manga"
@@ -32,8 +32,8 @@ addItem({
 
 addItem({
     name: "COMICS",
-    img: "/assets/img/COMICS.png",
-    description: "fresh,cool,tshirt/hoodie",
+    img: "../assets/img/COMICS.png",
+    description: "Orange and Apple juice fresh and delicious",
     url: "#",
     price:'$300 mxn',
     by: "Hoodie, con diseño comic/superhéroe"
@@ -41,8 +41,8 @@ addItem({
 
 addItem({
     name: "TV SHOW",
-    img: "/assets/img/TV SHOW.png",
-    description: "fresh,cool,tshirt/hoodie",
+    img: "../assets/img/TV SHOW.png",
+    description: "Orange and Apple juice fresh and delicious",
     url: "#",
     price:'$300 mxn',
     by: "Playera, con diseño cartoon/avatar"
@@ -50,8 +50,8 @@ addItem({
 
 addItem({
     name: "TV SHOW",
-    img: "/assets/img/APPA.png",
-    description: "fresh,cool,tshirt/hoodie",
+    img: "../assets/img/APPA.png",
+    description: "Orange and Apple juice fresh and delicious",
     url: "#",
     price:'$300 mxn',
     by: "Hoodie, con diseño TV SERIE/Saul G."
@@ -59,8 +59,8 @@ addItem({
 
 addItem({
     name: "TV SHOW",
-    img: "/assets/img/AVATAR.png",
-    description: "fresh,cool,tshirt/hoodie",
+    img: "../assets/img/AVATAR.png",
+    description: "Orange and Apple juice fresh and delicious",
     url: "#",
     price:'$300 mxn',
     by: "Playera, con diseño cartoon/avatar"
@@ -68,8 +68,8 @@ addItem({
 
 addItem({
     name: "FAMOUS",
-    img: "/assets/img/FAMOUS.png",
-    description: "fresh,cool,tshirt/hoodie",
+    img: "../assets/img/FAMOUS.png",
+    description: "Orange and Apple juice fresh and delicious",
     url: "#",
     price:'$300 mxn',
     by: "Hoodie, con diseño Película/4th Dimention"
@@ -77,8 +77,8 @@ addItem({
 
 addItem({
     name: "FAMOUS",
-    img: "/assets/img/BRUNO.png",
-    description: "fresh,cool,tshirt/hoodie",
+    img: "../assets/img/BRUNO.png",
+    description: "Orange and Apple juice fresh and delicious",
     url: "#",
     price:'$300 mxn',
     by: "Playera, con Treasure... digo Bruno Mars"
@@ -86,8 +86,8 @@ addItem({
 
 addItem({
     name: "FAMOUS",
-    img: "/assets/img/BTS.png",
-    description: "fresh,cool,tshirt/hoodie",
+    img: "../assets/img/BTS.png",
+    description: "Orange and Apple juice fresh and delicious",
     url: "#",
     price:'$300 mxn',
     by: "Playera, con IDOLS... lol"
@@ -95,8 +95,8 @@ addItem({
 
 addItem({
     name: "RETRO",
-    img: "/assets/img/RETRO.png",
-    description: "fresh,cool,tshirt/hoodie",
+    img: "../assets/img/RETRO.png",
+    description: "Orange and Apple juice fresh and delicious",
     url: "#",
     price:'$300 mxn',
     by: "Playera, con frase letras retro"
@@ -104,8 +104,8 @@ addItem({
 
 addItem({
     name: "FRASES",
-    img: "/assets/img/FRASE.png",
-    description: "fresh,cool,tshirt/hoodie",
+    img: "../assets/img/FRASE.png",
+    description: "Orange and Apple juice fresh and delicious",
     url: "#",
     price:'$300 mxn',
     by:"Playera, con frase graciosa/cool"

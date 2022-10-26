@@ -84,7 +84,7 @@ h1,h2{
 }
 
 .nav.about-us {
-  background-color: var(--color-home);
+  background-color: var(--color-about-us);
 }
 .nav.contactanos {
   background-color: var(--color-contact);
@@ -101,6 +101,9 @@ h1,h2{
 .nav.login {
   background-color: var(--color-login);
 }
+.nav.producto {
+  background-color: var(--color-products);
+}
 
 .nav .nav-link {
   color: #fff;
@@ -115,22 +118,25 @@ h1,h2{
 .nav.about-us .nav-link:hover {
   color: var(--color-about-us);
 }
-
 .nav.productos .nav-link:hover {
   color: var(--color-products);
 }
-
 .nav.home .nav-link:hover {
   color: var(--color-home);
 }
-
 .nav.editor .nav-link:hover {
   color: var(--color-editors);
 }
-
-.nav.contactenos .nav-link:hover {
+.nav.contactanos .nav-link:hover {
   color: var(--color-contact);
 }
+.nav.login .nav-link:hover {
+  color: var(--color-login);
+}
+.nav.productos .nav-link:hover {
+  color: var(--color-productos);
+}
+
 
 .nav.icons{
   color: #ACB2E7;
@@ -192,7 +198,7 @@ h1,h2{
 .inputs {
   border-top: 0;
   border-left: 0;
-  border-color: #FDAB60;
+  border-color: var(--color-contact);
   border-width: 0.15rem;
   margin: 0.5rem;
   padding: 0.3rem;
@@ -208,13 +214,35 @@ h1,h2{
   margin-bottom: 1rem;
 }
 
-.pContactanos {
+/* .pContactanos {
   font-family: 'Bebas Neue', cursive;
   color: var(--color-contact);
   font-size: 5rem;
   font-weight: 600;
   -webkit-text-stroke-width: 0.1rem;
   -webkit-text-stroke-color: var(--color-text);
+} */
+.pContactanos{
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+  background: transparent;
+  z-index: 0;
+  color:var(--color-contact);
+  font-size: 5rem;
+  line-height: 5rem;
+  letter-spacing: 0.7rem;
+}
+
+.pContactanos:before {
+  content: attr(title);
+  position: absolute;
+  top: 0.4rem;
+  left: 2.2rem;
+  text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
+  
+  z-index: 10;
 }
 
 .hotsale {
