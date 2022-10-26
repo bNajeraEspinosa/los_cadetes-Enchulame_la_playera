@@ -4,7 +4,7 @@ function addItem(item) {
     <div class="col">
     <div>
         <div>
-            <p class="fw-bold fs-3 m-0 my-1">${item.name}</p>
+            <p class="fw-bold fs-3 m-0 my-1 pContactanos">${item.name}</p>
         </div>
         <a href="${item.url}">
             <img class="w-50 my-3 img-fluid" src="${item.img}" >
