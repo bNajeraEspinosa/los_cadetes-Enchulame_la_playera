@@ -1,7 +1,6 @@
 import { navLinks } from './constants/index.js';
 
 const loadFooter = () => {
-  if (window.location.pathname === '/index.html') window.location.href = '/'
   const currentSite = navLinks.find((navLink) => window.location.pathname.toLowerCase() === navLink.href)
   const navbarHTML = `
     <div class="${currentSite.style}">

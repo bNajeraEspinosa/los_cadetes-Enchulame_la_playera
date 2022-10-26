@@ -146,6 +146,7 @@ h1,h2{
   border-radius: 5px;
   z-index: 10;
   transform: translate(5px, 5px);
+  pointer-events: none;
 }
 
 .our-border--circle {
@@ -217,6 +218,7 @@ h1,h2{
 }
 .our-text {
   font-size: 1rem;
+  text-align: justify;
 }
 @media (min-width: 768px) {
   .text-hightlight {
@@ -227,6 +229,7 @@ h1,h2{
   }
   .our-text {
     font-size: 1.4rem;
+    text-align: left;
   }
 }
 

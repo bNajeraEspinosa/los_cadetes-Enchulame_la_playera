@@ -24,7 +24,7 @@ addItem({
     name: "MANGA",
     img: "/assets/img/MANGA.png",
     description: "fresh,cool,tshirt/hoodie",
-    url: "#",
+    url: "/html/productos.html",
     by: "Hoodie, con diseño anime/manga"
 });
 
@@ -32,7 +32,7 @@ addItem({
     name: "COMICS",
     img: "/assets/img/COMICS.png",
     description: "fresh,cool,tshirt/hoodie",
-    url: "#",
+    url: "/html/productos.html",
     by: "Hoodie, con diseño comic/superhéroe"
 });
 
@@ -40,7 +40,7 @@ addItem({
     name: "TV SHOW",
     img: "/assets/img/TV SHOW.png",
     description: "fresh,cool,tshirt/hoodie",
-    url: "#",
+    url: "/html/productos.html",
     by: "Playera, con diseño cartoon/avatar"
 });
 
@@ -48,7 +48,7 @@ addItem({
     name: "TV SHOW",
     img: "/assets/img/APPA.png",
     description: "fresh,cool,tshirt/hoodie",
-    url: "#",
+    url: "/html/productos.html",
     by: "Hoodie, con diseño TV SERIE/Saul G."
 });
 
