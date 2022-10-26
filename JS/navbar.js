@@ -5,36 +5,36 @@ const navLinks = [
     style: 'home'
   },
   {
-    href: '/HTML/editor.html',
+    href: '/html/editor.html',
     label: 'Personaliza',
     style: 'editor'
   },
   {
-    href: '/HTML/productos.html',
+    href: '/html/productos.html',
     label: 'Productos',
     style: 'productos'
   },
   {
-    href: '/HTML/contactanos.html',
+    href: '/html/contactanos.html',
     label: 'Contactanos',
     style: 'contactanos'
   },
   {
-    href: '/HTML/about-us.html',
+    href: '/html/about-us.html',
     label: 'Nosotros',
     style: 'about-us'
   },
   {
-    href: '/HTML/login.html',
+    href: '/html/login.html',
     label: 'Login',
     style: 'login'
   },
   {
-    href: '/HTML/producto-info',
+    href: '/html/producto-info',
     style: 'producto'
   },
 ]
-const excludeLinks = ['/HTML/login.html', '/HTML/register.html', '/HTML/index.html', '/HTML/producto-info']
+const excludeLinks = ['/html/login.html', '/html/register.html', '/html/index.html', '/html/producto-info']
 const pathIcons = [
   {
     label: 'Carrito',
@@ -64,7 +64,7 @@ const generateNavBtnIcon = (label, path) => `
 
 const loadNavbar = () => {
   if (window.location.pathname === '/index.html') window.location.href = '/'
-  const currentSite = navLinks.find((navLink) => window.location.pathname === navLink.href)
+  const currentSite = navLinks.find((navLink) => window.location.pathname.toLowerCase() === navLink.href)
   console.log(currentSite);
   const navbarHTML = `
     <nav class="navbar nav ${currentSite.style} navbar-expand-lg navbar-light justify-content-center p-0" >
