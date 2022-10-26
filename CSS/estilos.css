@@ -83,6 +83,17 @@ h1,h2{
   font-size : 120px;
 }
 
+.nav .nav-link {
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: all 0.6s ease-in-out;
+}
+.nav .nav-link:hover {
+  background-color: var(--color-background);
+  filter: brightness(1);
+}
+
 .nav.about-us {
   background-color: var(--color-about-us);
 }
@@ -105,18 +116,11 @@ h1,h2{
   background-color: var(--color-products);
 }
 
-.nav .nav-link {
-  color: #fff;
-  letter-spacing: 1px;
-  font-weight: 600;
-  transition: all 0.6s ease-in-out;
-}
-.nav .nav-link:hover {
-  background-color: var(--color-background);
-  filter: brightness(1);
-}
 .nav.about-us .nav-link:hover {
   color: var(--color-about-us);
+}
+.nav.contactanos .nav-link:hover {
+  color: var(--color-contact);
 }
 .nav.productos .nav-link:hover {
   color: var(--color-products);
@@ -125,16 +129,13 @@ h1,h2{
   color: var(--color-home);
 }
 .nav.editor .nav-link:hover {
-  color: var(--color-editors);
-}
-.nav.contactanos .nav-link:hover {
-  color: var(--color-contact);
+  color: var(--color-editor);
 }
 .nav.login .nav-link:hover {
   color: var(--color-login);
 }
-.nav.productos .nav-link:hover {
-  color: var(--color-productos);
+.nav.producto .nav-link:hover {
+  color: var(--color-products);
 }
 
 
