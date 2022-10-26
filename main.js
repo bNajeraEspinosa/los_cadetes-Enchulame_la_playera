@@ -68,8 +68,10 @@ const loadNavbar = () => {
           <img
             src="https://i.postimg.cc/TwKBhCqZ/logo-basico.png"
             alt=""
-            width="65"
+            width="80"
             height="40"
+            class="img-fluid"
+            align="right"
           />
         </a>
 

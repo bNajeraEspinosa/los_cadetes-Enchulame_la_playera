@@ -2,7 +2,7 @@
 
  /* about us inicio */
 :root {
-  --color-home: #E7ACAC;
+  --color-home: #ffc198;
   --color-products: #FFC6AD;
   --color-editor: #FDD9AE;
   --color-about-us: #ACB2E7;
@@ -114,6 +114,22 @@ h1,h2{
 }
 .nav.about-us .nav-link:hover {
   color: var(--color-about-us);
+}
+
+.nav.productos .nav-link:hover {
+  color: var(--color-products);
+}
+
+.nav.home .nav-link:hover {
+  color: var(--color-home);
+}
+
+.nav.editor .nav-link:hover {
+  color: var(--color-editors);
+}
+
+.nav.contactenos .nav-link:hover {
+  color: var(--color-contact);
 }
 
 .nav.icons{
