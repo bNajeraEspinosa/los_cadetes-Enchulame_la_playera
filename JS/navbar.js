@@ -30,11 +30,11 @@ const navLinks = [
     style: 'login'
   },
   {
-    href: '/html/producto-info',
+    href: '/html/producto-info.html',
     style: 'producto'
   },
 ]
-const excludeLinks = ['/html/login.html', '/html/register.html', '/html/index.html', '/html/producto-info']
+const excludeLinks = ['/html/login.html', '/html/register.html', '/html/index.html', '/html/producto-info.html']
 const pathIcons = [
   {
     label: 'Carrito',
