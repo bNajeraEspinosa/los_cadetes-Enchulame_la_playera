@@ -1,0 +1,14 @@
+#botonContactanos {
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.3rem;
+  --bs-btn-color: var(--color-text);
+  --bs-btn-bg: var(--color-contact);
+  --bs-btn-border-color: var(--color-text);
+  --bs-btn-border-radius: 2rem;
+  --bs-btn-hover-color: var(--color-contact);
+  --bs-btn-hover-bg: var(--color-text);
+  --bs-btn-hover-border-color: var(--color-text);
+  --bs-btn-padding-x: 3.5rem;
+  --bs-btn-padding-y: 0.5rem;
+  --bs-btn-border-width: 0.15rem;
+}
