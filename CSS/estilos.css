@@ -39,31 +39,6 @@ body {
   margin-bottom: 1rem;
 }
 
-/*
-.textocontorno {
-    font-size : 119px;
-    line-height : 33.3px;
-    outline : #000000;
-    outline : rgb(0, 0, 0);
- }
-
-.textorosa {
-    font-size : 119px;
-    line-height : 33.3px;
-    color : #E7ADAC;
-    color : rgb(231, 173, 172);
-  }
-
-.textonaranjacontornonegro
-  {
-    font-family : Bebas;
-    font-size : 46px;
-    line-height : 12.91px;
-    color : #F7931E;
-    color : rgb(247, 147, 30);
-    outline : #000000;
-    outline : rgb(0, 0, 0);
-  } */
 .elementos {
     border: 1px solid;
     width: 350px;

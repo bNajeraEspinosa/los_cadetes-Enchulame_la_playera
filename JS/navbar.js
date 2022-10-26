@@ -1,50 +1,6 @@
-const navLinks = [
-  {
-    href: '/',
-    label: 'Home',
-    style: 'home'
-  },
-  {
-    href: '/html/editor.html',
-    label: 'Personaliza',
-    style: 'editor'
-  },
-  {
-    href: '/html/productos.html',
-    label: 'Productos',
-    style: 'productos'
-  },
-  {
-    href: '/html/contactanos.html',
-    label: 'Contactanos',
-    style: 'contactanos'
-  },
-  {
-    href: '/html/about-us.html',
-    label: 'Nosotros',
-    style: 'about-us'
-  },
-  {
-    href: '/html/login.html',
-    label: 'Login',
-    style: 'login'
-  },
-  {
-    href: '/html/producto-info.html',
-    style: 'producto'
-  },
-]
-const excludeLinks = ['/html/login.html', '/html/register.html', '/html/index.html', '/html/producto-info.html']
-const pathIcons = [
-  {
-    label: 'Carrito',
-    path: '/assets/icons/cart-fill.svg'
-  },
-  {
-    label: 'Usuario',
-    path: '/assets/icons/person-circle.svg'
-  },
-]
+import { navLinks, excludeLinks, pathIcons } from './constants/index.js';
+
+
 const generateNavLink = (href, label) => `
   <li class="tab">
     <a
@@ -65,9 +21,9 @@ const generateNavBtnIcon = (label, path) => `
 const loadNavbar = () => {
   if (window.location.pathname === '/index.html') window.location.href = '/'
   const currentSite = navLinks.find((navLink) => window.location.pathname.toLowerCase() === navLink.href)
-  console.log(currentSite);
+
   const navbarHTML = `
-    <nav class="navbar nav ${currentSite.style} navbar-expand-lg navbar-light justify-content-center p-0" >
+    <div class="navbar nav ${currentSite.style} navbar-expand-lg navbar-light justify-content-center p-0" >
       <div class="container-fluid py-2">
         <a class="navbar-brand" href="/">
           <img
@@ -119,7 +75,7 @@ const loadNavbar = () => {
         </div>
       </div>
     </div>
-  </nav>
+  </div>
 `
 
   document.getElementById('navbar').innerHTML = navbarHTML;
