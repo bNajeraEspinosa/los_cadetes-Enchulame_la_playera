@@ -29,6 +29,11 @@ const navLinks = [
     label: 'Login',
     style: 'login'
   },
+  {
+    href: '/HTML/producto-info',
+    label: 'Login',
+    style: 'login'
+  },
 ]
 const excludeLinks = ['/HTML/login.html', '/HTML/register.html', '/HTML/index.html', '/HTML/producto-info']
 const pathIcons = [
