@@ -1,6 +1,6 @@
 const navLinks = [
   {
-    href: '/index.html',
+    href: '/',
     label: 'Home',
     style: 'home'
   },
