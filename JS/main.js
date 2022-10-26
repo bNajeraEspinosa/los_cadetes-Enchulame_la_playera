@@ -1,11 +1,11 @@
 const navLinks = [
   {
-    href: '/',
+    href: '/index.html',
     label: 'Home',
     style: 'home'
   },
   {
-    href: '/editor.html',
+    href: '/HTML/editor.html',
     label: 'Personaliza',
     style: 'editor'
   },
@@ -25,7 +25,7 @@ const navLinks = [
     style: 'about-us'
   },
   {
-    href: '/login.html',
+    href: '/HTML/login.html',
     label: 'Login',
     style: 'login'
   },
