@@ -11,11 +11,11 @@ const generateNavLink = (href, label) => `
     </a>
   </li>`
 
-const generateNavBtnIcon = (label, path) => `
-  <div class="d-flex gap-2" style="cursor: pointer;">
-    <img class="w-100" style="filter: invert(1); scale: 1.5;" src="${path}" alt="${label}-icon" />
-    <p class="fw-semibold text-white f-6 m-0">${label}</p>
-  </div>
+const generateNavBtnIcon = (label, path, url) => `
+    <a class="d-flex gap-2" style="cursor: pointer; text-decoration:none;" href="${url}">
+      <img class="w-100" style="filter: invert(1)" src="${path}" alt="${label}-icon" />
+      <p class="fw-semibold text-white f-6 m-0">${label}</p>
+    </a>
   `
 
 const loadNavbar = () => {
@@ -71,7 +71,7 @@ const loadNavbar = () => {
 
       <!-- ICONOS DE CARRITO Y LOGIN -->
         <div class="d-flex justify-content-center gap-3" >
-          ${pathIcons.map(icon => generateNavBtnIcon(icon.label, icon.path)).join('')}
+          ${pathIcons.map(icon => generateNavBtnIcon(icon.label, icon.path,icon.url)).join('')}
         </div>
       </div>
     </div>

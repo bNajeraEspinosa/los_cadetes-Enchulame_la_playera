@@ -38,11 +38,13 @@ export const excludeLinks = ['/html/login.html', '/html/register.html', '/html/i
 export const pathIcons = [
   {
     label: 'Carrito',
-    path: '/assets/icons/cart-fill.svg'
+    path: '/assets/icons/cart-fill.svg',
+    url: '#'
   },
   {
     label: 'Usuario',
-    path: '/assets/icons/person-circle.svg'
+    path: '/assets/icons/person-circle.svg',
+    url: '/html/login.html'
   },
 ]
 
