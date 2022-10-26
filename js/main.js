@@ -10,21 +10,25 @@ const navLinks = [
     style: 'editor'
   },
   {
-    href: '/productos.html',
+    href: '/HTML/productos.html',
     label: 'Productos',
     style: 'productos'
   },
   {
-    href: '/contactanos.html',
+    href: '/HTML/contactanos.html',
     label: 'Contactanos',
     style: 'contactanos'
   },
   {
-    href: '/about-us.html',
+    href: '/HTML/about-us.html',
     label: 'Nosotros',
     style: 'about-us'
   },
-  
+  {
+    href: '/login.html',
+    label: 'Login',
+    style: 'login'
+  },
 ]
 const pathIcons = [
   {
@@ -55,7 +59,8 @@ const generateNavBtnIcon = (label, path) => `
 
 const loadNavbar = () => {
   if (window.location.pathname === '/index.html') window.location.href = '/'
-  const currentSite = navLinks.find((navLink) => window.location.pathname === navLink.href)
+  const filteredLinks = navLinks.filter(link => link !=="/login")
+  const currentSite = filteredLinks.find((navLink) => window.location.pathname === navLink.href)
   const navbarHTML = `
     <nav class="navbar nav ${currentSite.style} navbar-expand-lg navbar-light justify-content-center p-0" >
       <div class="container-fluid py-2">
@@ -95,7 +100,7 @@ const loadNavbar = () => {
     <!-- LINKS DE LA NAV -->
     <div class="collapse navbar-collapse justify-content-end gap-4" id="navbarSupportedContent">
       <ul class="navbar-nav nav text-center pb-3 pb-lg-0">
-      ${navLinks.map(link => generateNavLink(link.href, link.label)).join('')}
+      ${filteredLinks.map(link => generateNavLink(link.href, link.label)).join('')}
       </ul>
 
       <!-- ICONOS DE CARRITO Y LOGIN -->
