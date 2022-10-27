@@ -34,7 +34,7 @@ export const navLinks = [
     style: 'producto'
   },
 ]
-export const excludeLinks = ['/html/login.html', '/html/register.html', '/html/index.html', '/html/producto-info.html']
+export const excludeLinks = ['/html/login.html', '/html/register.html', '/html/index.html', '/html/producto-info.html','/html/editor.html']
 export const pathIcons = [
   {
     label: 'Carrito',
