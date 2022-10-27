@@ -1,5 +1,6 @@
 /* TODO: Establecer un color definitivo */
-.nav {
+.nav,
+.footer {
   background: #333;
 }
 
