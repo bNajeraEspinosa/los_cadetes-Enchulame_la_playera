@@ -1,3 +1,4 @@
+import { emailMessage } from './services/index.js'
 import { getElement, getAllElements, validateInputs } from './utils/index.js'
 
 const formElement = getElement('#formularioCont');
@@ -13,6 +14,7 @@ const submitForm = (event) => {
 
     // Capturar los datos del formulario
     const data = Object.fromEntries(new FormData(formElement));
+    emailMessage.send({ data })
 
     formElement.reset();
 }
