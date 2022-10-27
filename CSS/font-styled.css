@@ -1,0 +1,61 @@
+.page__title-container {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+}
+
+.page__title,
+.page__title-span {
+  font-family: "Bebas Neue", cursive;
+  font-weight: 700;
+  line-height: 1.2;
+  line-height: 0.8;
+  letter-spacing: 0.04em;
+  margin: 0;
+  z-index: 10;
+  color: #fff;
+}
+.page__title-span {
+  position: absolute;
+  color: transparent;
+
+  top: .03em;
+  right: .03em;
+
+  z-index: 10;
+
+  -webkit-text-stroke: 0.01px black;
+}
+
+.page__title.contact {
+  color: var(--color-contact);
+}
+.page__title.home {
+  color: var(--color-home);
+}
+.page__title.about-us {
+  color: var(--color-about-us);
+}
+
+
+.text-primary {
+  color: var(--color-primary)!important;
+}
+.text-primary-soft {
+  color: var(--color-primary-soft)!important;
+}
+.text-secondary {
+  color: var(--color-secondary)!important;
+}
+.text-secondary-soft {
+  color: var(--color-secondary-soft)!important;
+}
+.text-tertiary-soft {
+  color: var(--color-tertiary-soft)!important;
+}
+.text-tertiary {
+  color: var(--color-tertiary)!important;
+}
+
+
+

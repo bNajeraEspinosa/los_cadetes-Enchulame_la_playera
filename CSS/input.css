@@ -1,20 +1,14 @@
-.input {
-  border-top: 0;
-  border-left: 0;
-  border-color: #fdab60;
-  border-width: 0.15rem;
-  margin: 0.5rem;
-  padding: 3rem;
-  width: 100%;
-}
-
 .inputs {
   border-top: 0;
   border-left: 0;
   border-color: var(--color-contact);
   border-width: 0.15rem;
-  margin: 0.5rem;
-  padding: 0.3rem;
+  padding: .4rem .8rem;
   width: 100%;
 }
-
+.inputs:focus,
+.inputs:focus-within {
+  box-shadow: 0 0 0.5rem var(--color-contact);
+  outline: none;
+  border-color: var(--color-contact);
+}

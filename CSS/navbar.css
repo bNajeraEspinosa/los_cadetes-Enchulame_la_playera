@@ -1,46 +1,6 @@
-
-.about-us {
-  background-color: var(--color-about-us);
-}
-.contactanos {
-  background-color: var(--color-contact);
-}
-.productos {
-  background-color: var(--color-products);
-}
-.home {
-  background-color: var(--color-home);
-}
-.editor {
-  background-color: var(--color-editor);
-}
-.login {
-  background-color: var(--color-login);
-}
-.producto {
-  background-color: var(--color-products);
-}
-
-.nav.about-us .nav-link:hover {
-  color: var(--color-about-us);
-}
-.nav.contactanos .nav-link:hover {
-  color: var(--color-contact);
-}
-.nav.productos .nav-link:hover {
-  color: var(--color-products);
-}
-.nav.home .nav-link:hover {
-  color: var(--color-home);
-}
-.nav.editor .nav-link:hover {
-  color: var(--color-editor);
-}
-.nav.login .nav-link:hover {
-  color: var(--color-login);
-}
-.nav.producto .nav-link:hover {
-  color: var(--color-products);
+/* TODO: Establecer un color definitivo */
+.nav {
+  background: #333;
 }
 
 .nav.icons {
@@ -49,7 +9,7 @@
   color: #fff;
   letter-spacing: 1px;
   font-weight: 600;
-  transition: all 0.6s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 .nav.iconsProd {
   color: #ffc5ad;
@@ -57,24 +17,17 @@
   color: #fff;
   letter-spacing: 1px;
   font-weight: 600;
-  transition: all 0.6s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 
 .nav .nav-link {
   color: #fff;
   letter-spacing: 1px;
   font-weight: 600;
-  transition: all 0.6s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 .nav .nav-link:hover {
   background-color: var(--color-background);
   filter: brightness(1);
-}
-
-#nav-contactanos {
-  background-color: var(--color-contact);
-}
-
-#nav-contactanos .nav-link:hover {
-  color: var(--color-contact);
+  color: #333;
 }

@@ -1,12 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-@import 'navbar.css';
-@import 'button.css';
-@import 'custom.css';
-@import 'input.css';
-@import 'utils.css';
-
+@import "navbar.css";
+@import "button.css";
+@import "custom.css";
+@import "font-styled.css";
+@import "input.css";
+@import "utils.css";
 
 :root {
+  --color-primary: #ed1c24;
+  --color-primary-soft: #e7adac;
+  --color-secondary: #e5881c;
+  --color-secondary-soft: #f2c591;
+  --color-tertiary: #866fec;
+  --color-tertiary-soft: #d2c9f8;
+
   --color-home: #ffc198;
   --color-products: #ffc6ad;
   --color-editor: #fdd9ae;
@@ -19,12 +26,35 @@
 }
 
 body {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
+  background-color: #000;
+  color: #eee;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: "Bebas Neue", cursive;
 }
 
 
+/* TODO: Recolocar en respectivo archivo */
+.banner {
+  background-image: url(/assets/banner/banner-manga-1.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(2px);
+  --webkit-backdrop-filter: blur(2px);
+}
+/* Create blur opacity in banner */
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.50);
+  z-index: -1;
+  backdrop-filter: blur(2px);
+  --webkit-backdrop-filter: blur(2px);
+}
