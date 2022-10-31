@@ -1,0 +1,13 @@
+.btn.button-primary {
+    font-family: "Bebas Neue", cursive;
+    font-weight: 400;
+    background-color: var(--color-contact);
+  }
+  
+  .btn.button-primary:active {
+    background-color: var(--color-text);
+    color: var(--color-contact);
+    transform: translateY(2px);
+    transition: all 0.2s ease-in-out;
+  }
+  
