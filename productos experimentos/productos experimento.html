@@ -13,14 +13,31 @@
 </head>
 
 <body>
-    <!--  -->
+    <!--CONTAINER  -->
     <div class="container">
         <h1 style="text-align:center;">Colección</h1>
         <hr>
-        
-        <!--  -->
+        <div class="row" id="items"></div>
 
     </div>
+    <!-- END CONTAINER -->
+
+    <!-- TEMPLATE CARD -->
+    <template id="template-card">
+        <div class="col-6 mb-2 p-md-2 ">
+            <div class="card">
+                <div class="card-body">
+                    <h5 style="color:black ;" id="titulo">Titulo</h5>
+                    <p style="color:black ;" id="descripción">descripción</p>
+                    <p style="color:black ;" id="imagen">imagen</p>
+                    <p style="color:black ;" id="precio">precio</p>
+                    <button class="btn btn-dark">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </template>
+    <!-- END TEMPLATE CARD -->
+
     <script src="/productos experimentos/app.js"></script>
 </body>
 
