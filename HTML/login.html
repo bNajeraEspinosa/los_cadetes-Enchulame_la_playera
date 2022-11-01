@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../CSS/estilos.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -12,37 +11,119 @@
       crossorigin="anonymous"
     />
 
+    <link rel="stylesheet" href="../CSS/estilos.css" />
+
     <title>Log-in Enchúlame la playera(:</title>
   </head>
 
   <body class="d-flex flex-column" style="height: 100vh">
     <nav id="navbar"></nav>
-    <div class="container h-100 d-flex align-items-center">
-      <div class="container-width border">
-        <div class="row my-2"></div>
 
-        <!-- botones redes sociales -->
-        <div class="row my-2">
-          <button type="button" class="btn btn-lg btn-light inputs">
-            <img src="/assets/icons/twitter.svg" alt="" /> With Twitter 
-          </button>
-          <button type="button" class="btn btn-lg btn-light inputs">
-            <img src="/assets/icons/facebook.svg" alt="" /> With Facebook 
-          </button>
-          <button type="button" class="btn btn-lg btn-light">
-            <img src="/assets/icons/google.svg" alt="" /> With Google 
+    <main class="d-flex flex-grow-1 align-items-center py-4">
+      <!-- LOGIN PANEL -->
+      <div class="container w-80 w-max-sm p-4 bg-dark our-border">
+        <!-- TITLE -->
+        <div class="row">
+          <div class="page__title-container text-center">
+            <h1 class="page__title text-secondary font-size-sm">Ingresar</h1>
+            <span class="page__title-span w-100 text-secondary font-size-sm"
+              >Ingresar</span
+            >
+          </div>
+        </div>
+        <!-- TITLE -->
+        <hr class="my-3" />
+
+        <!-- DISPLAY STATUS -->
+        <div class="d-none text-center my-3" id="notify-form-loader">
+          <div class="spinner-border text-tertiary-soft" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+        <div
+          class="d-none alert alert-danger col-12"
+          role="alert"
+          id="notify-form-error"
+        >
+          Occurrio un error tratanto de iniciar sesion
+        </div>
+        <!-- DISPLAY STATUS -->
+        <!-- FORM -->
+        <form class="row g-4 needs-validation" id="login-form" novalidate>
+          <!-- INPUTS -->
+          <div class="col-12">
+            <input
+              type="email"
+              class="form-control inputs"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+            <div class="invalid-feedback">Campo obligatorio</div>
+          </div>
+          <div class="col-12">
+            <input
+              type="text"
+              class="form-control inputs"
+              id="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
+            <div class="invalid-feedback">Campo obligatorio</div>
+          </div>
+          <!-- INPUTS -->
+
+          <!-- LOGIN -->
+          <div class="col-12">
+            <button
+              class="btn btn-secondary w-100 border border-2 border border-dark fw-bold"
+            >
+              Iniciar sesión
+            </button>
+          </div>
+          <!-- LOGIN -->
+
+          <!-- FORGOT PASSWORD -->
+          <div class="col-12 text-end">
+            <a href="#" class="text-white-50 link-light fs-6"
+              >¿Olvidaste tu contraseña?</a
+            >
+          </div>
+          <!-- FORGOT PASSWORD -->
+        </form>
+        <!-- FORM -->
+
+        <hr class="my-3" />
+
+        <!-- THIRD PARTY -->
+        <div class="row row-cols-1 gap-2 mx-0">
+          <button
+            class="btn btn-outline-dark border bg-black d-flex align-items-center justify-content-center text-white-50 link-light"
+          >
+            <img
+              class="filter-invert px-2"
+              src="../assets/icons/google.svg"
+              alt=""
+            />
+            Google
           </button>
         </div>
+        <!-- THIRD PARTY -->
 
-        <!-- fin botones redes sociales -->
-        <!-- botones inicio y registro -->
-        <div class="row my-2">
-          <button type="button" class="btn btn-light">Iniciar Sesión</button>
-          <button type="button" class="btn btn-light">Registro</button>
+        <!-- REGISTER -->
+        <div class="row mt-4">
+          <div class="col-12 text-center">
+            <a href="/src/HTML/register.html" class="text-white-50 link-light fs-6"
+              >¿No tienes una cuenta?</a
+            >
+          </div>
         </div>
-        <!-- fin botones inicio y registro -->
+        <!-- REGISTER -->
       </div>
-    </div>
+      <!-- LOGIN PxANEL -->
+    </main>
 
     <footer id="footer"></footer>
 
