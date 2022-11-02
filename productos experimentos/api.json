@@ -2,8 +2,7 @@
     {
         "id": 1,
         "name": "MANGA",
-        "img": "../assets/img/MANGA.png",
-        "description": "Orange and Apple juice fresh and delicious",
+        "imagen": "../assets/img/MANGA.png",
         "url": "/html/producto-info.html",
         "price": 300,
         "by": "Hoodie, con diseño anime/manga"
@@ -11,8 +10,7 @@
     {
         "id": 2,
         "name": "COMICS",
-        "img": "../assets/img/COMICS.png",
-        "description": "Orange and Apple juice fresh and delicious",
+        "imagen": "../assets/img/COMICS.png",
         "url": "/html/producto-info.html",
         "price": 300,
         "by": "Hoodie, con diseño comic/superhéroe"
@@ -20,8 +18,7 @@
     {
         "id": 3,
         "name": "TV SHOW",
-        "img": "../assets/img/TV SHOW.png",
-        "description": "Orange and Apple juice fresh and delicious",
+        "imagen": "../assets/img/TV SHOW.png",
         "url": "/html/producto-info.html",
         "price": 300,
         "by": "Playera, con diseño cartoon/avatar"
@@ -29,8 +26,7 @@
     {
         "id": 4,
         "name": "TV SHOW",
-        "img": "../assets/img/APPA.png",
-        "description": "Orange and Apple juice fresh and delicious",
+        "imagen": "../assets/img/APPA.png",
         "url": "/html/producto-info.html",
         "price": 300,
         "by": "Hoodie, con diseño TV SERIE/Saul G."
@@ -38,8 +34,7 @@
     {
         "id": 5,
         "name": "TV SHOW",
-        "img": "../assets/img/AVATAR.png",
-        "description": "Orange and Apple juice fresh and delicious",
+        "imagen": "../assets/img/AVATAR.png",
         "url": "/html/producto-info.html",
         "price":300,
         "by": "Playera, con diseño cartoon/avatar"
@@ -47,8 +42,7 @@
     {
         "id": 6,
         "name": "FAMOUS",
-        "img": "../assets/img/FAMOUS.png",
-        "description": "Orange and Apple juice fresh and delicious",
+        "imagen": "../assets/img/FAMOUS.png",
         "url": "/html/producto-info.html",
         "price": 300,
         "by": "Hoodie, con diseño Película/4th Dimention"
@@ -56,8 +50,7 @@
     {
         "id": 7,
         "name": "FAMOUS",
-        "img": "../assets/img/BRUNO.png",
-        "description": "Orange and Apple juice fresh and delicious",
+        "imagen": "../assets/img/BRUNO.png",
         "url": "/html/producto-info.html",
         "price":300,
         "by": "Playera, con Treasure... digo Bruno Mars"
@@ -65,8 +58,7 @@
     {
         "id": 8,
         "name": "FAMOUS",
-        "img": "../assets/img/BTS.png",
-        "description": "Orange and Apple juice fresh and delicious",
+        "imagen": "../assets/img/BTS.png",
         "url": "/html/producto-info.html",
         "price": 300,
         "by": "Playera, con IDOLS... lol"
@@ -74,8 +66,7 @@
     {
         "id": 9,
         "name": "RETRO",
-        "img": "../assets/img/RETRO.png",
-        "description": "Orange and Apple juice fresh and delicious",
+        "imagen": "../assets/img/RETRO.png",
         "url": "/html/producto-info.html",
         "price": 300,
         "by": "Playera, con frase letras retro"
@@ -83,8 +74,7 @@
     {
         "id": 10,
         "name": "FRASES",
-        "img": "../assets/img/FRASE.png",
-        "description": "Orange and Apple juice fresh and delicious",
+        "imagen": "../assets/img/FRASE.png",
         "url": "/html/producto-info.html",
         "price":300,
         "by": "Playera, con frase graciosa/cool"
