@@ -1,6 +1,6 @@
 const formulario=document.getElementById("form-create-products");
 
-//console.log(formulario); //Impresión en consola para verificar correcto guardado del formulario
+//console.log(formulario); //Impresión en consola para verificar correcta lectura del formulario
 
 const crearProducto = (event) => {
     //Se evita la carga de la página
@@ -8,7 +8,6 @@ const crearProducto = (event) => {
 
     // Validación del formulario
     const isValid = formulario.checkValidity();
-    console.log(isValid);
     if (!isValid) return formulario.classList.add('was-validated');
     formulario.classList.remove('was-validated');
 
@@ -20,9 +19,12 @@ const crearProducto = (event) => {
     fetch("https://reqres.in/api/users",{ //URL de prueba
         method: "POST", //Se configura el método POST
         body: JSON.stringify(data) // El cuerpo del mensaje enviado son los datos del formulario convertido a JSON
-    }).then(response=>response.json()) //La respuesta se guarda en response y se convierte de jason a objeto
-    .then(json=>console.log(json)) //El objeto convertido en el paso anterior se guarda en variable json y se imprime en consola
-    .catch(err => console.log(err)); //En caso de error se imprimirá el error en consola
+    }).then( response => response.json() ) //La respuesta se guarda en response y se convierte de jason a objeto
+    .then( json => console.log(json) ) //El objeto convertido en el paso anterior se guarda en variable json y se imprime en consola
+    .catch( err => console.log(err) ); //En caso de error se imprimirá el error en consola
+
+    //Limpieza del formulario
+    formulario.reset();
 }
 
 formulario.addEventListener("submit", crearProducto);
