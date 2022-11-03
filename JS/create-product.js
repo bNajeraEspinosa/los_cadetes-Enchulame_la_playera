@@ -4,7 +4,7 @@ const formulario = document.getElementById("form-create-products");
 const toastLiveExample = document.getElementById('liveToast');
 
 //Función para crear los elementos de la alerta de acuerdo al mensaje
-const alerta = (encabezado,cuerpo,tipoEncab,tipoMens,svg) => {
+const alerta = (encabezado,cuerpo,tipoEncab,svg) => {
     const contAlerta = document.createElement('div')
     contAlerta.innerHTML = [
         `<div class="toast-header text-${tipoEncab}">`,
@@ -12,7 +12,7 @@ const alerta = (encabezado,cuerpo,tipoEncab,tipoMens,svg) => {
         `<strong class="me-auto">${encabezado}</strong>`,
         '<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>',
         '</div>',
-        `<div class="toast-body text-${tipoMens}">${cuerpo}</div>`
+        `<div class="toast-body text-dark">${cuerpo}</div>`
     ].join('')
     toastLiveExample.append(contAlerta)
 
@@ -42,9 +42,9 @@ const crearProducto = async (event) => {
             body: JSON.stringify(data) //Valores de formulario convertido a JSON
         });
         let json = await response.json() //Espera respuesta, convierte json a objeto
-        alerta("REGISTRO EXITOSO","¡Has registrado exitosamente el producto!","success","dark","/assets/icons/check-circle-fill.svg"); //Alerta de registro exitoso
+        alerta("REGISTRO EXITOSO","¡Has registrado exitosamente el producto!","success","/assets/icons/check-circle-fill.svg"); //Alerta de registro exitoso
     } catch (err) { //catch en caso de error
-        alerta("¡HUBO UN ERROR!",`Error al registrar producto. ${err}`,"danger","dark","/assets/icons/x-circle-fill.svg"); //Alerta de error
+        alerta("¡HUBO UN ERROR!",`Error al registrar producto. ${err}`,"danger","/assets/icons/x-circle-fill.svg"); //Alerta de error
     }
     //Limpieza del formulario
     formulario.reset();
