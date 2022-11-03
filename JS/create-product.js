@@ -1,8 +1,6 @@
-const formulario=document.getElementById("form-create-products");
+const formulario = document.getElementById("form-create-products");
 
-//console.log(formulario); //Impresión en consola para verificar correcta lectura del formulario
-
-const crearProducto = (event) => {
+const crearProducto = async (event) => {
     //Se evita la carga de la página
     event.preventDefault();
 
@@ -12,16 +10,19 @@ const crearProducto = (event) => {
     formulario.classList.remove('was-validated');
 
     //Conversión de las entradas del formulario a objeto con atributos
-    const data=Object.fromEntries(new FormData(formulario));
-    //console.log(data); //Impresión para confirmar correcto guardado de data
+    const data = Object.fromEntries(new FormData(formulario));
 
-    //Fetch
-    fetch("https://reqres.in/api/users",{ //URL de prueba
-        method: "POST", //Se configura el método POST
-        body: JSON.stringify(data) // El cuerpo del mensaje enviado son los datos del formulario convertido a JSON
-    }).then( response => response.json() ) //La respuesta se guarda en response y se convierte de jason a objeto
-    .then( json => console.log(json) ) //El objeto convertido en el paso anterior se guarda en variable json y se imprime en consola
-    .catch( err => console.log(err) ); //En caso de error se imprimirá el error en consola
+    //Fetch con try/catch
+    try { //Tratará guardar en response después de esperar el fetch
+        let response = await fetch("https://reqres.in/api/users", {
+            method: "POST", //Se configura el método POST
+            body: JSON.stringify(data) //Valores de formulario convertido a JSON
+        });
+        let json= await response.json() //Espera la respuesta, convierte el json a objeto y guarda en json
+        console.log(json); //Impresión en consola para confirmar resultado
+    } catch (err) { //catch en caso de error
+        console.log(err)//En caso de error se imprimirá el error en consola
+    }
 
     //Limpieza del formulario
     formulario.reset();
