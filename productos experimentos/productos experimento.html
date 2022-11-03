@@ -14,27 +14,26 @@
 
 <body>
     <!--CONTAINER  -->
-    <div class="container">
+    <div class="container w-90">
         <h1 style="text-align:center;">Colección</h1>
         <hr>
-        <div class="row" id="items"></div>
+        <div class="row-cols-1 row-cols-lg-3" id="items"></div>
 
     </div>
     <!-- END CONTAINER -->
 
     <!-- TEMPLATE CARD -->
-    <template id="template-card" >
-        <div class="col-6 mb-4 p-md-4 d-flex flex-grow-1" >
+    <template id="template-card">
+        <div class="">
             <div class="card">
-                <div class="card-body">
-                    <h5 id="name" style="color:black ;">name:</h5>
-                    <p id="identificación" style="color:black ;">id:</p>
-                   <img id="imagen" src="" alt="" class="card-img-top w-50 my-3 img-fluid" style="color:black; ;">
+                <div class="card-body" style="color:black ;">
+                    <h5 id="name">name:</h5>
+                    <img id="imagen" src="" alt="" class="card-img-top w-50 my-3 img-fluid">
                     <!-- <p id="url" style="color:black ;">url</p> -->
+                    <p id="price">price:</p>
+                    <p id="by">by:</p>
 
-                    <p id="price" style="color:black ;">price:</p>
-                    <p id="by" style="color:black ;">by:</p>
-                    
+                    <button class="btn btn-dark">Comprar</button>
                     <button class="btn btn-dark">Comprar</button>
                 </div>
             </div>

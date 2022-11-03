@@ -26,9 +26,9 @@ const fetchData = async () => {
 const cartas = data => {
     data.forEach(producto => {
 
-        templateCard.getElementById("identificación").textContent = producto.id;
+        /*  */
         templateCard.getElementById("name").textContent = producto.name;
-        templateCard.getElementById("imagen").setAttribute("src" , producto.imagen);
+        templateCard.getElementById("imagen").setAttribute("src", producto.imagen);
         /* templateCard.getElementById("url").textContent = producto.url; */
         templateCard.getElementById("price").textContent = producto.price;
         templateCard.getElementById("by").textContent = producto.by;
