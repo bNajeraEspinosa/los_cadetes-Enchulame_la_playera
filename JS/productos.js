@@ -1,25 +1,42 @@
-function addItem(item) {
-    const itemHTML = 
-    `
-    <div class="col d-flex flex-column">
-        <div class="flex flex-grow-1">
-            <div>
-                <p class="fw-bold fs-3 m-0 my-1">${item.name}</p>
-                <span class="fw-bold fs-6 d-block text-uppercase">${item.by}</span>
-            </div>
-            <img class="w-50 my-3 img-fluid" src="${item.img}" >
-        </div>
-        <div>
-            <p class="fw-bold fs-3 m-0 my-1">${item.price}</p>
-            <a href="${item.url}" class="btn my-3 btn-outline-secondary "> ✧ ¿Deseas ver mas detalles? ✦ </a>
-        </div>
-    </div>
-    `
+const items = document.getElementById("items");
+const templateCard = document.getElementById("template-card").content;
+const fragmento = document.createDocumentFragment();
 
+///////////////////////////////////////////////////////////
+//Aqui ejecutamos nuestra función fetchData
+document.addEventListener('DOMContentLoaded', (event) => {
+    fetchData();
+});
 
-    const itemsContainer = document.getElementById("hoodieProducto");
-    itemsContainer.innerHTML += itemHTML;
+//generamos función fetchData
+const fetchData = async () => {
+    try {
+        const res = await fetch('../api.json')
+        const data = await res.json()
+        /*  console.log(data) */
+        cartas(data)
+    } catch (error) {
+        console.log(error)
+
+    }
+
 }
+////////////////////////////////////////////////////////
 
+const cartas = data => {
+    data.forEach(producto => {
 
+        templateCard.getElementById("identificación").textContent = producto.id;
+        templateCard.getElementById("name").textContent = producto.name;
+        templateCard.getElementById("imagen").setAttribute("src" , producto.imagen);
+        /* templateCard.getElementById("url").textContent = producto.url; */
+        templateCard.getElementById("price").textContent = producto.price;
+        templateCard.getElementById("by").textContent = producto.by;
+        /*  */
+        const clonar = templateCard.cloneNode(true);
+        fragmento.appendChild(clonar);
+    })
+/* console.log(fragmento); */
+     items.appendChild(fragmento); 
 
+}
