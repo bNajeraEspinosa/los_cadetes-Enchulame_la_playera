@@ -18,10 +18,10 @@ const crearProducto = async (event) => {
             method: "POST", //Se configura el método POST
             body: JSON.stringify(data) //Valores de formulario convertido a JSON
         });
-        let json= await response.json() //Espera la respuesta, convierte el json a objeto y guarda en json
-        console.log(json); //Impresión en consola para confirmar resultado
+        let json= await response.json() //Espera respuesta, convierte json a objeto
+        console.log(json); //Imprime en consola para confirmar resultado
     } catch (err) { //catch en caso de error
-        console.log(err)//En caso de error se imprimirá el error en consola
+        console.log(err)//Imprimirá el error en consola
     }
 
     //Limpieza del formulario
