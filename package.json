@@ -2,8 +2,9 @@
   "name": "los_cadetes-enchulame_la_playera",
   "version": "1.0.0",
   "description": "Repositorio del proyecto e-comerce",
+  "type": "module",
   "scripts": {
-    "test": ""
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --runInBand"
   },
   "repository": {
     "type": "git",
