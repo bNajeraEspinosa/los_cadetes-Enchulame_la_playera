@@ -14,7 +14,7 @@ const alerta = (encabezado, cuerpo, tipoEncab, svg) => {
         '</div>',
         `<div class="toast-body text-dark" id="cuerpoToast">${cuerpo}</div>`
     ].join('') //Unión de los elementos del arreglo en una cadena
-    toastLiveExample.append(contAlerta) //Se agrega nuevo div dentro de otro div
+    toastLiveExample?.append(contAlerta) //Se agrega nuevo div dentro de otro div
 
     const toast = new bootstrap.Toast(toastLiveExample) //Se instancía toast
 
@@ -30,9 +30,10 @@ const remover = () => {
 }
 
 //Función async para validar formulario y fetch
-const crearProducto = async (event) => {
+export const crearProducto = async (event) => {
     //Se evita la carga de la página
     event.preventDefault();
+    const formulario = event.currentTarget;
 
     // Validación del formulario
     const isValid = formulario.checkValidity();
@@ -59,4 +60,4 @@ const crearProducto = async (event) => {
     formulario.reset();
 }
 
-formulario.addEventListener("submit", crearProducto);
+formulario?.addEventListener("submit", crearProducto);
