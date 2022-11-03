@@ -145,14 +145,14 @@
               </div>
               <div class="col-12">
                 <label for="category" class="form-label">Categoría</label>
-                <input
-                  type="text"
-                  class="form-control inputs"
-                  id="category"
-                  name="category"
-                  placeholder="Categoría"
-                  required
-                />
+                <select id="category" name="category" class="form-select" aria-label="Default select example" required>
+                  <option selected>Escoge una categoria</option>
+                  <option value="1">Anime</option>
+                  <option value="2">Musica</option>
+                  <option value="3">Texto</option>
+                  <option value="4">Caricaturas</option>
+                  <option value="5">Cine</option>
+                </select>
                 <div class="invalid-feedback">
                   Campo obligatorio. Ingresa una categoría
                 </div>
