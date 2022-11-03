@@ -21,7 +21,7 @@ const crearProducto = async (event) => {
         let json= await response.json() //Espera respuesta, convierte json a objeto
         console.log(json); //Imprime en consola para confirmar resultado
     } catch (err) { //catch en caso de error
-        console.log(err)//Imprimirá el error en consola
+        console.log(err)//Imprimirá error en consola
     }
 
     //Limpieza del formulario
@@ -29,6 +29,3 @@ const crearProducto = async (event) => {
 }
 
 formulario.addEventListener("submit", crearProducto);
-
-// {name: 'Playera batman', description: 'Playera de hombre negra manga corta con diseño de batman en letras rojas', description_short: 'Playera negra manga corta batman letras ', price: '300', img: 'https://drive.google.com/file/d/1026w6Fka3jpLi1K5MgoJyRHpCBIO92J1/view', stock: '6', category: 'comics'}
-// Se guardó este objeto para hacer pruebas, para probarlo sin llenar el formulario se debe copiar este código para signar el objeto en la constante data
