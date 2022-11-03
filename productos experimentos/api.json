@@ -1,82 +1,82 @@
 [
     {
-        "id": 1,
+        "id": "id:1",
         "name": "MANGA",
         "imagen": "../assets/img/MANGA.png",
         "url": "/html/producto-info.html",
-        "price": 300,
+        "price": "$ 300 mxn",
         "by": "Hoodie, con diseño anime/manga"
     },
     {
-        "id": 2,
+        "id": "id:2",
         "name": "COMICS",
         "imagen": "../assets/img/COMICS.png",
         "url": "/html/producto-info.html",
-        "price": 300,
+        "price": "$ 300 mxn",
         "by": "Hoodie, con diseño comic/superhéroe"
     },
     {
-        "id": 3,
+        "id": "id:3",
         "name": "TV SHOW",
         "imagen": "../assets/img/TV SHOW.png",
         "url": "/html/producto-info.html",
-        "price": 300,
+        "price": "$ 300 mxn",
         "by": "Playera, con diseño cartoon/avatar"
     },
     {
-        "id": 4,
+        "id": "id:4",
         "name": "TV SHOW",
         "imagen": "../assets/img/APPA.png",
         "url": "/html/producto-info.html",
-        "price": 300,
+        "price": "$ 300 mxn",
         "by": "Hoodie, con diseño TV SERIE/Saul G."
     },
     {
-        "id": 5,
+        "id": "id:5",
         "name": "TV SHOW",
         "imagen": "../assets/img/AVATAR.png",
         "url": "/html/producto-info.html",
-        "price":300,
+        "price": "$ 300 mxn",
         "by": "Playera, con diseño cartoon/avatar"
     },
     {
-        "id": 6,
+        "id": "id:6",
         "name": "FAMOUS",
         "imagen": "../assets/img/FAMOUS.png",
         "url": "/html/producto-info.html",
-        "price": 300,
+        "price": "$ 300 mxn",
         "by": "Hoodie, con diseño Película/4th Dimention"
     },
     {
-        "id": 7,
+        "id": "id:7",
         "name": "FAMOUS",
         "imagen": "../assets/img/BRUNO.png",
         "url": "/html/producto-info.html",
-        "price":300,
+        "price": "$ 300 mxn",
         "by": "Playera, con Treasure... digo Bruno Mars"
     },
     {
-        "id": 8,
+        "id": "id:8",
         "name": "FAMOUS",
         "imagen": "../assets/img/BTS.png",
         "url": "/html/producto-info.html",
-        "price": 300,
+        "price": "$ 300 mxn",
         "by": "Playera, con IDOLS... lol"
     },
     {
-        "id": 9,
+        "id": "id:9",
         "name": "RETRO",
         "imagen": "../assets/img/RETRO.png",
         "url": "/html/producto-info.html",
-        "price": 300,
+        "price": "$ 300 mxn",
         "by": "Playera, con frase letras retro"
     },
     {
-        "id": 10,
+        "id": "id:10",
         "name": "FRASES",
         "imagen": "../assets/img/FRASE.png",
         "url": "/html/producto-info.html",
-        "price":300,
+        "price": "$ 300 mxn",
         "by": "Playera, con frase graciosa/cool"
     }
 ] 
