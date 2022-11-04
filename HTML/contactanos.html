@@ -15,45 +15,39 @@
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../CSS/estilos.css" />    
+    <link rel="stylesheet" href="../CSS/estilos.css" />
     <title>CONTÁCTANOS</title>
   </head>
 
-  <body class="d-flex flex-column" style="height: 100vh">
+  <body class="d-flex flex-column" style="height: 100vh;">
     <nav id="navbar"></nav>
 
     <!-- Container que guardará el formulario. El container es de 1 fila con 2 columnas, la primer columna contendrá solo texto, la segunda columna contendrá el formulario -->
-    <section
-      class="container my-5 d-flex flex-grow-1 align-items-center w-90 border our-border p-4 border-dark bg-dark"
-    >
+    <section class="container my-5 d-flex flex-grow-1 align-items-center" id="containerFormularioContacto">
       <div class="row">
         <!-- Columna 1. Texto "Contáctanos" -->
-        <div class="col-12 col-lg-4 m-auto text-center g-4">
-          <div class="page__title-container">
-            <h1 class="page__title text-center contact font-size-md">
-              Contactanos
-            </h1>
-            <span class="page__title-span font-size-md">Contactanos</span>
-          </div>
-          <p class="my-2 fs-5 fw-semibold">¡Nos encanta escucharte!</p>
-          <p class="d-none d-lg-block">
+        <div class="col text-center my-auto">
+          <p title="Contactanos" class="pContactanos font-size-lg">CONTACTANOS</p>
+          <p>¡Nos encanta escucharte!</p>
+          <p>
             Si se presentó algún problema con nuestra página, tienes alguna
             duda, sugerencia o deseas ponerte en contacto con nosotros, mándanos
             un mensaje y lo resolveremos lo más pronto posible.
           </p>
         </div>
         <!-- Columna 2 con formulario -->
-        <div class="col-12 col-lg-8">
+        <div class="col">
           <!-- PLANTILLA FORMULARIO BOOTSTRAP -->
-          <form class="row g-3 needs-validation g-4 m-0" id="formularioCont" novalidate>
+          <form class="row g-3 needs-validation" id="formularioCont" novalidate>
             <!-- Columna input nombre -->
             <div class="col-6">
-              <label for="name" class="input-group__label fs-4">Nombre</label>
+              <label for="input-nombre-contactanos" class="form-label"
+                >Nombre</label
+              >
               <input
                 type="text"
-                class="form-control inputs"
-                id="name"
-                name="name"
+                class="inputs"
+                id="input-nombre-contactanos"
                 placeholder="Nombre(s)"
                 required
               />
@@ -61,14 +55,13 @@
             </div>
             <!-- Columna input apellido -->
             <div class="col-6">
-              <label for="apellido" class="input-group__label fs-4"
+              <label for="input-apellido-contactanos" class="form-label"
                 >Apellido</label
               >
               <input
                 type="text"
-                class="form-control inputs"
-                id="apellido"
-                name="apellido"
+                class="inputs"
+                id="input-apellido-contactanos"
                 placeholder="Apellido(s)"
                 required
               />
@@ -76,14 +69,13 @@
             </div>
             <!-- Columna input correo -->
             <div class="col-md-12">
-              <label for="email" class="input-group__label fs-4"
+              <label for="input-correo-contactanos" class="form-label"
                 >Ingresa tu correo electrónico:</label
               >
               <input
                 type="email"
-                class="form-control inputs"
-                id="email"
-                name="email"
+                class="inputs"
+                id="input-correo-contactanos"
                 placeholder="correo@correo.com"
                 required
               />
@@ -93,14 +85,13 @@
             </div>
             <!-- Columna input teléfono -->
             <div class="col-12">
-              <label for="tel" class="input-group__label fs-4"
+              <label for="input-tel-contactanos" class="form-label"
                 >Ingresa tu número telefónico:</label
               >
               <input
                 type="tel"
-                class="form-control inputs"
-                id="tel"
-                name="tel"
+                class="inputs"
+                id="input-tel-contactanos"
                 placeholder="Teléfono"
                 required
               />
@@ -108,13 +99,12 @@
             </div>
             <!-- Columna input mensaje -->
             <div class="col-12">
-              <label for="message" class="input-group__label fs-4"
+              <label for="input-mensaje-contactanos" class="form-label"
                 >Déjanos tu mensaje:</label
               >
               <textarea
-                class="form-control inputs"
-                id="message"
-                name="message"
+                class="inputs"
+                id="input-mensaje-contactanos"
                 minlength="50"
                 maxlength="1000"
                 placeholder="Escribe tu mensaje aquí..."
@@ -123,7 +113,13 @@
               <div class="invalid-feedback">Por favor ingrese un mensaje</div>
             </div>
             <div class="col-12 text-center">
-              <button class="btn button-primary border border-dark border- px-5 py-2">Enviar</button>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                id="botonContactanos"
+              >
+                Enviar
+              </button>
             </div>
           </form>
         </div>
@@ -137,7 +133,7 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="../JS/contactanos.js"></script>
+    <script src="../JS/contactanos.js"></script>
     <script type="module" src="../JS/navbar.js"></script>
     <script type="module" src="../JS/footer.js"></script>
   </body>
