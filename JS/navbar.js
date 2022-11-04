@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const user = JSON.parse(localStorage.getItem('cur_user'));
   const offlinePages = ['/html/login.html', '/html/register.html'];
   const currentPage = window.location.pathname;
-  if (offlinePages.includes(currentPage)) location.replace('/index.html');
+  if (offlinePages.includes(currentPage.toLocaleLowerCase()) && user) location.replace('/index.html');
   loadNavbar(user);
 
 
