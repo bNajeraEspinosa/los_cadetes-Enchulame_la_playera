@@ -18,7 +18,7 @@ const añadirUsuario = async (event) => {
     //Fetch con try/catch
     try { //Tratará guardar en response después de esperar el fetch
         let response = await fetch("https://reqres.in/api/users", {
-            method: "POST", //Se configura el método POST
+            method: 'POST', //Se configura el método POST
             body: JSON.stringify(data) //Valores de formulario convertido a JSON
         })
     } catch (err) {
