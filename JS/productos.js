@@ -29,7 +29,7 @@ const cartas = data => {
         /* templateCard.getElementById("identificación").textContent = producto.id; */
         templateCard.getElementById("name").textContent = producto.name;
         templateCard.getElementById("imagen").setAttribute("src", producto.imagen);
-        templateCard.getElementById("url").setAttribute("href", /html/producto - info.html ? id = ${ producto.id })
+        /* templateCard.getElementById("url").setAttribute("href", producto.url); <---- checar esta linea que coincida*/
         templateCard.getElementById("price").textContent = producto.price;
         templateCard.getElementById("by").textContent = producto.by;
         /*  */
