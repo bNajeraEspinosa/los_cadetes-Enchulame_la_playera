@@ -1,34 +1,38 @@
-import { navLinks, excludeLinks, pathIcons } from './constants/index.js';
-
+import { NAV_LINKS, PROFILE } from './constants/nav-data.js';
 
 const generateNavLink = (href, label) => `
   <li class="tab">
-    <a
-      class="nav-link fs-6 rounded"
-      href="${href}"
-    >
+    <a class="nav-link fs-6 rounded" href="${href}" >
       ${label}
     </a>
-  </li>`
-
-const generateNavBtnIcon = (label, path, url) => `
-    <a class="d-flex gap-2" style="cursor: pointer; text-decoration:none;" href="${url}">
-      <img class="w-100" style="filter: invert(1)" src="${path}" alt="${label}-icon" />
-      <p class="fw-semibold text-white f-6 m-0">${label}</p>
-    </a>
+  </li>
+`
+export const generateNavBtnIcon = (label, icon, url) => `
+  <a class="d-flex gap-2 align-items-center" style="cursor: pointer; text-decoration:none;" href="${url}">
+    <img class="w-100" style="filter: invert(1)" src="${icon}" alt="${label}-icon" />
+    <p class="fw-semibold text-white fs-6 m-0">${label}</p>
+  </a>
   `
+export const generateNavDropdownBtn = (label, path, list) => `
+  <div class="btn-group">
+    <button class="btn btn-sm d-flex gap-2 align-items-center rounded dropdown-menu-end" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <img class="w-100" style="filter: invert(1)" src="${path}" alt="${label}-icon" />
+      <p class="fw-semibold text-white fs-6 m-0">${label}</p>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-lg-end dropdown-menu-dark border border-2 border-dark">
+      ${list}
+    </ul>
+  </div>
+`
 
-const loadNavbar = () => {
-  if (window.location.pathname === '/index.html') window.location.href = '/'
-  const currentSite = navLinks.find((navLink) => window.location.pathname.toLowerCase() === navLink.href)
-
+const loadNavbar = (user) => {
   const navbarHTML = `
-    <div class="navbar nav ${currentSite.style} navbar-expand-lg navbar-light justify-content-center p-0" >
-      <div class="container-fluid py-2">
+    <div class="navbar nav navbar-expand-lg navbar-light justify-content-center p-0" >
+      <div class="container-fluid py-2 w-90">
         <a class="navbar-brand" href="/">
           <img
             src="https://i.postimg.cc/TwKBhCqZ/logo-basico.png"
-            alt=""
+            alt="logo"
             width="80"
             height="40"
             class="img-fluid"
@@ -38,40 +42,27 @@ const loadNavbar = () => {
 
     <!-- BOTÓN DE RESPONSIVE -->
     <button
-      class="navbar-toggler border-white border-opacity-25"
+      class="navbar-toggler border-white border-opacity-25 d-flex d-lg-none px-2"
       type="button"
+      style="transform: scale(1.25)"
       data-bs-toggle="collapse"
       data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent"
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-      <svg
-        width="32"
-        height="32"
-        fill="#fff"
-        class="bi bi-list"
-        viewBox="0 0 16 16"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-        />
-      </svg>
+      <img src="/assets/icons/burger.svg" class="fs-1 filter-invert" />
     </button>
 
     <!-- LINKS DE LA NAV -->
     <div class="collapse navbar-collapse justify-content-end gap-4" id="navbarSupportedContent">
-      <ul class="navbar-nav nav text-center pb-3 pb-lg-0">
-      ${navLinks
-      .filter(link => !excludeLinks.includes(link.href))
-      .map(link => generateNavLink(link.href, link.label))
-      .join('')}
+      <ul class="navbar-nav nav text-center pb-lg-0">
+        ${Object.values(NAV_LINKS).map(({ path, label }) => generateNavLink(path, label)).join('')}
       </ul>
 
       <!-- ICONOS DE CARRITO Y LOGIN -->
-        <div class="d-flex justify-content-center gap-3" >
-          ${pathIcons.map(icon => generateNavBtnIcon(icon.label, icon.path,icon.url)).join('')}
+        <div class="d-flex justify-content-center gap-3 py-2 align-items-center" >
+        ${generateNavDropdownBtn(user ? user.username : PROFILE.label, PROFILE.icon, user ? PROFILE.list.online.join('') : PROFILE.list.offline.join(''))}
         </div>
       </div>
     </div>
@@ -81,4 +72,20 @@ const loadNavbar = () => {
   document.getElementById('navbar').innerHTML = navbarHTML;
 }
 
-loadNavbar()
+document.addEventListener('DOMContentLoaded', () => {
+  const user = JSON.parse(localStorage.getItem('cur_user'));
+  const offlinePages = ['/html/login.html', '/html/register.html'];
+  const currentPage = window.location.pathname;
+  if (offlinePages.includes(currentPage)) location.replace('/index.html');
+  loadNavbar(user);
+
+
+  if (user) {
+    const btnLogoutEl = document.getElementById('btn-logout');
+    btnLogoutEl?.addEventListener('click', () => {
+      localStorage.removeItem('cur_user');
+      window.location.reload();
+    });
+  }
+
+});
