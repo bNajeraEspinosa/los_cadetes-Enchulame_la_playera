@@ -20,11 +20,16 @@ function onSignIn(googleUser) {
                 event.stopPropagation();
             } else { //Si la validación arroja verdadero se hará el guardado de los datos ingresados en los inputs
                 const objFormCont = document.forms["login-form"];
-                let correo = objFormCont.elements['input-nombre-contactanos'].value;
-                let contraseña = objFormCont.elements['input-apellido-contactanos'].value;
+                let correo = objFormCont.elements['email'].value;
+                let contraseña = objFormCont.elements['password'].value;
+
                 // Impresión en consola para verificar
-                console.log("Nombre: " + correo);
-                console.log("Apellido: " + contraseña);
+                console.log("Email: " + correo);
+                console.log("Contraseña: " + contraseña);
+
+                localStorage.set("login-form",JSON.stringify(correo, contraseña));
+                var credentials = JSON.parse(localStorage.get("items"));
+                console.log(credentials.inputs);
             }
             form.classList.add('was-validated');
         }, false)
