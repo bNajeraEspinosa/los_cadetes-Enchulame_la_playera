@@ -25,7 +25,7 @@
           <img class="imagenhoodie1" src="../assets/img/NEW HOODIES PRINCIPAL.png" style="width: 70%" alt="..." />
         </div>
         <div class="col d-flex flex-column align-items-center justify-content-center">
-          <h2 class="text-end-center text-uppercase font-size-xl">New Hoodies</h2>
+          <h2 class="text-end-center text-uppercase font-size-lg">New Hoodies</h2>
           <span class="text-uppercase">Flash Sale</span>
         </div>
       </div>
@@ -35,13 +35,13 @@
 
   <!-- ENCABEZADO -->
   <section>
-    <div id="tituloHoodies2">
+    <d id="tituloHoodies2">
       <h1 class="text-center fs-1 text-uppercase">Colecciones</h1>
-    </div>
+    </d iv>
   </section>
   <!--CONTAINER  -->
   <div class="container w-90">
-    <div class="row row-cols-lg-3" id="items"></div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-5" id="items"></div>
 
   </div>
   <!-- END CONTAINER -->
@@ -51,18 +51,22 @@
 
     <!-- TEMPLATE CARD -->
     <template id="template-card">
-      <div class="row">
-          <div class="card">
-              <div class="card-body" style="color:black ;">
-                  <h5 id="name">name:</h5>
-                  <img id="imagen" src="" alt="" class="card-img-top w-50 my-3 img-fluid">
-                  <!-- <p id="url" style="color:black ;">url</p> -->
-                  <p id="price">price:</p>
-                  <p id="by">by:</p>
-
-                  <button class="btn btn-dark  border- px-5 py-2">Comprar</button>
-                  <button class="btn button-primary border border-dark border- px-5 py-2">Comprar</button>
+      <div class="d-flex flex-column flex-grow-1 px-3">
+          <div class="card text-white text-center bg-dark">
+            <div class="card-header">
+              <h5 id="name">name:</h5>
+            </div>
+            <a id="url" class="link-light text-decoration-none">
+              <div class="card-body p-0" >
+                <img id="img" src="" alt="" class="card-img-top w-50 my-3 img-fluid">
+                <p id="price">price:</p>
+                <p id="by">by:</p>
               </div>
+            </a>
+            <div class="card-footer d-flex flex-column gap-2 flex-md-row">
+              <button class="btn fs-6 btn-black flex-grow-1">Agregar al carrito</button>
+              <button class="btn fs-6 btn-orange flex-grow-1 text-white">Comprar</button>
+            </div>
           </div>
       </div>
   </template>
