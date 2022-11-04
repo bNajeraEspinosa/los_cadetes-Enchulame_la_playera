@@ -11,3 +11,20 @@
     transition: all 0.2s ease-in-out;
   }
   
+
+  .btn-orange{  
+    background-color: var(--color-secondary);
+  }
+  .btn-orange:hover{
+    background-color: var(--color-secondary);
+    filter: brightness(1.2);
+  }
+  .btn-black {
+    background-color: var(--color-text);
+    color: var(--color-background);
+  }
+  .btn-black:hover {
+    background-color: var(--color-text);
+    color: var(--color-background);
+    filter: brightness(1.2);
+  }
