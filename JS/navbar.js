@@ -72,4 +72,20 @@ const loadNavbar = (user) => {
   document.getElementById('navbar').innerHTML = navbarHTML;
 }
 
-loadNavbar()
+document.addEventListener('DOMContentLoaded', () => {
+  const user = JSON.parse(localStorage.getItem('cur_user'));
+  const offlinePages = ['/html/login.html', '/html/register.html'];
+  const currentPage = window.location.pathname;
+  if (offlinePages.includes(currentPage)) location.replace('/index.html');
+  loadNavbar(user);
+
+
+  if (user) {
+    const btnLogoutEl = document.getElementById('btn-logout');
+    btnLogoutEl?.addEventListener('click', () => {
+      localStorage.removeItem('cur_user');
+      window.location.reload();
+    });
+  }
+
+});
