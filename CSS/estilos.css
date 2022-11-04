@@ -42,7 +42,7 @@ h2 {
 
 /* TODO: Recolocar en respectivo archivo */
 .banner {
-  background-image: url(/public/assets/banner/banner-manga-1.webp);
+  background-image: url(/assets/banner/banner-manga-1.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

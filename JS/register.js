@@ -9,25 +9,18 @@ const submitRegister = async (e) => {
 
   const data = Object.fromEntries(new FormData(formElement));
 
-  const response = await fetch("https://reqres.in/api/users", {
-    body: JSON.stringify(data),
-    method: "POST",
-  });
-
-  const userData = await response.json();
-
   try {
-    const response = await fetch("https://reqres.in/api/users", {
+    const response = await fetch("https://mockend.com/alaanescobedo/db-server/users", {
       body: JSON.stringify(data),
       method: "POST",
     });
     const userData = await response.json();
+
+    localStorage.setItem("cur_user", JSON.stringify(userData));
+    window.location.href = "/index.html";
   } catch (error) {
     console.log(error);
   }
 
-  localStorage.setItem("cur_user", JSON.stringify(data));
-  //console.log(userData);
-  window.location.href = "/index.html";
 };
 formElement.addEventListener("submit", submitRegister);

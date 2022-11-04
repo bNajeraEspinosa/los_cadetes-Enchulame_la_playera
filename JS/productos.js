@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 //generamos función fetchData
 const fetchData = async () => {
     try {
-        const res = await fetch('https://mockend.com/alaanescobedo/db-server/products?limit=10');
+        const res = await fetch('https://mockend.com/alaanescobedo/db-server/products?limit=15');
         const data = await res.json()
         /*  console.log(data) */
         cartas(data)
