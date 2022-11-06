@@ -24,20 +24,20 @@ const mockForm = {
 global.FormData = jest.fn()
 
 const response = { json: jest.fn(() => Promise.resolve(mockProduct)) }
-global.fetch = jest.fn().mockImplementation(() => Promise.resolve(response))
 
 jest.spyOn(Object, 'fromEntries').mockImplementation(() => mockProduct)
 
 global.bootstrap = {
   Toast: jest.fn().mockImplementation(() => ({
     show: jest.fn(),
-  })),
+  }))
 }
 
 describe('create-product.js', () => {
 
   beforeEach(() => {
     jest.clearAllMocks()
+    global.fetch = jest.fn().mockImplementation(() => Promise.resolve(response))
   })
 
   describe('crearProducto function', () => {
