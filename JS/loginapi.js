@@ -1,6 +1,6 @@
 const formulario = document.getElementById("login-form");
 
-const login = async (event) => {
+export const login = async (event) => {
   event.preventDefault();
   const formulario = event.currentTarget;
   const isValid = formulario.checkValidity();
@@ -18,6 +18,7 @@ const login = async (event) => {
     const userData = await response.json();
     
     localStorage.setItem("cur_user", JSON.stringify(userData));
+    formulario.reset();
     window.location.href = "/index.html";
   } catch (error) {
     console.log(error);
