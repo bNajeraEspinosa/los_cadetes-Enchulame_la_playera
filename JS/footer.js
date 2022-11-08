@@ -19,7 +19,7 @@ export const loadFooter = () => {
           <p color:"black;" >copyright 2022</p>
         </div>
         <nav class="col-md-5">
-          <a href="terminos.html">Términos y condiciones</a>
+          <a href="HTML/terminos.html">Términos y condiciones</a>
         </nav>
       </div>  
     </div>
