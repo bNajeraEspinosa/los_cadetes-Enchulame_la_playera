@@ -1,4 +1,3 @@
-
 export const loadFooter = () => {
   const navbarHTML = `
     <div class="footer">
@@ -16,8 +15,8 @@ export const loadFooter = () => {
         src="/assets/icons/whatsapp.svg" alt="Icono Whats App"> </a>
       </div>  
     </div>
-  `
-  document.getElementById('footer').innerHTML = navbarHTML;
-}
+  `;
+  document.getElementById("footer").innerHTML = navbarHTML;
+};
 
 loadFooter();
