@@ -19,8 +19,8 @@
   position: absolute;
   color: transparent;
 
-  top: .03em;
-  right: .03em;
+  top: 0.03em;
+  right: 0.03em;
 
   z-index: 10;
 
@@ -37,22 +37,21 @@
   color: var(--color-about-us);
 }
 
-
 .text-primary {
-  color: var(--color-primary)!important;
+  color: var(--color-primary) !important;
 }
 .text-primary-soft {
-  color: var(--color-primary-soft)!important;
+  color: var(--color-primary-soft) !important;
 }
 .text-secondary {
-  color: var(--color-secondary)!important;
+  color: var(--color-secondary) !important;
 }
 .text-secondary-soft {
-  color: var(--color-secondary-soft)!important;
+  color: var(--color-secondary-soft) !important;
 }
 .text-tertiary-soft {
-  color: var(--color-tertiary-soft)!important;
+  color: var(--color-tertiary-soft) !important;
 }
 .text-tertiary {
-  color: var(--color-tertiary)!important;
+  color: var(--color-tertiary) !important;
 }

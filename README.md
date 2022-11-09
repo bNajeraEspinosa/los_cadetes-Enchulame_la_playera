@@ -1,2 +1,3 @@
 # los_cadetes-Enchulame_la_playera
-Repositorio del proyecto e-comerce 
+
+Repositorio del proyecto e-comerce
