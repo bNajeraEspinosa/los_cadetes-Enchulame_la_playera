@@ -9,6 +9,7 @@ const fetchData = async () => {
     try {
         const res = await fetch('https://mockend.com/alaanescobedo/db-server/products?limit=15');
         const data = await res.json();
+        remover();
         cartas(data);
     } catch (error) {
         console.log(error);
