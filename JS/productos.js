@@ -1,21 +1,8 @@
 const items = document.getElementById("items");
 const templateCard = document.getElementById("template-card").content;
 const fragmento = document.createDocumentFragment();
-//const tempPlaceholder = document.getElementById("template-placeholder").content;
 
-////////////////////////////////////////////////////////
-//Declaración función async fetch
-const fetchData = async () => {
-    try {
-        const res = await fetch('https://mockend.com/alaanescobedo/db-server/products?limit=15');
-        const data = await res.json();
-        remover();
-        cartas(data);
-    } catch (error) {
-        console.log(error);
-    }
-}
-
+//Declaración de función para eliminar elementos del HTML
 const remover = () => {
     const objPlaceholder = document.getElementById('items');
     objPlaceholder.replaceChildren();
@@ -35,10 +22,20 @@ const cartas = data => {
     })
     /* console.log(fragmento); */
     items.appendChild(fragmento);
-
 }
 
-///////////////////////////////////////////////////////////
+//Declaración función async fetch
+const fetchData = async () => {
+    try {
+        const res = await fetch('https://mockend.com/alaanescobedo/db-server/products?limit=15');
+        const data = await res.json();
+        remover();
+        cartas(data);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 //Aqui ejecutamos nuestra función fetchData
 document.addEventListener('DOMContentLoaded', (event) => {
     fetchData();
