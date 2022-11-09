@@ -10,7 +10,7 @@
 
 @media (min-width: 576px) {
   .bg-opacity-sm-none {
-    --bs-bg-opacity: 0
+    --bs-bg-opacity: 0;
   }
 }
 
@@ -36,22 +36,43 @@
 }
 
 /* TODO: Establecer medidas definitivas */
-.font-size-xs { font-size: 1rem }
-.font-size-sm { font-size: 2rem }
-.font-size-md { font-size: 3rem }
-.font-size-lg { font-size: 4rem}
-.font-size-xl { font-size: 8rem }
+.font-size-xs {
+  font-size: 1rem;
+}
+.font-size-sm {
+  font-size: 2rem;
+}
+.font-size-md {
+  font-size: 3rem;
+}
+.font-size-lg {
+  font-size: 4rem;
+}
+.font-size-xl {
+  font-size: 8rem;
+}
 @media (min-width: 576px) {
-  .font-size-md { font-size: 3.2rem }
-  .font-size-lg { font-size: 4.8rem }
-  .font-size-xl { font-size: 8.8rem }
+  .font-size-md {
+    font-size: 3.2rem;
+  }
+  .font-size-lg {
+    font-size: 4.8rem;
+  }
+  .font-size-xl {
+    font-size: 8.8rem;
+  }
 }
 @media (min-width: 992px) {
-  .font-size-md { font-size: 3.6rem }
-  .font-size-lg { font-size: 6.4rem }
-  .font-size-xl { font-size: 11rem }
+  .font-size-md {
+    font-size: 3.6rem;
+  }
+  .font-size-lg {
+    font-size: 6.4rem;
+  }
+  .font-size-xl {
+    font-size: 11rem;
+  }
 }
-
 
 @media (min-width: 768px) {
   .hotsale {

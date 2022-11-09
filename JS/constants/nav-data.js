@@ -3,37 +3,36 @@ import { ROUTES } from "./routes.js";
 export const NAV_LINKS = [
   {
     path: ROUTES.HOME,
-    label: 'Home'
+    label: "Home",
   },
   {
     path: ROUTES.PRODUCTS,
-    label: 'Productos'
+    label: "Productos",
   },
   {
     path: ROUTES.CONTACT,
-    label: 'Contactanos'
+    label: "Contactanos",
   },
   {
     path: ROUTES.ABOUT_US,
-    label: 'Nosotros'
+    label: "Nosotros",
   },
-]
+];
 
 export const CART = {
-  label: 'Carrito',
-  icon: 'cart-fill.svg'
-}
+  label: "Carrito",
+  icon: "cart-fill.svg",
+};
 export const PROFILE = {
-  icon: '/assets/icons/person-circle.svg',
-  label: 'Perfil',
+  icon: "/assets/icons/person-circle.svg",
+  label: "Perfil",
   list: {
     offline: [
       `<li><a class="dropdown-item" href="${ROUTES.LOGIN}">Iniciar sesión</a></li>`,
       `<li><a class="dropdown-item" href="${ROUTES.REGISTER}">Registrarse</a></li>`,
-
     ],
     online: [
       `<li><button class="btn dropdown-item" id="btn-logout">Cerrar sesión</button></li>`,
-    ]
-  }
-}
+    ],
+  },
+};

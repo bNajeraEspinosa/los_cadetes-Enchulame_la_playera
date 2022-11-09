@@ -12,10 +12,13 @@ export const submitRegister = async (e) => {
   const data = Object.fromEntries(new FormData(currentForm));
 
   try {
-    const response = await fetch("https://mockend.com/alaanescobedo/db-server/users", {
-      body: JSON.stringify(data),
-      method: "POST",
-    });
+    const response = await fetch(
+      "https://mockend.com/alaanescobedo/db-server/users",
+      {
+        body: JSON.stringify(data),
+        method: "POST",
+      }
+    );
     const userData = await response.json();
 
     localStorage.setItem("cur_user", JSON.stringify(userData));
@@ -24,6 +27,5 @@ export const submitRegister = async (e) => {
   } catch (error) {
     console.log(error);
   }
-
 };
 formElement?.addEventListener("submit", submitRegister);

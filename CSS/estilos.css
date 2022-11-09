@@ -35,10 +35,11 @@ h2 {
   font-family: "Bebas Neue", cursive;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
-
 
 /* TODO: Recolocar en respectivo archivo */
 .banner {
@@ -57,7 +58,7 @@ h2 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.50);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: -1;
   backdrop-filter: blur(2px);
   --webkit-backdrop-filter: blur(2px);
