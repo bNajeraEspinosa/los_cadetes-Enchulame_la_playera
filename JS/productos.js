@@ -17,8 +17,8 @@ const fetchData = async () => {
 }
 
 const remover = () => {
-    const objPlaceholder = document.getElementById('contPlaceholders');
-    objPlaceholder.remove();
+    const objPlaceholder = document.getElementById('items');
+    objPlaceholder.replaceChildren();
 }
 
 //Declaración función mostrar cards con artículos
