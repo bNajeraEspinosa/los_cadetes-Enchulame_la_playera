@@ -15,7 +15,8 @@ const loadProductInfo = async () => {
     productPrice.textContent = productData.price;
     
   } catch (error) {
-    console.log(error);
+    alerta("¡HUBO UN ERROR!", `Error al buscar el producto. ${err}`, "danger", "/assets/icons/x-circle-fill.svg"); //Alerta de error
+    setTimeout(remover, 6000);
   }
 
 

@@ -16,7 +16,8 @@ const fetchData = async () => {
         /*  console.log(data) */
         cartas(data)
     } catch (error) {
-        console.log(error)
+        alerta("¡HUBO UN ERROR!", `Error al cargar los producto. ${err}`, "danger", "/assets/icons/x-circle-fill.svg"); //Alerta de error
+        setTimeout(remover, 6000);
 
     }
 

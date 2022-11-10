@@ -20,7 +20,8 @@ const login = async (event) => {
     localStorage.setItem("cur_user", JSON.stringify(userData));
     window.location.href = "/index.html";
   } catch (error) {
-    console.log(error);
+    alerta("¡HUBO UN ERROR!", `Error al Iniciar Sesion producto. ${err}`, "danger", "/assets/icons/x-circle-fill.svg"); //Alerta de error
+    setTimeout(remover, 6000);
   }
 
 };
