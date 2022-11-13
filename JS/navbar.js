@@ -67,7 +67,7 @@ const loadNavbar = (user) => {
         <div class="d-flex gap-2 align-items-center btn" role="button">
         <a data-bs-toggle="modal" data-bs-target="#modal">
           <img src="/assets/icons/${CART.icon}" class="fs-1 filter-invert" />
-          <p class="fw-semibold text-white fs-6 m-0">${CART.label}</p>
+          <span class="fw-semibold text-white fs-6 m-0" id="carritoContenedor"></span>
           </a>
         </div>
         ${generateNavDropdownBtn(
