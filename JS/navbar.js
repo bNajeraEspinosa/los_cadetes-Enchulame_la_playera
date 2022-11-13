@@ -1,4 +1,4 @@
-import { NAV_LINKS, PROFILE } from "./constants/nav-data.js";
+import { NAV_LINKS, PROFILE, CART } from "./constants/nav-data.js";
 
 const generateNavLink = (href, label) => `
   <li class="tab">
@@ -63,7 +63,13 @@ const loadNavbar = (user) => {
       </ul>
 
       <!-- ICONOS DE CARRITO Y LOGIN -->
-        <div class="d-flex justify-content-center gap-3 py-2 align-items-center" >
+        <div class="d-flex justify-content-center gap-3 py-2 align-items-center">
+        <div class="d-flex gap-2 align-items-center btn" role="button">
+        <a href="/HTML/compra.html">
+          <img src="/assets/icons/${CART.icon}" class="fs-1 filter-invert" />
+          <p class="fw-semibold text-white fs-6 m-0">${CART.label}</p>
+          </a>
+        </div>
         ${generateNavDropdownBtn(
           user ? user.username : PROFILE.label,
           PROFILE.icon,

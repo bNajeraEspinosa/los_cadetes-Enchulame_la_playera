@@ -29,34 +29,22 @@
             </div>
             <!-- Separación -->
             <hr class="my-3">
-            <div id="carrito" class="form-group table-responsive">
-                <table class="table" id="lista-compra">
-                    <thead>
-                        <tr>
-                            <th scope="col">Imagen</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Precio</th>
-                            <th scope="col">Cantidad</th>
-                            <th scope="col">Sub Total</th>
-                        </tr>
-
-                    </thead>
-                    <tbody>
-
-                    </tbody>
-                    <tr>
-                        <th colspan="4" scope="col" class="text-right">TOTAL
-                            <p id="totalProceso"></p>
-                        </th>
-                    </tr>
-
-                </table>
-            </div>
-
-            <div class="row justify-content-center d-none" id="spinner">
-                <div class="spinner">
-                    <div class="dot1"></div>
-                    <div class="dot2"></div>
+            <div id="carrito" class="my-2">
+                <div class="row">
+                    <div class="col-7 col-md-12 d-flex border border-danger">
+                        <div class="col-3 border border-danger">
+                            <img src="https://via.placeholder.com/75" alt="">
+                        </div>
+                        <div class="col-9 border border-danger">
+                            Descripción del producto
+                        </div>
+                    </div>
+                    <div class="col-3 col-md-4 border border-danger">
+                        Cantidad
+                    </div>
+                    <div class="col-2 col-md-8 border border-danger">
+                        Subtotal
+                    </div>
                 </div>
             </div>
 
@@ -65,7 +53,8 @@
                     <a href="./productos.html" class="btn fs-6 btn-black flex-grow-1">Seguir comprando</a>
                 </div>
                 <div class="col-xs-12 col-md-4">
-                    <input type="submit" class="btn fs-6 btn-orange flex-grow-1 text-white" id="button" value="Finalizar compra">
+                    <input type="submit" class="btn fs-6 btn-orange flex-grow-1 text-white" id="button"
+                        value="Finalizar compra">
                 </div>
             </div>
         </div>
