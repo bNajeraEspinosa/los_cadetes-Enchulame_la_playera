@@ -188,29 +188,40 @@
     </div>
   </div>
   <!-- END CONTAINER -->
-  <!-- MODAL -->
+<!-- MENSAJE DE ALERTA -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div
+    id="liveToast"
+    class="toast"
+    role="alert"
+    aria-live="assertive"
+    aria-atomic="true"
+  ></div>
+</div>
+<!-- MENSAJE DE ALERTA -->
+
+  <!-- MODAL CARRITO -->
   <div class="container-xl">
     <div class="modal" tabindex="-1" role="dialog" id="modal">
       <div class="modal-dialog" role="document">
-        <div class="modal-content">
+        <div class="modal-content bg-dark">
           <div class="modal-header">
             <h5 class="modal-title">Carrito</h5>
-            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <button type="button" class="close btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body"></div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-danger" id="vaciarCarrito">
+            <button type="button" class="btn btn-orange text-white" id="vaciarCarrito">
               Vaciar carrito
             </button>
-            <button type="button" id="procesarCompra" class="btn btn-primary">
+            <button type="button" id="procesarCompra" class="btn btn-black">
               Continuar compra
             </button>
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
               Cerrar
             </button>
-
             <span>Precio total:</span>
             <p class="text-center" id="precioTotal"></p>
           </div>
@@ -218,7 +229,7 @@
       </div>
     </div>
   </div>
-<!-- END MODAL -->
+<!-- END MODAL CARRITO -->
 
   <footer id="footer"></footer>
 
