@@ -17,49 +17,45 @@
     <nav id="navbar"></nav>
 
     <!-- CONTAINER LISTA DE ARTÍCULOS -->
-    <section class="container my-5 flex-grow-1 align-items-center w-90 border our-border p-4 border-dark bg-dark">
+    <main class="container my-5 flex-grow-1 align-items-center w-90 border our-border p-4 border-dark bg-dark">
         <!-- Título -->
         <div class="row justify-content-center align-items-center">
             <div class="col-12 m-auto text-center g-4">
                 <div class="page__title-container">
-                    <h1 class="page__title text-center contact font-size-md">CARRITO DE COMPRA
+                    <h1 class="page__title text-center contact font-size-md" id="tituloCarrito">CARRITO DE COMPRA
                     </h1>
                     <span class="page__title-span w-100 font-size-md">CARRITO DE COMPRA</span>
                 </div>
             </div>
             <!-- Separación -->
             <hr class="my-3">
-            <div id="carrito" class="my-2">
-                <div class="row">
-                    <div class="col-7 col-md-12 d-flex border border-danger">
-                        <div class="col-3 border border-danger">
-                            <img src="https://via.placeholder.com/75" alt="">
-                        </div>
-                        <div class="col-9 border border-danger">
-                            Descripción del producto
-                        </div>
-                    </div>
-                    <div class="col-3 col-md-4 border border-danger">
-                        Cantidad
-                    </div>
-                    <div class="col-2 col-md-8 border border-danger">
-                        Subtotal
-                    </div>
-                </div>
-            </div>
+            <!-- Separación -->
+            <div id="listaCompra" class="my-2"></div>
 
+            <hr class="my-3">
+            <div class="row">
+                <div class="col-9 d-flex justify-content-end text-uppercase">Total</div>
+                <div class="col-3" id="totalProceso">$10,000</div>
+            </div>
+            <hr class="my-3">
             <div class="row justify-content-between">
                 <div class="col-md-4 mb-2">
                     <a href="./productos.html" class="btn fs-6 btn-black flex-grow-1">Seguir comprando</a>
                 </div>
                 <div class="col-xs-12 col-md-4">
-                    <input type="submit" class="btn fs-6 btn-orange flex-grow-1 text-white" id="button"
-                        value="Finalizar compra">
+                    <button class="btn fs-6 btn-orange flex-grow-1 text-white" id="finalizarCompra">Finalizar
+                        Compra</button>
                 </div>
             </div>
         </div>
         </div>
-    </section>
+    </main>
+
+    <!-- MENSAJE DE ALERTA -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"></div>
+    </div>
+    <!-- MENSAJE DE ALERTA -->
     <!-- CONTAINER LISTA DE ARTÍCULOS -->
 
     <footer class="mt-2" id="footer"></footer>
@@ -69,6 +65,7 @@
         crossorigin="anonymous"></script>
     <script type="module" src="../JS/navbar.js"></script>
     <script type="module" src="../JS/footer.js"></script>
+    <script src="../JS/productos.js"></script>
 
 </body>
 
