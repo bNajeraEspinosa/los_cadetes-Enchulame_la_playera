@@ -27,12 +27,6 @@
           let telCont = objFormCont.elements["input-tel-contactanos"].value;
           let mensCont =
             objFormCont.elements["input-mensaje-contactanos"].value;
-          // Impresión en consola para verificar
-          console.log("Nombre: " + nombreCont);
-          console.log("Apellido: " + apellidoCont);
-          console.log("Correo: " + correoCont);
-          console.log("Teléfono: " + telCont);
-          console.log("Mensaje: " + mensCont);
         }
         form.classList.add("was-validated");
       },
