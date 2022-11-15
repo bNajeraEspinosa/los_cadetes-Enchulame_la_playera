@@ -26,9 +26,9 @@ export const createProduct = async ({
   }
 };
 
-export const getListProducts = async ({ limit } = { limit: 12 }) => {
+export const getListProducts = async () => {
   try {
-    const res = await fetch(`${ENDPOINTS.PRODUCTS}?limit=${limit}`);
+    const res = await fetch(`${ENDPOINTS.PRODUCTS}`);
     return await res.json();
   } catch (error) {
     throw error;
