@@ -1,4 +1,4 @@
-import { NAV_LINKS, PROFILE } from './constants/nav-data.js';
+import { NAV_LINKS, PROFILE } from "./constants/nav-data.js";
 
 const generateNavLink = (href, label) => `
   <li class="tab">
@@ -6,13 +6,13 @@ const generateNavLink = (href, label) => `
       ${label}
     </a>
   </li>
-`
+`;
 export const generateNavBtnIcon = (label, icon, url) => `
   <a class="d-flex gap-2 align-items-center" style="cursor: pointer; text-decoration:none;" href="${url}">
     <img class="w-100" style="filter: invert(1)" src="${icon}" alt="${label}-icon" />
     <p class="fw-semibold text-white fs-6 m-0">${label}</p>
   </a>
-  `
+  `;
 export const generateNavDropdownBtn = (label, path, list) => `
   <div class="btn-group">
     <button class="btn btn-sm d-flex gap-2 align-items-center rounded dropdown-menu-end" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -23,7 +23,7 @@ export const generateNavDropdownBtn = (label, path, list) => `
       ${list}
     </ul>
   </div>
-`
+`;
 
 const loadNavbar = (user) => {
   const navbarHTML = `
@@ -57,35 +57,40 @@ const loadNavbar = (user) => {
     <!-- LINKS DE LA NAV -->
     <div class="collapse navbar-collapse justify-content-end gap-4" id="navbarSupportedContent">
       <ul class="navbar-nav nav text-center pb-lg-0">
-        ${Object.values(NAV_LINKS).map(({ path, label }) => generateNavLink(path, label)).join('')}
+        ${Object.values(NAV_LINKS)
+          .map(({ path, label }) => generateNavLink(path, label))
+          .join("")}
       </ul>
 
       <!-- ICONOS DE CARRITO Y LOGIN -->
         <div class="d-flex justify-content-center gap-3 py-2 align-items-center" >
-        ${generateNavDropdownBtn(user ? user.username : PROFILE.label, PROFILE.icon, user ? PROFILE.list.online.join('') : PROFILE.list.offline.join(''))}
+        ${generateNavDropdownBtn(
+          user ? user.username : PROFILE.label,
+          PROFILE.icon,
+          user ? PROFILE.list.online.join("") : PROFILE.list.offline.join("")
+        )}
         </div>
       </div>
     </div>
   </div>
-`
+`;
 
-  document.getElementById('navbar').innerHTML = navbarHTML;
-}
+  document.getElementById("navbar").innerHTML = navbarHTML;
+};
 
-document.addEventListener('DOMContentLoaded', () => {
-  const user = JSON.parse(localStorage.getItem('cur_user'));
-  const offlinePages = ['/html/login.html', '/html/register.html'];
+document.addEventListener("DOMContentLoaded", () => {
+  const user = JSON.parse(localStorage.getItem("cur_user"));
+  const offlinePages = ["/html/login.html", "/html/register.html"];
   const currentPage = window.location.pathname;
-  if (offlinePages.includes(currentPage.toLocaleLowerCase()) && user) location.replace('/index.html');
+  if (offlinePages.includes(currentPage.toLocaleLowerCase()) && user)
+    location.replace("/index.html");
   loadNavbar(user);
 
-
   if (user) {
-    const btnLogoutEl = document.getElementById('btn-logout');
-    btnLogoutEl?.addEventListener('click', () => {
-      localStorage.removeItem('cur_user');
+    const btnLogoutEl = document.getElementById("btn-logout");
+    btnLogoutEl?.addEventListener("click", () => {
+      localStorage.removeItem("cur_user");
       window.location.reload();
     });
   }
-
 });

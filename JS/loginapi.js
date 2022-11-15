@@ -1,29 +1,29 @@
-const formulario = document.getElementById("login-form");
+import {
+  hideLoading,
+  showAlert,
+  showLoading,
+} from "./handlers/handle-alert.js";
+import { handleSubmitForm } from "./handlers/handle-submit-form.js";
+import { loginUser } from "./services/auth.service.js";
+import { setInLocalStorage } from "./services/local-storage.service.js";
 
 export const login = async (event) => {
   event.preventDefault();
-  const formulario = event.currentTarget;
-  const isValid = formulario.checkValidity();
-
-  if (!isValid) return formulario.classList.add("was-validated");
-  formulario.classList.remove("was-validated");
-
-  const data = Object.fromEntries(new FormData(formulario));
+  const currentForm = event.currentTarget;
+  const formData = handleSubmitForm(currentForm);
+  if (!formData) return;
 
   try {
-    const response = await fetch("https://mockend.com/alaanescobedo/db-server/users", {
-      body: JSON.stringify(data),
-      method: "POST",
-    });
-    const userData = await response.json();
-    
-    localStorage.setItem("cur_user", JSON.stringify(userData));
-    formulario.reset();
-    window.location.href = "/index.html";
+    showLoading();
+    const userData = await loginUser(formData);
+    setInLocalStorage("cur_user", userData);
+    currentForm.reset();
+    location.href = "/index.html";
   } catch (error) {
-    console.log(error);
+    showAlert({ status: "error", message: error?.message });
+  } finally {
+    hideLoading();
   }
-
 };
-
-formulario?.addEventListener("submit", login);
+const formElement = document.getElementById("login-form");
+formElement?.addEventListener("submit", login);
