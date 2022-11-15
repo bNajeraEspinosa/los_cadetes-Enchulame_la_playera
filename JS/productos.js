@@ -1,7 +1,7 @@
 const contCards = document.getElementById("contCards");
 const toastLiveExample = document.getElementById("liveToast");
 let data = "";
-let carrito=[];
+let carrito;
 
 //Función para guardar en local storage
 function guardarStorage() {
@@ -15,22 +15,28 @@ function agregarProducto(id) {//Parámetro de entrada es el id
     if (existe) {//Si el producto ya se encuentra dentro del arreglo carrito
         const prod = carrito.map(prod => {
             if (prod.id === id) {
-                //prod.cantidad++;//Aumenta cantidad, para no duplicar el producto
-                console.log("aumenta cantidad del artículo");
+                prod.cantidad++;
             }
         })
     } else {//Si el producto no existe dentro del arreglo
         const item = data.find((prod) => prod.id === id);
+        item.cantidad = 1;
         carrito.push(item);//Agrega el producto al arreglo carrito
     }
     guardarStorage();
 };
 
+//Función para agregar producto al carrito. En productos.html
+function comprarArticulo(id) {//Parámetro de entrada es el id
+    agregarProducto(id); //Se agrega producto a carrito y localStorage
+    //Se redirecciona a la página compra.html (SE DEBE CAMBIAR ESTE LINK)
+    window.location.href = "http://127.0.0.1:5500/HTML/compra.html";
+};
+
 //Función para crear los elementos de la alerta de acuerdo al mensaje
 const alerta = (encabezado, cuerpo, tipoEncab, svg) => {
     const contAlerta = document.createElement("div"); //creación del div
-    contAlerta.innerHTML = [
-        //HTML del nuevo div
+    contAlerta.innerHTML = [ //HTML del nuevo div
         `<div class="toast-header text-${tipoEncab}" id="encabToast">`,
         `<img src="${svg}" class="rounded me-2">`,
         `<strong class="me-auto">${encabezado}</strong>`,
@@ -72,7 +78,7 @@ const cartas = data => {
         </a>
         <div class="card-footer d-flex flex-column gap-2 flex-md-row">
         <button onclick="agregarProducto(${id})" class="btn fs-6 btn-black flex-grow-1">Agregar al carrito</button>
-        <button class="btn fs-6 btn-orange flex-grow-1 text-white">Comprar</button>
+        <button onclick="comprarArticulo(${id})" class="btn fs-6 btn-orange flex-grow-1 text-white">Comprar</button>
         </div>
         </div>
         </div>
@@ -90,7 +96,7 @@ const fetchData = async () => {
     } catch (error) {
         alerta(
             "¡HUBO UN ERROR!",
-            `Error al cargar los productos.`,
+            `Error al cargar los productos. Recarga la página`,
             "danger",
             "/assets/icons/x-circle-fill.svg"
         ); //Alerta de error
@@ -100,6 +106,6 @@ const fetchData = async () => {
 
 //Aqui ejecutamos nuestra función fetchData
 document.addEventListener('DOMContentLoaded', () => {
-        fetchData();
+    carrito = JSON.parse(localStorage.getItem('carrito')) || new Array();
+    fetchData();
 });
-
