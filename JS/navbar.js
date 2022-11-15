@@ -65,7 +65,7 @@ const loadNavbar = (user) => {
       <!-- ICONOS DE CARRITO Y LOGIN -->
         <div class="d-flex justify-content-center gap-3 py-2 align-items-center">
         <div class="d-flex gap-2 align-items-center btn" role="button">
-        <a href="/HTML/compra.html">
+        <a href="/HTML/compra.html" id="linkCarrito">
           <img src="/assets/icons/${CART.icon}" class="fs-1 filter-invert" />
           <span class="fw-semibold text-white fs-6 m-0" id="carritoSpan"></span>
           </a>
