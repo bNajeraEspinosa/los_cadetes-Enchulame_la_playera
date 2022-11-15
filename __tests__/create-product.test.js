@@ -1,14 +1,14 @@
 import { jest } from "@jest/globals";
+import { ENDPOINTS } from "../JS/constants/endpoints.js";
 import { crearProducto } from "../JS/create-product.js";
 
 const mockProduct = {
   name: "Test Item",
-  description: "Test description",
-  description_short: "Test short description",
-  price: "Test price",
-  img: "Test image",
-  stock: "Test stock",
-  category: "Test category",
+  descriptionShort: "Test short description",
+  price: "250.00",
+  img: "https://via.placeholder.com/150",
+  stock: "12",
+  category: "Anime",
 };
 
 const mockForm = {
@@ -82,7 +82,7 @@ describe("create-product.js", () => {
     // Fetch
     it("Debe ejecutar el fetch con los datos del formulario", async () => {
       await crearProducto(mockEvent);
-      expect(global.fetch).toHaveBeenCalledWith("https://reqres.in/api/users", {
+      expect(global.fetch).toHaveBeenCalledWith(`${ENDPOINTS.PRODUCTS}`, {
         method: "POST",
         body: JSON.stringify(mockProduct),
       });

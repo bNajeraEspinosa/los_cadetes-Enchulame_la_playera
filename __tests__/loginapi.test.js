@@ -1,4 +1,5 @@
 import { jest } from "@jest/globals";
+import { ENDPOINTS } from "../JS/constants/endpoints.js";
 import { login } from "../JS/loginapi.js";
 
 const mockProduct = {
@@ -82,13 +83,10 @@ describe("loginapi.js", () => {
     // Fetch
     it("Debe ejecutar el fetch con los datos del formulario", async () => {
       await login(mockEvent);
-      expect(global.fetch).toHaveBeenCalledWith(
-        "https://mockend.com/alaanescobedo/db-server/users",
-        {
-          method: "POST",
-          body: JSON.stringify(mockProduct),
-        }
-      );
+      expect(global.fetch).toHaveBeenCalledWith(`${ENDPOINTS.AUTH_USER}`, {
+        method: "POST",
+        body: JSON.stringify(mockProduct),
+      });
       expect(global.fetch).toHaveBeenCalledTimes(1);
     });
     it("Debe llamar al metodo .json", async () => {

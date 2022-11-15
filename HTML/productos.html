@@ -18,207 +18,276 @@
     <link rel="stylesheet" href="../CSS/estilos.css" />
   </head>
 
-  <body>
+  <body class="d-flex flex-column" style="height: 100vh">
     <!-- NAVBAR -->
     <nav id="navbar"></nav>
     <!-- NAVBAR -->
 
-    <!-- HERO -->
-    <header>
-      <div class="container">
-        <div class="row row-cols-2">
-          <div class="col text-center">
-            <img
-              class="imagenhoodie1"
-              src="../assets/img/NEW HOODIES PRINCIPAL.png"
-              style="width: 70%"
-              alt="..."
-            />
-          </div>
-          <div
-            class="col d-flex flex-column align-items-center justify-content-center"
+    <!-- MENSAJE DE ALERTA -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div
+        id="liveToast"
+        class="toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      ></div>
+    </div>
+    <!-- MENSAJE DE ALERTA -->
+
+    <!-- ENCABEZADO -->
+    <main class="my-3">
+      <div class="text-center my-4">
+        <div class="page__title-container">
+          <h1 class="page__title text-secondary font-size-md">Productos</h1>
+          <span class="page__title-span w-100 text-secondary font-size-md"
+            >Productos</span
           >
-            <h2 class="text-end-center text-uppercase font-size-lg">
-              New Hoodies
-            </h2>
-            <span class="text-uppercase">Flash Sale</span>
-          </div>
         </div>
       </div>
-    </div>
-  </header>
-  <!-- HERO -->
+      <!--CONTAINER  -->
+      <div class="container w-90 flex-grow-1">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-5" id="items">
+          <!-- PLACEHOLDERS -->
+          <!-- PLACEHOLDER CARD 1 -->
+          <div class="d-flex flex-column flex-grow-1 px-3">
+            <div class="card text-white text-center bg-dark" aria-hidden="true">
+              <div class="card-header">
+                <h5 class="card-title placeholder-glow">
+                  <span class="placeholder placeholder-lg w-75"></span>
+                </h5>
+              </div>
+              <a class="link-light text-decoration-none">
+                <div class="card-body p-0">
+                  <img
+                    src="../assets/img/img-placeholder.png"
+                    alt="..."
+                    class="card-img-top w-50 my-3 img-fluid rounded"
+                  />
+                  <p class="card-text placeholder-glow">
+                    <span class="placeholder w-75 placeholder-sm"></span>
+                  </p>
+                  <p class="card-text placeholder-glow">
+                    <span class="placeholder w-75 placeholder-sm"></span>
+                  </p>
+                </div>
+              </a>
+              <div class="card-footer d-flex flex-column gap-2 flex-md-row">
+                <button class="btn fs-6 btn-black flex-grow-1">
+                  <span class="placeholder"></span>
+                </button>
+                <button class="btn fs-6 btn-orange flex-grow-1 text-white">
+                  <span class="placeholder"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- PLACEHOLDER CARD 2 -->
+          <div class="d-flex flex-column flex-grow-1 px-3">
+            <div class="card text-white text-center bg-dark" aria-hidden="true">
+              <div class="card-header">
+                <h5 class="card-title placeholder-glow">
+                  <span class="placeholder placeholder-lg w-75"></span>
+                </h5>
+              </div>
+              <a class="link-light text-decoration-none">
+                <div class="card-body p-0">
+                  <img
+                    src="../assets/img/img-placeholder.png"
+                    alt="..."
+                    class="card-img-top w-50 my-3 img-fluid rounded"
+                  />
+                  <p class="card-text placeholder-glow">
+                    <span class="placeholder w-75 placeholder-sm"></span>
+                  </p>
+                  <p class="card-text placeholder-glow">
+                    <span class="placeholder w-75 placeholder-sm"></span>
+                  </p>
+                </div>
+              </a>
+              <div class="card-footer d-flex flex-column gap-2 flex-md-row">
+                <button class="btn fs-6 btn-black flex-grow-1">
+                  <span class="placeholder"></span>
+                </button>
+                <button class="btn fs-6 btn-orange flex-grow-1 text-white">
+                  <span class="placeholder"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- PLACEHOLDER CARD 3 -->
+          <div class="d-flex flex-column flex-grow-1 px-3">
+            <div class="card text-white text-center bg-dark" aria-hidden="true">
+              <div class="card-header">
+                <h5 class="card-title placeholder-glow">
+                  <span class="placeholder placeholder-lg w-75"></span>
+                </h5>
+              </div>
+              <a class="link-light text-decoration-none">
+                <div class="card-body p-0">
+                  <img
+                    src="../assets/img/img-placeholder.png"
+                    alt="..."
+                    class="card-img-top w-50 my-3 img-fluid rounded"
+                  />
+                  <p class="card-text placeholder-glow">
+                    <span class="placeholder w-75 placeholder-sm"></span>
+                  </p>
+                  <p class="card-text placeholder-glow">
+                    <span class="placeholder w-75 placeholder-sm"></span>
+                  </p>
+                </div>
+              </a>
+              <div class="card-footer d-flex flex-column gap-2 flex-md-row">
+                <button class="btn fs-6 btn-black flex-grow-1">
+                  <span class="placeholder"></span>
+                </button>
+                <button class="btn fs-6 btn-orange flex-grow-1 text-white">
+                  <span class="placeholder"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- PLACEHOLDER CARD 4 -->
+          <div class="d-flex flex-column flex-grow-1 px-3">
+            <div class="card text-white text-center bg-dark" aria-hidden="true">
+              <div class="card-header">
+                <h5 class="card-title placeholder-glow">
+                  <span class="placeholder placeholder-lg w-75"></span>
+                </h5>
+              </div>
+              <a class="link-light text-decoration-none">
+                <div class="card-body p-0">
+                  <img
+                    src="../assets/img/img-placeholder.png"
+                    alt="..."
+                    class="card-img-top w-50 my-3 img-fluid rounded"
+                  />
+                  <p class="card-text placeholder-glow">
+                    <span class="placeholder w-75 placeholder-sm"></span>
+                  </p>
+                  <p class="card-text placeholder-glow">
+                    <span class="placeholder w-75 placeholder-sm"></span>
+                  </p>
+                </div>
+              </a>
+              <div class="card-footer d-flex flex-column gap-2 flex-md-row">
+                <button class="btn fs-6 btn-black flex-grow-1">
+                  <span class="placeholder"></span>
+                </button>
+                <button class="btn fs-6 btn-orange flex-grow-1 text-white">
+                  <span class="placeholder"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- PLACEHOLDER CARD 5 -->
+          <div class="d-flex flex-column flex-grow-1 px-3">
+            <div class="card text-white text-center bg-dark" aria-hidden="true">
+              <div class="card-header">
+                <h5 class="card-title placeholder-glow">
+                  <span class="placeholder placeholder-lg w-75"></span>
+                </h5>
+              </div>
+              <a class="link-light text-decoration-none">
+                <div class="card-body p-0">
+                  <img
+                    src="../assets/img/img-placeholder.png"
+                    alt="..."
+                    class="card-img-top w-50 my-3 img-fluid rounded"
+                  />
+                  <p class="card-text placeholder-glow">
+                    <span class="placeholder w-75 placeholder-sm"></span>
+                  </p>
+                  <p class="card-text placeholder-glow">
+                    <span class="placeholder w-75 placeholder-sm"></span>
+                  </p>
+                </div>
+              </a>
+              <div class="card-footer d-flex flex-column gap-2 flex-md-row">
+                <button class="btn fs-6 btn-black flex-grow-1">
+                  <span class="placeholder"></span>
+                </button>
+                <button class="btn fs-6 btn-orange flex-grow-1 text-white">
+                  <span class="placeholder"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- PLACEHOLDER CARD 6 -->
+          <div class="d-flex flex-column flex-grow-1 px-3">
+            <div class="card text-white text-center bg-dark" aria-hidden="true">
+              <div class="card-header">
+                <h5 class="card-title placeholder-glow">
+                  <span class="placeholder placeholder-lg w-75"></span>
+                </h5>
+              </div>
+              <a class="link-light text-decoration-none">
+                <div class="card-body p-0">
+                  <img
+                    src="../assets/img/img-placeholder.png"
+                    alt="..."
+                    class="card-img-top w-50 my-3 img-fluid rounded"
+                  />
+                  <p class="card-text placeholder-glow">
+                    <span class="placeholder w-75 placeholder-sm"></span>
+                  </p>
+                  <p class="card-text placeholder-glow">
+                    <span class="placeholder w-75 placeholder-sm"></span>
+                  </p>
+                </div>
+              </a>
+              <div class="card-footer d-flex flex-column gap-2 flex-md-row">
+                <button class="btn fs-6 btn-black flex-grow-1">
+                  <span class="placeholder"></span>
+                </button>
+                <button class="btn fs-6 btn-orange flex-grow-1 text-white">
+                  <span class="placeholder"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- END PLACEHOLDER -->
+        </div>
+      </div>
+      <!-- END CONTAINER -->
+    </main>
 
-  <!-- ENCABEZADO -->
-  <section>
-    <div id="tituloHoodies2">
-      <h1 class="text-center fs-1 text-uppercase">Colecciones</h1>
-    </div>
-  </section>
-  <!--CONTAINER  -->
-  <div class="container w-90">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-5" id="items">
-      <!-- PLACEHOLDERS -->
-      <!-- PLACEHOLDER CARD 1 -->
-      <div class="d-flex flex-column flex-grow-1 px-3">
-        <div class="card text-white text-center bg-dark" aria-hidden="true">
-          <div class="card-header">
-            <h5 class="card-title placeholder-glow"><span class="placeholder placeholder-lg w-75"></span></h5>
-          </div>
-          <a class="link-light text-decoration-none">
-            <div class="card-body p-0">
-              <img src="../assets/img/img-placeholder.png" alt="..." class="card-img-top w-50 my-3 img-fluid rounded">
-              <p class="card-text placeholder-glow">
-                <span class="placeholder w-75 placeholder-sm"></span></p>
-              <p class="card-text placeholder-glow">
-                <span class="placeholder w-75 placeholder-sm"></span></p>
-            </div>
-          </a>
-          <div class="card-footer d-flex flex-column gap-2 flex-md-row">
-            <button class="btn fs-6 btn-black flex-grow-1"><span class="placeholder"></span></button>
-            <button class="btn fs-6 btn-orange flex-grow-1 text-white"><span class="placeholder"></span></button>
-          </div>
-        </div>
-      </div>
-      <!-- PLACEHOLDER CARD 2 -->
-      <div class="d-flex flex-column flex-grow-1 px-3">
-        <div class="card text-white text-center bg-dark" aria-hidden="true">
-          <div class="card-header">
-            <h5 class="card-title placeholder-glow"><span class="placeholder placeholder-lg w-75"></span></h5>
-          </div>
-          <a class="link-light text-decoration-none">
-            <div class="card-body p-0">
-              <img src="../assets/img/img-placeholder.png" alt="..." class="card-img-top w-50 my-3 img-fluid rounded">
-              <p class="card-text placeholder-glow">
-                <span class="placeholder w-75 placeholder-sm"></span></p>
-              <p class="card-text placeholder-glow">
-                <span class="placeholder w-75 placeholder-sm"></span></p>
-            </div>
-          </a>
-          <div class="card-footer d-flex flex-column gap-2 flex-md-row">
-            <button class="btn fs-6 btn-black flex-grow-1"><span class="placeholder"></span></button>
-            <button class="btn fs-6 btn-orange flex-grow-1 text-white"><span class="placeholder"></span></button>
-          </div>
-        </div>
-      </div>
-      <!-- PLACEHOLDER CARD 3 -->
-      <div class="d-flex flex-column flex-grow-1 px-3">
-        <div class="card text-white text-center bg-dark" aria-hidden="true">
-          <div class="card-header">
-            <h5 class="card-title placeholder-glow"><span class="placeholder placeholder-lg w-75"></span></h5>
-          </div>
-          <a class="link-light text-decoration-none">
-            <div class="card-body p-0">
-              <img src="../assets/img/img-placeholder.png" alt="..." class="card-img-top w-50 my-3 img-fluid rounded">
-              <p class="card-text placeholder-glow">
-                <span class="placeholder w-75 placeholder-sm"></span></p>
-              <p class="card-text placeholder-glow">
-                <span class="placeholder w-75 placeholder-sm"></span></p>
-            </div>
-          </a>
-          <div class="card-footer d-flex flex-column gap-2 flex-md-row">
-            <button class="btn fs-6 btn-black flex-grow-1"><span class="placeholder"></span></button>
-            <button class="btn fs-6 btn-orange flex-grow-1 text-white"><span class="placeholder"></span></button>
-          </div>
-        </div>
-      </div>
-      <!-- PLACEHOLDER CARD 4 -->
-      <div class="d-flex flex-column flex-grow-1 px-3">
-        <div class="card text-white text-center bg-dark" aria-hidden="true">
-          <div class="card-header">
-            <h5 class="card-title placeholder-glow"><span class="placeholder placeholder-lg w-75"></span></h5>
-          </div>
-          <a class="link-light text-decoration-none">
-            <div class="card-body p-0">
-              <img src="../assets/img/img-placeholder.png" alt="..." class="card-img-top w-50 my-3 img-fluid rounded">
-              <p class="card-text placeholder-glow">
-                <span class="placeholder w-75 placeholder-sm"></span></p>
-              <p class="card-text placeholder-glow">
-                <span class="placeholder w-75 placeholder-sm"></span></p>
-            </div>
-          </a>
-          <div class="card-footer d-flex flex-column gap-2 flex-md-row">
-            <button class="btn fs-6 btn-black flex-grow-1"><span class="placeholder"></span></button>
-            <button class="btn fs-6 btn-orange flex-grow-1 text-white"><span class="placeholder"></span></button>
-          </div>
-        </div>
-      </div>
-      <!-- PLACEHOLDER CARD 5 -->
-      <div class="d-flex flex-column flex-grow-1 px-3">
-        <div class="card text-white text-center bg-dark" aria-hidden="true">
-          <div class="card-header">
-            <h5 class="card-title placeholder-glow"><span class="placeholder placeholder-lg w-75"></span></h5>
-          </div>
-          <a class="link-light text-decoration-none">
-            <div class="card-body p-0">
-              <img src="../assets/img/img-placeholder.png" alt="..." class="card-img-top w-50 my-3 img-fluid rounded">
-              <p class="card-text placeholder-glow">
-                <span class="placeholder w-75 placeholder-sm"></span></p>
-              <p class="card-text placeholder-glow">
-                <span class="placeholder w-75 placeholder-sm"></span></p>
-            </div>
-          </a>
-          <div class="card-footer d-flex flex-column gap-2 flex-md-row">
-            <button class="btn fs-6 btn-black flex-grow-1"><span class="placeholder"></span></button>
-            <button class="btn fs-6 btn-orange flex-grow-1 text-white"><span class="placeholder"></span></button>
-          </div>
-        </div>
-      </div>
-      <!-- PLACEHOLDER CARD 6 -->
-      <div class="d-flex flex-column flex-grow-1 px-3">
-        <div class="card text-white text-center bg-dark" aria-hidden="true">
-          <div class="card-header">
-            <h5 class="card-title placeholder-glow"><span class="placeholder placeholder-lg w-75"></span></h5>
-          </div>
-          <a class="link-light text-decoration-none">
-            <div class="card-body p-0">
-              <img src="../assets/img/img-placeholder.png" alt="..." class="card-img-top w-50 my-3 img-fluid rounded">
-              <p class="card-text placeholder-glow">
-                <span class="placeholder w-75 placeholder-sm"></span></p>
-              <p class="card-text placeholder-glow">
-                <span class="placeholder w-75 placeholder-sm"></span></p>
-            </div>
-          </a>
-          <div class="card-footer d-flex flex-column gap-2 flex-md-row">
-            <button class="btn fs-6 btn-black flex-grow-1"><span class="placeholder"></span></button>
-            <button class="btn fs-6 btn-orange flex-grow-1 text-white"><span class="placeholder"></span></button>
-          </div>
-        </div>
-      </div>
-<!-- END PLACEHOLDER -->
-    </div>
-  </div>
-  <!-- END CONTAINER -->
-  <!-- ENCABEZADO -->
+    <!-- ENCABEZADO -->
 
     <!-- ROPA -->
 
-  <!-- TEMPLATE CARD Original-->
-  <template id="template-card">
-    <div class="d-flex flex-column flex-grow-1 px-3">
-      <div class="card text-white text-center bg-dark">
-        <div class="card-header">
-          <h5 id="name">name:</h5>
-        </div>
-        <a id="url" class="link-light text-decoration-none">
-          <div class="card-body p-0">
-            <img id="img" src="" alt="" class="card-img-top w-50 my-3 img-fluid">
-            <p id="price">price:</p>
-            <p id="description_short">short description:</p>
+    <!-- TEMPLATE CARD Original-->
+    <template id="template-card">
+      <div class="d-flex flex-column flex-grow-1 px-3">
+        <div class="card text-white text-center bg-dark">
+          <div class="card-header">
+            <h5 id="name">name:</h5>
           </div>
-        </a>
-        <div class="card-footer d-flex flex-column gap-2 flex-md-row">
-          <button class="btn fs-6 btn-black flex-grow-1">Agregar al carrito</button>
-          <button class="btn fs-6 btn-orange flex-grow-1 text-white">Comprar</button>
+          <a id="url" class="link-light text-decoration-none">
+            <div class="card-body p-0">
+              <img
+                id="img"
+                src=""
+                alt=""
+                class="card-img-top w-50 my-3 img-fluid"
+              />
+              <p id="price">price:</p>
+              <p id="description_short">short description:</p>
+            </div>
+          </a>
+          <div class="card-footer d-flex flex-column gap-2 flex-md-row">
+            <button class="btn fs-6 btn-black flex-grow-1">
+              Agregar al carrito
+            </button>
+            <button class="btn fs-6 btn-orange flex-grow-1 text-white">
+              Comprar
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-  </template>
-  <!-- END TEMPLATE CARD Original -->
-
-  <!-- ROPA -->
-
-    <!-- ROPA -->
+    </template>
+    <!-- END TEMPLATE CARD Original -->
 
     <footer id="footer"></footer>
 
@@ -227,7 +296,7 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
-    <script src="../JS/productos.js"></script>
+    <script type="module" src="../JS/productos.js"></script>
     <script type="module" src="../JS/navbar.js"></script>
     <script type="module" src="../JS/footer.js"></script>
   </body>
