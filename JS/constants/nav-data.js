@@ -32,6 +32,7 @@ export const PROFILE = {
       `<li><a class="dropdown-item" href="${ROUTES.REGISTER}">Registrarse</a></li>`,
     ],
     online: [
+      `<li><a class="dropdown-item" href="/html/create-product.html">Crear Producto</a></li>`,
       `<li><button class="btn dropdown-item" id="btn-logout">Cerrar sesión</button></li>`,
     ],
   },

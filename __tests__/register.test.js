@@ -1,9 +1,15 @@
 import { jest } from "@jest/globals";
+import { ENDPOINTS } from "../JS/constants/endpoints.js";
 import { submitRegister } from "../JS/register.js";
 
 const mockProduct = {
-  username: "Test Item",
+  firstName: "John",
+  lastName: "Doe",
+  username: "Admin",
+  email: "admin@admin.com",
   password: "123456",
+  passwordConfirm: "123456",
+  phone: "1234567890",
 };
 
 const mockForm = {
@@ -80,13 +86,10 @@ describe("register.js", () => {
     // Fetch
     it("Debe ejecutar el fetch con los datos del formulario", async () => {
       await submitRegister(mockEvent);
-      expect(global.fetch).toHaveBeenCalledWith(
-        "https://mockend.com/alaanescobedo/db-server/users",
-        {
-          method: "POST",
-          body: JSON.stringify(mockProduct),
-        }
-      );
+      expect(global.fetch).toHaveBeenCalledWith(`${ENDPOINTS.AUTH_USER}`, {
+        method: "POST",
+        body: JSON.stringify(mockProduct),
+      });
       expect(global.fetch).toHaveBeenCalledTimes(1);
     });
     it("Debe llamar al metodo .json", async () => {

@@ -1,31 +1,29 @@
-const formElement = document.getElementById("register-form");
+import {
+  hideLoading,
+  showAlert,
+  showLoading,
+} from "./handlers/handle-alert.js";
+import { handleSubmitForm } from "./handlers/handle-submit-form.js";
+import { registerUser } from "./services/auth.service.js";
+import { setInLocalStorage } from "./services/local-storage.service.js";
 
 export const submitRegister = async (e) => {
   e.preventDefault();
-
   const currentForm = e.currentTarget;
-
-  const isValid = currentForm.checkValidity();
-  if (!isValid) return currentForm.classList.add("was-validated");
-  currentForm.classList.remove("was-validated");
-
-  const data = Object.fromEntries(new FormData(currentForm));
-
+  const formData = handleSubmitForm(currentForm);
+  if (!formData) return;
   try {
-    const response = await fetch(
-      "https://mockend.com/alaanescobedo/db-server/users",
-      {
-        body: JSON.stringify(data),
-        method: "POST",
-      }
-    );
-    const userData = await response.json();
-
-    localStorage.setItem("cur_user", JSON.stringify(userData));
+    showLoading();
+    const data = await registerUser(formData);
+    setInLocalStorage("cur_user", data);
     currentForm.reset();
     window.location.href = "/index.html";
   } catch (error) {
-    console.log(error);
+    showAlert({ status: "error", message: error?.message });
+  } finally {
+    hideLoading();
   }
 };
+
+const formElement = document.getElementById("register-form");
 formElement?.addEventListener("submit", submitRegister);
