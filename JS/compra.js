@@ -3,6 +3,7 @@ const totalProceso = document.getElementById("totalProceso");
 const toastLiveExample = document.getElementById("liveToast");
 const vaciarCarrito = document.getElementById("vaciarCarrito");
 const listaCompra = document.getElementById("listaCompra");
+let carrito;
 
 //Función para mostrar la lista de productos en compras.html
 function procesarPedido() {
@@ -20,7 +21,7 @@ function procesarPedido() {
         listaCompra.appendChild(row);
     } else {
         carrito.forEach(prod => {
-            const {description_short, img, price } = prod;
+            const { id, description_short, cantidad } = prod;
             const row = document.createElement('row');
             row.innerHTML += `
             <div class="col-12 col-md-7 d-flex border border-danger">
@@ -32,11 +33,11 @@ function procesarPedido() {
                 </div>
             </div>
             <div class="col-3 col-md-3 border border-danger">
-                <button type="button" class="btn btn-orange p-0">
+                <button onclick="reducirCantidad(${id})" class="btn btn-orange p-0">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-dash" viewBox="0 0 16 18"><path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"></path></svg>
                 </button>
-                <span>Cant</span>
-                <button type="button" class="btn btn-orange p-0">
+                <span id="spanCantidad${id}">${cantidad}</span>
+                <button onclick="aumentarCantidad(${id})" class="btn btn-orange p-0">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-plus" viewBox="0 0 16 18"><path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path></svg>
                 </button>
             </div>
@@ -49,6 +50,30 @@ function procesarPedido() {
     }
     totalProceso.innerText = carrito.reduce((acc, prod) => acc + prod.price * prod.cantidad, 0);
 }
+
+function aumentarCantidad(id) {
+    const item = carrito.find((prod) => prod.id === id);
+    item.cantidad++;
+    let stringCantidad = `spanCantidad${id}`;
+    const spanCantidad = document.getElementById(stringCantidad);
+    spanCantidad.innerText = item.cantidad;
+    guardarStorage();
+};
+
+function reducirCantidad(id) {
+    const item = carrito.find((prod) => prod.id === id);
+    if (item.cantidad === 1) {
+        carrito = carrito.filter((prod) => prod.id !== id);
+        listaCompra.replaceChildren();
+        procesarPedido();
+    } else {
+        item.cantidad--;
+        let stringCantidad = `spanCantidad${id}`;
+        const spanCantidad = document.getElementById(stringCantidad);
+        spanCantidad.innerText = item.cantidad;
+    }
+    guardarStorage();
+};
 
 //Función para crear los elementos de la alerta de acuerdo al mensaje
 const alerta = (encabezado, cuerpo, tipoEncab, svg) => {
@@ -84,7 +109,7 @@ function guardarStorage() {
 
 //Aqui ejecutamos nuestra función fetchData
 document.addEventListener('DOMContentLoaded', () => {
-    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    carrito = JSON.parse(localStorage.getItem('carrito')) || new Array();
     procesarPedido();
 });
 
@@ -99,6 +124,10 @@ finalizarCompra.addEventListener('click', () => { //Al hacer click en botón se 
         ); //Alerta de error
         setTimeout(remover, 6000);
     } else {
+        localStorage.removeItem("carrito");
+        carrito=[]
+        listaCompra.replaceChildren();
+        procesarPedido();
         alerta(
             "¡GRACIAS POR ELEGIRNOS PARA ENCHULAR TU PLAYERA!",
             "Hemos recibido tu pedido y pronto recibirás tu playera",
@@ -114,6 +143,6 @@ vaciarCarrito.addEventListener('click', () => {//Al hacer click en botón se rea
     cantidad = 0;
     carrito = [];//Reinicia arreglo del carrito
     guardarStorage();
-    procesarPedido();
     listaCompra.replaceChildren();
+    procesarPedido();
 })
