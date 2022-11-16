@@ -50,29 +50,35 @@ export const paginationButton = (page, items) => {
     "btn-outline-dark",
     "text-secondary",
     "btn-lg",
-    "fs-bold"
+    "fs-bold",
+    "bg-black"
   );
 
   li.appendChild(button);
 
   button.innerText = page;
 
-  if (current_page == page) button.classList.add("active");
+  if (current_page == page) {
+    button.classList.remove("bg-black");
+    button.classList.add("active", "bg-dark");
+  }
 
   button.addEventListener("click", function () {
     current_page = page;
     displayList(items, list_element, rows, current_page);
 
     let current_btn = document.querySelector("button.active");
-    current_btn.classList.remove("active");
+    current_btn.classList.add("bg-black");
+    current_btn.classList.remove("active", "bg-dark");
 
-    button.classList.add("active");
+    button.classList.remove("bg-black");
+    button.classList.add("active", "bg-dark");
   });
 
   return button;
 };
 
-const createProductCard = ({ id, name, img, price, description_short }) => {
+const createProductCard = ({ id, name, img, price }) => {
   document.addEventListener("click", function (e) {
     if (e.target && e.target.id === `btnAddToCart-${id}`) {
       addProductToCart(id);
@@ -81,19 +87,18 @@ const createProductCard = ({ id, name, img, price, description_short }) => {
 
   return `
     <div class="d-flex flex-column px-3 col-12 col-sm-6 col-lg-4">
-      <div class="card text-white text-center bg-dark">
-        <div class="card-header">
+      <div class="card text-white text-center bg-dark py-3 flex-grow-1">
+        <div class="card-header flex-grow-1">
           <h5>${name}</h5>
         </div>
-        <a class="link-light text-decoration-none">
+        <a href="/html/producto-info.html?id=${id}" class="link-light text-decoration-none">
           <div class="card-body p-0">
             <img
               src="${img}"
               alt="${name}-img"
               class="card-img-top w-50 my-3 img-fluid"
             />
-            <p>${price}</p>
-            <p>${description_short}</p>
+            <p class="fs-4 fw-bold">${price}</p>
           </div>
         </a>
         <div class="card-footer d-flex flex-column gap-2 flex-md-row">

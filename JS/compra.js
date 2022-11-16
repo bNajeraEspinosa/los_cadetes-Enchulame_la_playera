@@ -5,7 +5,6 @@ import {
   setInLocalStorage,
 } from "./services/local-storage.service.js";
 import { formatCurrency } from "./utils/format-currency.js";
-import { getProductInfo } from "./services/products.service.js";
 
 const finalizarCompra = document.getElementById("finalizarCompra");
 const totalProceso = document.getElementById("totalProceso");
@@ -19,11 +18,13 @@ function procesarPedido(carrito) {
     const row = document.createElement("div");
     row.classList.add("row", "my-2");
     row.innerHTML += `
-            <div class="col d-flex justify-content-center">
-                <h5>Tu carrito está vacío</h5>
-            </div>
-            <div class="col d-flex justify-content-center">
-                <p>¿No sabes qué comprar? ¡Miles de productos te esperan!</p>
+            <div class="container">
+              <div class="col d-flex justify-content-center">
+                  <h5>Tu carrito está vacío</h5>
+              </div>
+              <div class="col d-flex justify-content-center">
+                  <p>¿No sabes qué comprar? ¡Miles de productos te esperan!</p>
+              </div>
             </div>
         `;
     listaCompra.appendChild(row);
@@ -36,20 +37,21 @@ function procesarPedido(carrito) {
       document.addEventListener("click", function (e) {
         const btn = e.target?.closest("button");
         if (!btn) return;
+        console.log(btn);
         if (btn.id === `btnReduceQuantity-${id}`) reducirCantidad(id);
         if (btn.id === `btnAddQuantity-${id}`) aumentarCantidad(id);
       });
 
       row.innerHTML += `
             <div class="col-12 col-md-7 d-flex">
-                <div class="col-3">
+                <div class="col-4 text-center">
                     <img src="https://via.placeholder.com/75">
                 </div>
-                <div class="col-9">
+                <div class="col-8 p-2">
                     ${"Sin descripción"}
                 </div>
             </div>
-            <div class="col-3 col-md-3">
+            <div class="col-4 col-md-3 text-center ps-3 ps-sm-4">
                 <button id="btnReduceQuantity-${id}" class="btn btn-orange p-0">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-dash" viewBox="0 0 16 18"><path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"></path></svg>
                 </button>
@@ -58,19 +60,36 @@ function procesarPedido(carrito) {
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-plus" viewBox="0 0 16 18"><path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path></svg>
                 </button>
             </div>
-            <div class="col-9 col-md-2">
-                $100
-            </div>
+            <div class="col-8 col-md-2" id="subtotal-${id}"></div>
         `;
       listaCompra.appendChild(row);
+      refreshSubtotal(id);
     });
   }
-  const total = carrito.reduce(
-    (acc, prod) => acc + prod.price * prod.cantidad,
-    0
-  );
-  totalProceso.innerText = formatCurrency({ format: "mxn", amount: total });
+  refreshTotal();
 }
+
+const refreshSubtotal = (id) => {
+  const subtotalElement = document?.getElementById(`subtotal-${id}`);
+  if (!subtotalElement) return;
+  const carrito = getFromLocalStorage("cart") ?? [];
+  const productSubTotal = carrito.find((prod) => prod.id === id);
+  const subtotal = 299 * productSubTotal.quantity;
+  const subTotalFormatted = formatCurrency({
+    format: "mxn",
+    amount: subtotal ?? 0,
+  });
+  subtotalElement.innerText = subTotalFormatted;
+};
+
+const refreshTotal = () => {
+  const totalElement = document?.getElementById("totalProceso");
+  if (!totalElement) return;
+  const carrito = getFromLocalStorage("cart") ?? [];
+  const total = carrito.reduce((acc, prod) => acc + prod.quantity * 299, 0);
+  const totalFormatted = formatCurrency({ format: "mxn", amount: total ?? 0 });
+  totalElement.innerText = totalFormatted;
+};
 
 function aumentarCantidad(id) {
   const carrito = getFromLocalStorage("cart") ?? [];
@@ -82,6 +101,8 @@ function aumentarCantidad(id) {
   spanCantidad.innerText = item.quantity;
 
   setInLocalStorage("cart", carrito);
+  refreshSubtotal(id);
+  refreshTotal();
 }
 
 function reducirCantidad(id) {
@@ -100,6 +121,8 @@ function reducirCantidad(id) {
     spanCantidad.innerText = item.quantity;
   }
   setInLocalStorage("cart", carrito);
+  refreshSubtotal(id);
+  refreshTotal();
 }
 
 //Función para crear los elementos de la alerta de acuerdo al mensaje
