@@ -1,7 +1,7 @@
 /* TODO: Establecer un color definitivo */
 .nav,
 .footer {
-  background: #333;
+  background: rgb(222, 132, 27);
 }
 
 .nav.icons {
