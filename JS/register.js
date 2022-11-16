@@ -1,6 +1,6 @@
 const formElement = document.getElementById("register-form");
 
-export const submitRegister = async (e) => {
+const submitRegister = async (e) => {
   e.preventDefault();
 
   const currentForm = e.currentTarget;
