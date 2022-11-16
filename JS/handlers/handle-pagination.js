@@ -85,7 +85,7 @@ const createProductCard = ({ id, name, img, price, description_short }) => {
         <div class="card-header">
           <h5>${name}</h5>
         </div>
-        <a class="link-light text-decoration-none">
+        <a href="/html/producto-info.html?id=${id}" class="link-light text-decoration-none"></a>
           <div class="card-body p-0">
             <img
               src="${img}"
