@@ -1,11 +1,11 @@
 export const loadFooter = () => {
   const navbarHTML = `
   <!-- Footer -->
-    <footer class="text-center text-white" style="background-color: #333">
+  <div class="footer text-center text-white">
     <!-- Grid container -->
     <div class="container">
       <!-- Section: Links -->
-      <section class="mt-5">
+      <section>
         <!-- Grid row-->
         <div class="row text-center d-flex justify-content-center pt-5 g-2">
           <!-- Grid column -->
@@ -69,10 +69,8 @@ export const loadFooter = () => {
     </div>
     <!-- Grid container -->
 
-  </footer>
+  </div>
   <!-- Footer -->
-</div>
-<!-- End of .container -->
 `;
   document.getElementById("footer").innerHTML = navbarHTML;
 };
