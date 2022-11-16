@@ -1,4 +1,5 @@
-import { NAV_LINKS, PROFILE } from "./constants/nav-data.js";
+import { NAV_LINKS, PROFILE, CART } from "./constants/nav-data.js";
+import { getFromLocalStorage } from "./services/local-storage.service.js";
 
 const generateNavLink = (href, label) => `
   <li class="tab">
@@ -25,7 +26,7 @@ export const generateNavDropdownBtn = (label, path, list) => `
   </div>
 `;
 
-const loadNavbar = (user) => {
+const loadNavbar = (user, cartLength) => {
   const navbarHTML = `
     <div class="navbar nav navbar-expand-lg navbar-light justify-content-center p-0" >
       <div class="container-fluid py-2 w-90">
@@ -63,7 +64,14 @@ const loadNavbar = (user) => {
       </ul>
 
       <!-- ICONOS DE CARRITO Y LOGIN -->
-        <div class="d-flex justify-content-center gap-3 py-2 align-items-center" >
+        <div class="d-flex justify-content-center gap-3 py-2 align-items-center">
+        <a href="/HTML/compra.html" class="text-decoration-none" id="linkCarrito">
+          <div class="d-flex gap-2 align-items-center btn" role="button">
+            <img src="/assets/icons/${CART.icon}" class="fs-1 filter-invert" />
+            <span class="fw-semibold text-white fs-6 m-0" id="carritoSpan">Carrito</span>
+            <span class="badge rounded-pill badge-notification bg-danger" id="cart-total">${cartLength}</span>
+          </div>
+        </a>
         ${generateNavDropdownBtn(
           user ? user.username : PROFILE.label,
           PROFILE.icon,
@@ -79,12 +87,13 @@ const loadNavbar = (user) => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  const user = JSON.parse(localStorage.getItem("cur_user"));
+  const user = getFromLocalStorage("cur_user");
+  const cart = getFromLocalStorage("cart") ?? [];
   const offlinePages = ["/html/login.html", "/html/register.html"];
   const currentPage = window.location.pathname;
   if (offlinePages.includes(currentPage.toLocaleLowerCase()) && user)
     location.replace("/index.html");
-  loadNavbar(user);
+  loadNavbar(user, cart.length);
 
   if (user) {
     const btnLogoutEl = document.getElementById("btn-logout");

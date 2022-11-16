@@ -50,6 +50,19 @@
           Occurrio un error tratanto de iniciar sesion
         </div>
         <!-- DISPLAY STATUS -->
+
+        <!-- MENSAJE DE ALERTA -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+          <div
+            id="liveToast"
+            class="toast"
+            role="alert"
+            aria-live="assertive"
+            aria-atomic="true"
+          ></div>
+        </div>
+        <!-- MENSAJE DE ALERTA -->
+
         <!-- FORM -->
         <form class="row g-4 needs-validation" id="login-form" novalidate>
           <!-- INPUTS -->
@@ -132,7 +145,5 @@
     <script type="module" src="../JS/navbar.js"></script>
     <script type="module" src="../JS/footer.js"></script>
     <script type="module" src="../JS/loginapi.js"></script>
-    <!-- SCRIPT GOOGLE -->
-    <!--   <script src="https://apis.google.com/js/platform.js" async defer></script> -->
   </body>
 </html>
