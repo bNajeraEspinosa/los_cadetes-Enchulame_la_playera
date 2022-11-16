@@ -1,5 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../CSS/estilos.css" />
+  </head>
 
   <body class="d-flex flex-column" style="height: 100vh">
     <!-- NAVBAR -->
@@ -18,22 +35,23 @@
     </div>
     <!-- MENSAJE DE ALERTA -->
 
-    <!-- ENCABEZADO -->
     <main class="my-3">
       <div class="text-center my-4">
+        <!-- ENCABEZADO -->
         <div class="page__title-container">
           <h1 class="page__title text-secondary font-size-md">Productos</h1>
           <span class="page__title-span w-100 text-secondary font-size-md"
             >Productos</span
           >
         </div>
+        <!-- ENCABEZADO -->
       </div>
       <!--CONTAINER  -->
       <div class="container w-90 flex-grow-1">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-5" id="items">
+        <div class="row g-5" id="items">
           <!-- PLACEHOLDERS -->
           <!-- PLACEHOLDER CARD 1 -->
-          <div class="d-flex flex-column flex-grow-1 px-3">
+          <div class="d-flex flex-column px-3 col-12 col-sm-6 col-lg-4">
             <div class="card text-white text-center bg-dark" aria-hidden="true">
               <div class="card-header">
                 <h5 class="card-title placeholder-glow">
@@ -66,7 +84,7 @@
             </div>
           </div>
           <!-- PLACEHOLDER CARD 2 -->
-          <div class="d-flex flex-column flex-grow-1 px-3">
+          <div class="d-flex flex-column px-3 col-12 col-sm-6 col-lg-4">
             <div class="card text-white text-center bg-dark" aria-hidden="true">
               <div class="card-header">
                 <h5 class="card-title placeholder-glow">
@@ -99,7 +117,7 @@
             </div>
           </div>
           <!-- PLACEHOLDER CARD 3 -->
-          <div class="d-flex flex-column flex-grow-1 px-3">
+          <div class="d-flex flex-column px-3 col-12 col-sm-6 col-lg-4">
             <div class="card text-white text-center bg-dark" aria-hidden="true">
               <div class="card-header">
                 <h5 class="card-title placeholder-glow">
@@ -132,7 +150,7 @@
             </div>
           </div>
           <!-- PLACEHOLDER CARD 4 -->
-          <div class="d-flex flex-column flex-grow-1 px-3">
+          <div class="d-flex flex-column px-3 col-12 col-sm-6 col-lg-4">
             <div class="card text-white text-center bg-dark" aria-hidden="true">
               <div class="card-header">
                 <h5 class="card-title placeholder-glow">
@@ -165,7 +183,7 @@
             </div>
           </div>
           <!-- PLACEHOLDER CARD 5 -->
-          <div class="d-flex flex-column flex-grow-1 px-3">
+          <div class="d-flex flex-column px-3 col-12 col-sm-6 col-lg-4">
             <div class="card text-white text-center bg-dark" aria-hidden="true">
               <div class="card-header">
                 <h5 class="card-title placeholder-glow">
@@ -198,7 +216,7 @@
             </div>
           </div>
           <!-- PLACEHOLDER CARD 6 -->
-          <div class="d-flex flex-column flex-grow-1 px-3">
+          <div class="d-flex flex-column px-3 col-12 col-sm-6 col-lg-4">
             <div class="card text-white text-center bg-dark" aria-hidden="true">
               <div class="card-header">
                 <h5 class="card-title placeholder-glow">
@@ -232,45 +250,17 @@
           </div>
           <!-- END PLACEHOLDER -->
         </div>
+        <nav>
+          <ul
+            class="pagination justify-content-center gap-3 my-3"
+            id="pagination"
+          ></ul>
+        </nav>
       </div>
       <!-- END CONTAINER -->
     </main>
 
-    <!-- ENCABEZADO -->
-
-    <!-- ROPA -->
-
-    <!-- TEMPLATE CARD Original-->
-    <template id="template-card">
-      <div class="d-flex flex-column flex-grow-1 px-3">
-        <div class="card text-white text-center bg-dark">
-          <div class="card-header">
-            <h5 id="name">name:</h5>
-          </div>
-          <a id="url" class="link-light text-decoration-none">
-            <div class="card-body p-0">
-              <img
-                id="img"
-                src=""
-                alt=""
-                class="card-img-top w-50 my-3 img-fluid"
-              />
-              <p id="price">price:</p>
-              <p id="description_short">short description:</p>
-            </div>
-          </a>
-          <div class="card-footer d-flex flex-column gap-2 flex-md-row">
-            <button class="btn fs-6 btn-black flex-grow-1">
-              Agregar al carrito
-            </button>
-            <button class="btn fs-6 btn-orange flex-grow-1 text-white">
-              Comprar
-            </button>
-          </div>
-        </div>
-      </div>
-    </template>
-    <!-- END TEMPLATE CARD Original -->
+    <footer id="footer"></footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
