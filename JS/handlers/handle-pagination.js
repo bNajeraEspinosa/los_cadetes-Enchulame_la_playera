@@ -1,5 +1,6 @@
+import { addProductToCart } from "../services/local-cart.service.js";
+
 const list_element = document.getElementById("items");
-const templateCard = document.getElementById("template-card").content;
 
 //total de items
 let current_page = 1;
@@ -17,23 +18,11 @@ export const displayList = (items, wrapper, rows_per_page, page) => {
   let end = start + rows_per_page;
 
   let paginatedItems = items.slice(start, end);
-
   // Recorrer el arreglo de productos
-  const fragmento = document.createDocumentFragment();
-  paginatedItems.forEach((producto) => {
-    templateCard.getElementById("name").textContent = producto.name;
-    templateCard.getElementById("img").setAttribute("src", producto.img);
-    templateCard
-      .getElementById("url")
-      .setAttribute("href", `/html/producto-info.html?id=${producto.id}`);
-    templateCard.getElementById("price").textContent = producto.price;
-    templateCard.getElementById("description_short").textContent =
-      producto.description_short;
-    const clonar = templateCard.cloneNode(true);
-    fragmento.appendChild(clonar);
-  });
-
-  wrapper.appendChild(fragmento);
+  const productList = paginatedItems.map((producto) =>
+    createProductCard(producto)
+  );
+  wrapper.innerHTML = productList.join("");
 };
 
 export const setupPagination = (items, wrapper, rows_per_page) => {
@@ -81,4 +70,41 @@ export const paginationButton = (page, items) => {
   });
 
   return button;
+};
+
+const createProductCard = ({ id, name, img, price, description_short }) => {
+  document.addEventListener("click", function (e) {
+    if (e.target && e.target.id === `btnAddToCart-${id}`) {
+      addProductToCart(id);
+    }
+  });
+
+  return `
+    <div class="d-flex flex-column px-3 col-12 col-sm-6 col-lg-4">
+      <div class="card text-white text-center bg-dark">
+        <div class="card-header">
+          <h5>${name}</h5>
+        </div>
+        <a class="link-light text-decoration-none">
+          <div class="card-body p-0">
+            <img
+              src="${img}"
+              alt="${name}-img"
+              class="card-img-top w-50 my-3 img-fluid"
+            />
+            <p>${price}</p>
+            <p>${description_short}</p>
+          </div>
+        </a>
+        <div class="card-footer d-flex flex-column gap-2 flex-md-row">
+          <button id="btnAddToCart-${id}" class="btn fs-6 btn-black flex-grow-1">
+            Agregar al carrito
+          </button>
+          <button class="btn fs-6 btn-orange flex-grow-1 text-white">
+            Comprar
+          </button>
+        </div>
+      </div>
+    </div>
+  `;
 };
