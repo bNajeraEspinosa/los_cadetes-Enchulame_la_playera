@@ -12,3 +12,32 @@
   outline: none;
   border-color: var(--color-contact);
 }
+
+.checkboxes {
+  position: absolute;
+  opacity: 100;
+  cursor: pointer;
+  height: 5;
+  width: 5;
+  box-shadow: 0px 0px 3px 3px var(--color-contact);
+}
+
+.checkboxes:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 3px 3px var(--color-contact);
+}
+
+.checkboxes:checked {
+  background-color: black;
+  box-shadow: 0px 0px 3px 3px var(--color-contact);
+}
+
+.radios:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 3px 3px var(--color-contact);
+}
+
+.radios:checked {
+  background-color: var(--color-contact);
+  box-shadow: 0px 0px 3px 3px var(--color-contact);
+}
