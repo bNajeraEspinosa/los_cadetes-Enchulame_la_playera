@@ -11,7 +11,6 @@ export const submitCheckout = async (e) => {
     try {
         showLoading();
         const data = await payment(formData);
-        console.log(data)
         setInLocalStorage("payment", data);
         currentForm.reset();
     } catch (error) {
