@@ -9,23 +9,23 @@
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../CSS/estilos.css" />
-    <title>Compra - Enchúlame La Playera</title>
+    <link rel="stylesheet" href="../CSS/estilos.css"/>
+    <title>Pago - Enchúlame La Playera</title>
 </head>
 
 <body>
     <nav id="navbar"></nav>
-    <!-- Container exterior con borde -->
+    <!-- CONTAINER EXTERIOR CON BORDE -->
     <main class="container my-5 flex-grow-1 align-items-center w-90 border our-border p-4 border-dark bg-dark">
-        <!-- Container para elementos -->
+        <!-- CONTAINER PARA ELEMENTOS -->
         <div class="row justify-content-center align-items-center h-100 d-flex flex-column">
             <!-- TITULO -->
             <div class="col-12 m-auto text-center g-4">
                 <div class="page__title-container">
                     <h1 class="page__title text-center contact font-size-md" id="tituloCarrito">
-                        PAGO
+                        REALIZAR PAGO
                     </h1>
-                    <span class="page__title-span w-100 font-size-md">PAGO</span>
+                    <span class="page__title-span w-100 font-size-md">REALIZAR PAGO</span>
                 </div>
             </div>
             <!-- Separación -->
@@ -45,14 +45,14 @@
             </div>
             <!-- LOADER -->
 
-            <!-- Formulario de pagos -->
+            <!-- FORMULARIO DE PAGO -->
             <div class="flex-grow-1 my-2">
-                <h4 class="mb-3">Datos de pago</h4>
+                <h4 class="mb-3">Datos de envío</h4>
                 <form class="needs-validation" id="checkout-form" novalidate>
                     <div class="row g-3">
                         <div class="col-sm-6">
                             <label for="firstName" class="form-label">Nombres(s)</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="Nombre(s)" value=""
+                            <input type="text" class="form-control inputs" id="firstName" placeholder="Nombre(s)" value=""
                                 required>
                             <div class="invalid-feedback">
                                 Campo obligatorio.
@@ -61,7 +61,7 @@
 
                         <div class="col-sm-6">
                             <label for="lastName" class="form-label">Apellidos</label>
-                            <input type="text" class="form-control" id="lastName" placeholder="Apellidos" value=""
+                            <input type="text" class="form-control inputs" id="lastName" placeholder="Apellidos" value=""
                                 required="">
                             <div class="invalid-feedback">
                                 Campo obligatorio.
@@ -91,7 +91,7 @@
                         <div class="col-12">
                             <label for="address" class="form-label">Calle, número exterior e interior <span
                                     class="text-muted"><I>(Opcional)</I></span></label>
-                            <input type="text" class="form-control" id="address" placeholder="Calle #999" required="">
+                            <input type="text" class="form-control inputs" id="address" placeholder="Calle #999" required="">
                             <div class="invalid-feedback">
                                 Campo obligatorio.
                             </div>
@@ -100,12 +100,12 @@
                         <div class="col-12">
                             <label for="address2" class="form-label">Colonia<span
                                     class="text-muted"><I>(Opcional)</I></span></label>
-                            <input type="text" class="form-control" id="address2" placeholder="Colonia">
+                            <input type="text" class="form-control inputs" id="address2" placeholder="Colonia">
                         </div>
 
                         <div class="col-md-5">
                             <label for="country" class="form-label">País</label>
-                            <select class="form-select" id="country" required="">
+                            <select class="form-select inputs" id="country" required="">
                                 <option value="">Elige el país...</option>
                                 <option>México</option>
                             </select>
@@ -116,7 +116,7 @@
 
                         <div class="col-md-4">
                             <label for="state" class="form-label">Estado</label>
-                            <select class="form-select" id="state" required="">
+                            <select class="form-select inputs" id="state" required="">
                                 <option value="">Elige el estado...</option>
                                 <option>Ciudad de México</option>
                                 <option>México</option>
@@ -131,7 +131,7 @@
 
                         <div class="col-md-3">
                             <label for="zip" class="form-label">Código Postal</label>
-                            <input type="text" class="form-control" id="zip" placeholder="Código Postal" required>
+                            <input type="text" class="form-control inputs" id="zip" placeholder="Código Postal" required>
                             <div class="invalid-feedback">
                                 Campo obligatorio.
                             </div>
@@ -141,7 +141,7 @@
                     <hr class="my-4">
 
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="saveInfo">
+                        <input type="checkbox" class="form-check-input checkboxes" id="saveInfo">
                         <label class="form-check-label" for="saveInfo">Guarda esta información para mi siguiente
                             compra</label>
                     </div>
@@ -152,12 +152,12 @@
 
                     <div class="my-3">
                         <div class="form-check">
-                            <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked=""
+                            <input id="credit" name="paymentMethod" type="radio" class="form-check-input radios" checked=""
                                 required="">
                             <label class="form-check-label" for="credit">Tarjeta de crédito</label>
                         </div>
                         <div class="form-check">
-                            <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required="">
+                            <input id="debit" name="paymentMethod" type="radio" class="form-check-input radios" required="">
                             <label class="form-check-label" for="debit">Tarjeta de débito</label>
                         </div>
                     </div>
@@ -165,7 +165,7 @@
                     <div class="row gy-3">
                         <div class="col-md-6">
                             <label for="ccName" class="form-label">Nombre en tarjeta</label>
-                            <input type="text" class="form-control" id="ccName" placeholder="Nombre en tarjeta"
+                            <input type="text" class="form-control inputs" id="ccName" placeholder="Nombre en tarjeta"
                                 required="">
                             <small class="text-muted">Nombre completo como se muestra en la tarjeta</small>
                             <div class="invalid-feedback">
@@ -175,7 +175,7 @@
 
                         <div class="col-md-6">
                             <label for="ccNumber" class="form-label">Número de tarjeta</label>
-                            <input type="text" class="form-control" id="ccNumber" placeholder="1234 1234 1234 1234" required="">
+                            <input type="text" class="form-control inputs" id="ccNumber" placeholder="1234 1234 1234 1234" required="">
                             <div class="invalid-feedback">
                                 Campo obligatorio
                             </div>
@@ -183,7 +183,7 @@
 
                         <div class="col-md-3">
                             <label for="ccExpiration" class="form-label">Expiración</label>
-                            <input type="text" class="form-control" id="ccExpiration" placeholder="07/24" required>
+                            <input type="text" class="form-control inputs" id="ccExpiration" placeholder="07/24" required>
                             <div class="invalid-feedback">
                                 Campo obligatorio
                             </div>
@@ -191,7 +191,7 @@
 
                         <div class="col-md-3">
                             <label for="ccCvv" class="form-label">CVV</label>
-                            <input type="text" class="form-control" id="ccCvv" placeholder="123" required>
+                            <input type="text" class="form-control inputs" id="ccCvv" placeholder="123" required>
                             <div class="invalid-feedback">
                                 Campo obligatorio
                             </div>
@@ -200,12 +200,14 @@
 
                     <hr class="my-4">
 
-                    <button class="w-100 btn btn-primary btn-lg" type="submit">Realizar pago</button>
+                    <button class="btn btn-secondary w-100 border border-2 border border-dark fw-bold" type="submit">Realizar pago</button>
                 </form>
             </div>
+            <!-- END FORMULARIO DE PAGO -->
         </div>
-
+        <!-- END CONTAINER PARA ELEMENTOS -->
     </main>
+    <!-- END CONTAINER EXTERIOR CON BORDE -->
 
     <footer class="mt-2" id="footer"></footer>
 
