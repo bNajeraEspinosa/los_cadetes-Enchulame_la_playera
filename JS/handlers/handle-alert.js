@@ -16,7 +16,17 @@ export const showLoading = () => {
   loaderElement?.classList.remove("d-none");
 };
 
+export const showImgLoading = () => {
+  const loaderElement = document.getElementById("notify-form-loader-img");
+  loaderElement?.classList.remove("d-none");
+};
+
 export const hideLoading = () => {
   const loaderElement = document.getElementById("notify-form-loader");
+  loaderElement?.classList.add("d-none");
+};
+
+export const hideImgLoading = () => {
+  const loaderElement = document.getElementById("notify-form-loader-img");
   loaderElement?.classList.add("d-none");
 };

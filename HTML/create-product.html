@@ -66,25 +66,10 @@
                   name="name"
                   placeholder="Nombre del producto"
                   required
+                  autocomplete="off"
                 />
                 <div class="invalid-feedback">
                   Campo obligatorio. Ingresa el nombre del producto
-                </div>
-              </div>
-              <div class="col-12">
-                <label for="descriptionShort" class="form-label"
-                  >Descripción corta</label
-                >
-                <input
-                  type="text"
-                  class="form-control inputs"
-                  id="descriptionShort"
-                  name="descriptionShort"
-                  placeholder="Descripción corta"
-                  required
-                />
-                <div class="invalid-feedback">
-                  Campo obligatorio. Ingresa una descripción corta del producto
                 </div>
               </div>
               <div class="col-6">
@@ -119,11 +104,11 @@
                 <div>
                   <label for="img" class="form-label">Imagenes</label>
                   <input
-                    type="file"
+                    type="text"
                     class="form-control inputs"
                     id="img"
                     name="img"
-                    placeholder="Imagen"
+                    placeholder="Url"
                     required
                     multiple
                   />
@@ -142,18 +127,45 @@
                   required
                 >
                   <option selected>Escoge una categoria</option>
-                  <option value="1">Anime</option>
-                  <option value="2">Musica</option>
-                  <option value="3">Texto</option>
-                  <option value="4">Caricaturas</option>
-                  <option value="5">Cine</option>
+                  >
                 </select>
                 <div class="invalid-feedback">
                   Campo obligatorio. Ingresa una categoría
                 </div>
               </div>
+              <div class="col-12">
+                <label for="sizes" class="form-label">Tamaño</label>
+                <select
+                  id="sizes"
+                  name="sizes"
+                  class="form-select"
+                  aria-label="Default select example"
+                  required
+                >
+                  <option selected>Escoge un tamaño</option>
+                  >
+                </select>
+                <div class="invalid-feedback">
+                  Campo obligatorio. Ingresa un tamaño
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="colors" class="form-label">Color</label>
+                <select
+                  id="colors"
+                  name="colors"
+                  class="form-select"
+                  aria-label="Default select example"
+                  required
+                >
+                  <option selected>Escoge un color</option>
+                  >
+                </select>
+                <div class="invalid-feedback">
+                  Campo obligatorio. Ingresa un color
+                </div>
+              </div>
               <!-- INPUTS -->
-
               <hr />
 
               <!-- SUBMIT -->
@@ -183,11 +195,19 @@
           <!-- FORM-CONTAINER -->
           <!-- PREVIEW IMAGE -->
           <div class="d-none d-sm-block col-12 col-sm-4 align-self-center">
-            <img
-              src="../assets/img/AVATAR.png"
-              alt="undraw_add_file2_gvbb"
-              class="img-fluid"
-            />
+            <div class="d-none text-center my-3" id="notify-form-loader-img">
+              <div class="spinner-border text-tertiary-soft" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+            <div id="img-container">
+              <img
+                src="https://via.placeholder.com/500"
+                class="img-fluid"
+                alt="..."
+                id="img-preview"
+              />
+            </div>
           </div>
           <!-- PREVIEW IMAGE -->
         </div>

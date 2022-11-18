@@ -15,7 +15,7 @@ const currencies = {
  */
 export const formatCurrency = ({ amount, format }) => {
   const currency = currencies[format];
-  if (!currency) return;
+  if (!currency || !amount) return null;
   const { locale, currency: currencyCode, style } = currency;
 
   return new Intl.NumberFormat(locale, {
