@@ -34,6 +34,18 @@
         <!-- TITLE -->
         <hr class="my-3" />
 
+        <!-- MENSAJE DE ALERTA -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+          <div
+            id="liveToast"
+            class="toast"
+            role="alert"
+            aria-live="assertive"
+            aria-atomic="true"
+          ></div>
+        </div>
+        <!-- MENSAJE DE ALERTA -->
+
         <!-- DISPLAY STATUS -->
         <div class="d-none text-center my-3" id="notify-form-loader">
           <div class="spinner-border text-tertiary-soft" role="status">
@@ -51,13 +63,24 @@
         <!-- FORM -->
         <form class="row g-4 needs-validation" id="register-form" novalidate>
           <!-- INPUTS -->
-          <div class="col-12">
+          <div class="col-12 col-sm-6">
             <input
               type="text"
               class="form-control inputs"
-              id="fullName"
-              name="fullName"
-              placeholder="Nombre Completo"
+              id="firstName"
+              name="firstName"
+              placeholder="Nombre"
+              required
+            />
+            <div class="invalid-feedback">Campo obligatorio</div>
+          </div>
+          <div class="col-12 col-sm-6">
+            <input
+              type="text"
+              class="form-control inputs"
+              id="lastName"
+              name="lastName"
+              placeholder="Apellido(s)"
               required
             />
             <div class="invalid-feedback">Campo obligatorio</div>
@@ -99,7 +122,7 @@
             <input
               type="password"
               class="form-control inputs"
-              id="confirm-password"
+              id="passwordConfirm"
               name="password"
               placeholder="Confirmar Password"
               required
@@ -134,7 +157,7 @@
         <!-- LOGIN -->
         <div class="row mt-4">
           <div class="col-12 text-center">
-            <a href="/src/HTML/login.html" class="text-white-50 link-light fs-6"
+            <a href="/HTML/login.html" class="text-white-50 link-light fs-6"
               >¿Ya tienes una cuenta?
             </a>
           </div>
@@ -151,7 +174,7 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
-    <script src="/JS/register.js"></script>
+    <script type="module" src="/JS/register.js"></script>
     <script type="module" src="../JS/navbar.js"></script>
     <script type="module" src="../JS/footer.js"></script>
   </body>

@@ -1,63 +1,84 @@
-//Se leen todos los elementos del formulario
-const formulario = document.getElementById("form-create-products");
-//Se lee el elemento para la alerta de producto registrado
-const toastLiveExample = document.getElementById('liveToast');
+import {
+  hideImgLoading,
+  hideLoading,
+  showAlert,
+  showImgLoading,
+  showLoading,
+} from "./handlers/handle-alert.js";
+import { handleSubmitForm } from "./handlers/handle-submit-form.js";
+import {
+  createProduct,
+  getAllProductsCategories,
+  getAllProductsColors,
+  getAllProductsSizes,
+} from "./services/products.service.js";
 
-//Función para crear los elementos de la alerta de acuerdo al mensaje
-const alerta = (encabezado, cuerpo, tipoEncab, svg) => {
-    const contAlerta = document.createElement('div') //creación del div
-    contAlerta.innerHTML = [ //HTML del nuevo div
-        `<div class="toast-header text-${tipoEncab}" id="encabToast">`,
-        `<img src="${svg}" class="rounded me-2">`,
-        `<strong class="me-auto">${encabezado}</strong>`,
-        '<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>',
-        '</div>',
-        `<div class="toast-body text-dark" id="cuerpoToast">${cuerpo}</div>`
-    ].join('') //Unión de los elementos del arreglo en una cadena
-    toastLiveExample?.append(contAlerta) //Se agrega nuevo div dentro de otro div
-
-    const toast = new bootstrap.Toast(toastLiveExample) //Se instancía toast
-
-    toast.show() //Se muestra toast
-}
-
-//Función para eliminar los elementos HTML del toast y evitar acumulación
-const remover = () => {
-    const encabezadoA = document.getElementById('encabToast');
-    const cuerpoA = document.getElementById('cuerpoToast');
-    encabezadoA.remove();
-    cuerpoA.remove();
-}
-
-//Función async para validar formulario y fetch
 export const crearProducto = async (event) => {
-    //Se evita la carga de la página
-    event.preventDefault();
-    const formulario = event.currentTarget;
+  event.preventDefault();
+  const currentForm = event.currentTarget;
 
-    // Validación del formulario
-    const isValid = formulario.checkValidity();
-    if (!isValid) return formulario.classList.add('was-validated');
-    formulario.classList.remove('was-validated');
+  const formData = handleSubmitForm(currentForm);
+  if (!formData) return;
 
-    //Conversión de las entradas del formulario a objeto con atributos
-    const data = Object.fromEntries(new FormData(formulario));
+  try {
+    showLoading();
+    const data = await createProduct(formData);
+    console.log({ data });
+    showAlert({ status: "success", message: "Producto creado exitosamente" });
+    currentForm.reset();
+  } catch (err) {
+    showAlert({ status: "error", message: err?.message });
+  } finally {
+    hideLoading();
+  }
+};
 
-    //Fetch con try/catch
-    try { //Tratará guardar en response después de esperar el fetch
-        let response = await fetch("https://reqres.in/api/users", {
-            method: "POST", //Se configura el método POST
-            body: JSON.stringify(data) //Valores de formulario convertido a JSON
-        });
-        let json = await response.json() //Espera respuesta, convierte json a objeto
-        alerta("REGISTRO EXITOSO", "¡Has registrado exitosamente el producto!", "success", "/assets/icons/check-circle-fill.svg"); //Alerta de registro exitoso
-        setTimeout(remover, 6000);//Función con delay para eliminar HTML de la alerta y evitar acumulación
-    } catch (err) { //catch en caso de error
-        alerta("¡HUBO UN ERROR!", `Error al registrar producto. ${err}`, "danger", "/assets/icons/x-circle-fill.svg"); //Alerta de error
-        setTimeout(remover, 6000);
-    }
-    //Limpieza del formulario
-    formulario.reset();
-}
+document.addEventListener("DOMContentLoaded", async () => {
+  const categorySelect = document.querySelector("#category");
+  const colorSelect = document.querySelector("#colors");
+  const sizeSelect = document.querySelector("#sizes");
 
-formulario?.addEventListener("submit", crearProducto);
+  const imgInput = document.querySelector("#img");
+  const imgContainer = document.querySelector("#img-container");
+
+  imgInput.addEventListener("change", (e) => {
+    const value = e.target.value;
+    imgContainer.classList.add("d-none");
+    showImgLoading();
+
+    const img = document.querySelector("#img-preview");
+    img.src = value;
+    img.addEventListener("load", () => {
+      hideImgLoading();
+      imgContainer.classList.remove("d-none");
+    });
+  });
+
+  const categories = await getAllProductsCategories();
+  const colors = await getAllProductsColors();
+  const sizes = await getAllProductsSizes();
+
+  categories.forEach((category) => {
+    const option = document.createElement("option");
+    option.value = category.id;
+    option.textContent = category.name;
+    categorySelect.appendChild(option);
+  });
+
+  colors.forEach((color) => {
+    const option = document.createElement("option");
+    option.value = color.id;
+    option.textContent = color.name;
+    colorSelect.appendChild(option);
+  });
+
+  sizes.forEach((size) => {
+    const option = document.createElement("option");
+    option.value = size.id;
+    option.textContent = size.name;
+    sizeSelect.appendChild(option);
+  });
+});
+
+const formElement = document.getElementById("form-create-products");
+formElement?.addEventListener("submit", crearProducto);

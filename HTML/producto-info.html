@@ -16,29 +16,112 @@
   <body class="d-flex flex-column" style="height: 100vh">
     <nav id="navbar"></nav>
 
-    <div class="container align-items-center row mx-auto my-4 flex-grow-1">
-      <div class="d-none d-md-flex flex-column col-12 col-md-2 gap-2">
-        <!-- Images vertical -->
-        <img class="img-fluid" src="https://via.placeholder.com/150" alt="" />
-        <img class="img-fluid" src="https://via.placeholder.com/150" alt="" />
-        <img class="img-fluid" src="https://via.placeholder.com/150" alt="" />
+    <section
+      class="container my-4 d-flex flex-grow-1 align-items-center w-90 border our-border p-4 border-dark bg-dark"
+    >
+      <div class="align-items-center row mx-auto my-4 flex-grow-1">
+        <div class="d-none d-md-flex flex-column col-12 col-md-2 gap-2">
+          <!-- Images vertical -->
+          <button class="btn p-0">
+            <img
+              class="img-fluid w-100"
+              src="https://via.placeholder.com/150"
+              alt=""
+            />
+          </button>
+          <button class="btn p-0">
+            <img
+              class="img-fluid w-100"
+              src="https://via.placeholder.com/150"
+              alt=""
+            />
+          </button>
+          <button class="btn p-0">
+            <img
+              class="img-fluid w-100"
+              src="https://via.placeholder.com/150"
+              alt=""
+            />
+          </button>
+        </div>
+        <!-- IMAGE -->
+        <div class="col-12 col-md-6 text-center">
+          <div class="d-none text-center my-3" id="notify-form-loader">
+            <div class="spinner-border text-tertiary-soft" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+
+          <img id="product-img" class="w-75 mx-auto img-fluid" />
+        </div>
+        <!-- INFO -->
+        <div class="col-12 col-md-4">
+          <h1 id="product-name" class="fs-1"></h1>
+          <ul>
+            <li>Manga larga</li>
+            <li>100% Algodon</li>
+            <li>Hecho en México</li>
+          </ul>
+          <div class="btn-group">
+            <input
+              type="radio"
+              class="btn-check"
+              name="options"
+              id="option1"
+              autocomplete="off"
+            />
+            <label class="btn btn-secondary" for="option1">xs</label>
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="options"
+              id="option2"
+              autocomplete="off"
+            />
+            <label class="btn btn-secondary" for="option2">sm</label>
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="options"
+              id="option3"
+              autocomplete="off"
+              checked
+            />
+            <label class="btn btn-secondary" for="option3">md</label>
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="options"
+              id="option4"
+              autocomplete="off"
+            />
+            <label class="btn btn-secondary" for="option4">lg</label>
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="options"
+              id="option5"
+              autocomplete="off"
+            />
+            <label class="btn btn-secondary" for="option5">xl</label>
+          </div>
+          <h3 class="my-4 fw-bold ps-3" id="product-price">$299</h3>
+          <button
+            class="btn btn-orange fw-bold m-0 w-100 py-3 mb-3"
+            id="btnAddToCart"
+          >
+            Agregar al carrito
+          </button>
+          <button class="btn btn-black fw-bold m-0 w-100 py-3" id="btnBuyNow">
+            Comprar
+          </button>
+        </div>
       </div>
-      <!-- IMAGE -->
-      <div class="col-12 col-md-6 text-center">
-        <img id="product-img" class="w-75 mx-auto img-fluid" alt="Anime-product" />
-      </div>
-      <!-- INFO -->
-      <div class="col-12 col-md-4">
-        <h1 id="product-name" class="fs-1"></h1>
-        <ul>
-          <li>Manga larga</li>
-          <li>100% Algodon</li>
-          <li>Hecho en México</li>
-        </ul>
-        <h3 id="product-price"></h3>
-        <button class="btn colores m-0 w-100">Agregar al carrito</button>
-      </div>
-    </div>
+    </section>
 
     <footer id="footer"></footer>
 

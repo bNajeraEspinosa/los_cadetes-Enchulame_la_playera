@@ -4,7 +4,8 @@
   "description": "Repositorio del proyecto e-comerce",
   "type": "module",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --runInBand"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,15 @@
   "homepage": "https://github.com/alaanescobedo/los_cadetes-Enchulame_la_playera#readme",
   "devDependencies": {
     "@types/jest": "29.2.1",
+    "husky": "8.0.1",
     "jest": "29.2.2",
-    "jest-environment-jsdom": "29.2.2"
+    "jest-environment-jsdom": "29.2.2",
+    "lint-staged": "13.0.3",
+    "prettier": "2.7.1"
+  },
+  "lint-staged": {
+    "**/*.{html,css,js}": [
+      "prettier --write"
+    ]
   }
 }

@@ -1,41 +1,19 @@
-const items = document.getElementById("items");
-const templateCard = document.getElementById("template-card").content;
-const fragmento = document.createDocumentFragment();
+import { displayList, setupPagination } from "./handlers/handle-pagination.js";
 
-///////////////////////////////////////////////////////////
-//Aqui ejecutamos nuestra función fetchData
-document.addEventListener('DOMContentLoaded', (event) => {
-    fetchData();
-});
+import { getListProducts } from "./services/products.service.js";
+import { showAlert } from "./handlers/handle-alert.js";
 
-//generamos función fetchData
 const fetchData = async () => {
-    try {
-        const res = await fetch('https://mockend.com/alaanescobedo/db-server/products?limit=15');
-        const data = await res.json()
-        /*  console.log(data) */
-        cartas(data)
-    } catch (error) {
-        console.log(error)
+  try {
+    const data = await getListProducts();
+    displayList(data, document.getElementById("items"), 12, 1);
+    setupPagination(data, document.getElementById("pagination"), 12);
+  } catch (error) {
+    showAlert({ status: "error", message: error?.message });
+  }
+};
 
-    }
-
-}
-////////////////////////////////////////////////////////
-
-const cartas = data => {
-    data.forEach(producto => {
-
-        templateCard.getElementById("name").textContent = producto.name;
-        templateCard.getElementById("img").setAttribute("src", producto.img);
-        templateCard.getElementById("url").setAttribute("href", `/html/producto-info.html?id=${producto.id}`);
-        templateCard.getElementById("price").textContent = producto.price;
-        templateCard.getElementById("by").textContent = producto.by;
-        /*  */
-        const clonar = templateCard.cloneNode(true);
-        fragmento.appendChild(clonar);
-    })
-    /* console.log(fragmento); */
-    items.appendChild(fragmento);
-
-}
+//Aqui ejecutamos nuestra función fetchData
+document.addEventListener("DOMContentLoaded", () => {
+  fetchData();
+});

@@ -2,186 +2,159 @@
 <!DOCTYPE html>
 <!-- DATOS DE REGION -->
 <html lang="en">
-  <!-- META HEAD-->
+<!-- META HEAD-->
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-      crossorigin="anonymous"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/CSS/estilos.css" />
-    <script type="module" src="/JS/navbar.js"></script>
-    <script type="module" src="/JS/footer.js" async></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/CSS/estilos.css" />
+  <script type="module" src="/JS/navbar.js"></script>
+  <script type="module" src="/JS/footer.js" async></script>
 
-    <title>Home: Enchúlame la playera</title>
-  </head>
+  <title>Home: Enchúlame la playera</title>
+</head>
 
-  <!-- INICIO DEL BODY -->
+<!-- INICIO DEL BODY -->
 
-  <body class="d-flex flex-column" style="height: 100vh">
-    <nav id="navbar"></nav>
+<body class="d-flex flex-column" style="height: 100vh">
+  <nav id="navbar"></nav>
 
-    <!-- CAROUSEL -->
-    <div
-      id="carouselExampleIndicators"
-      class="carousel slide"
-      data-bs-ride="carousel"
-    >
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
-      </div>
-
-      <!-- IMAGEN PRINCIPAL CAROUSEL -->
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img
-            src="/assets/banner/3.webp"
-            class="d-block w-100"
-            alt="..."
-          />
-        </div>
-        <!-- SEGUNDA IMAGEN CAROUSEL -->
-        <div class="carousel-item">
-          <img
-            src="/assets/banner/2.webp"
-            class="d-block w-100"
-            alt="..."
-          />
-        </div>
-        <!-- TERCERA IMAGEN CAROUSEL -->
-        <div class="carousel-item">
-          <img
-            src="/assets/banner/1.webp"
-            class="d-block w-100"
-            alt="..."
-          />
-        </div>
-      </div>
-
-      <!-- BOTONES CAROUSEL -->
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+  <!-- CAROUSEL -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
     </div>
 
-    <!-- HOT SALE AND FIRE TEXT -->
-    <section class="flex-grow-1">
-      <div class="row my-4 mx-0">
-        <div class="col-12 m-auto text-center g-4">
-          <div class="page__title-container">
-            <h2 class="page__title home font-size-lg text-danger">Hot sale</h2>
-            <span class="page__title-span font-size-lg w-100">Hot sale</span>
-          </div>
+    <!-- IMAGEN PRINCIPAL CAROUSEL -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/assets/banner/3.webp" class="d-block w-100" alt="..." />
+      </div>
+      <!-- SEGUNDA IMAGEN CAROUSEL -->
+      <div class="carousel-item">
+        <img src="/assets/banner/2.webp" class="d-block w-100" alt="..." />
+      </div>
+      <!-- TERCERA IMAGEN CAROUSEL -->
+      <div class="carousel-item">
+        <img src="/assets/banner/1.webp" class="d-block w-100" alt="..." />
+      </div>
+    </div>
+
+    <!-- BOTONES CAROUSEL -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- HOT SALE AND FIRE TEXT -->
+  <section class="flex-grow-1">
+    <div class="row my-4 mx-0">
+      <div class="col-12 m-auto text-center g-4">
+        <div class="page__title-container">
+          <h2 class="page__title home font-size-lg text-danger">Hot sale</h2>
+          <span class="page__title-span font-size-lg w-100">Hot sale</span>
         </div>
       </div>
+    </div>
 
-      <!-- CARRUSEL -->
-      <div
-        id="carouselExampleControls"
-        class="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-inner">
-          <!-- BANNER -->
-          <div
-            class="container-fluid border border-start-0 border-end-0 border-danger p-0"
-          >
-            <div class="row mx-0 banner oclusion">
-              <div class="col-12 col-sm-6 mx-auto text-center">
-                <img
-                  src="/assets/img/product-manga-1.webp"
-                  class="img-fluid w-75"
-                />
-              </div>
-              <div
-                class="col-12 col-sm-6 py-4 text-center align-self-center bg-dark bg-opacity-50 bg-opacity-sm-none h-100 oclusion"
-              >
-                <div class="page__title-container" style="max-height: 50vh">
-                  <h2 class="page__title text-tertiary-soft font-size-lg">
-                    Manga
-                  </h2>
-                  <span class="page__title-span font-size-lg w-100">Manga</span>
-                </div>
+    <!-- CARRUSEL -->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- BANNER -->
+        <div class="container-fluid border border-start-0 border-end-0 border-danger p-0">
+          <div class="row mx-0 banner oclusion">
+            <div class="col-12 col-sm-6 mx-auto text-center">
+              <img src="/assets/img/product-manga-1.webp" class="img-fluid w-75" />
+            </div>
+            <div
+              class="col-12 col-sm-6 py-4 text-center align-self-center bg-dark bg-opacity-50 bg-opacity-sm-none h-100 oclusion">
+              <div class="page__title-container" style="max-height: 50vh">
+                <h2 class="page__title text-tertiary-soft font-size-lg">
+                  Manga
+                </h2>
+                <span class="page__title-span font-size-lg w-100">Manga</span>
               </div>
             </div>
           </div>
-          <!-- END-BANNER -->
-
-          <!-- BOTONES -->
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleControls"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleControls"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-          <!-- END-BOTONES -->
         </div>
-        <!-- END-CARRUSEL -->
+        <!-- END-BANNER -->
+
+        <!-- BOTONES -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        <!-- END-BOTONES -->
       </div>
-    </section>
+    </div>
+    <!-- END-CARRUSEL -->
 
-    <footer id="footer"></footer>
+    <!-- START CONTAINER FEATURETTES -->
+    <div class="container marketing mt-3">
+      <!-- START FEATURETTES -->
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">COMODIDAD Y ESTILO. <span class="text-muted">ESTILO PARA TODXS.</span></h2>
+          <p class="lead">Tenemos las hoodies mas suavecitas y con estilo, para que le presumas a tus amigos mientras juegan videojuegos, o simplemente porque quieres ser la persona más cool en cualquier lado. </p>
+        </div>
+        <div class="col-md-5">
+          <img src="/assets/img/INDEX IMAGES/img-featurette2.png" alt="Mujer con hoodie amarilla" width="500" height="500">
+        </div>
+      </div>
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2 ps-5">
+          <h2 class="featurette-heading fw-normal lh-1">LOS MEJORES DISEÑOS. <span class="text-muted">DILO CON UNA PLAYERA.</span></h2>
+          <p class="lead">A veces una playera dice más que mil palabras, puedes demostrar que eres fan de tu serie favorita luciendo genial y sintiéndote cómodx a la vez.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img src="/assets/img/INDEX IMAGES/img-featurette3.png" alt="Hombre de espaldas con playera blanca" width="500" height="500">
+        </div>
+      </div>
+  
+      <hr class="featurette-divider">
+  
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">NO OLVIDES <span class="text-muted">#UNA PLAYERA QUE DIGA</span></h2>
+          <p class="lead">Sabemos que es importante expresarte, por eso nuestras playeras lo pueden hacer por ti. Exprésate usando las playeras más geniales y hechas con la mejor calidad solo para ti.</p>
+        </div>
+        <div class="col-md-5">
+          <img src="/assets/img/INDEX IMAGES/img-featurette1.png" alt="Mujer con playera azul" width="500" height="500">
+        </div>
+      </div>
+      <!-- END FEATURETTES -->
+    </div><!-- END CONTAINER FEATURETTES -->
+  </section>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <footer id="footer"></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
