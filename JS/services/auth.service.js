@@ -30,9 +30,12 @@ export const registerUser = async ({
 
 export const loginUser = async ({ username, password }) => {
   try {
-    const response = await fetch(`${ENDPOINTS.AUTH_USER}`, {
+    const response = await fetch(`${ENDPOINTS.AUTH_USER}/login`, {
       body: JSON.stringify({ username, password }),
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
     });
     return await response.json();
   } catch (error) {

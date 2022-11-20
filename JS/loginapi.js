@@ -16,10 +16,13 @@ export const login = async (event) => {
   try {
     showLoading();
     const userData = await loginUser(formData);
+    console.log({ userData });
+    if (!userData) throw new Error("No se pudo iniciar sesión");
     setInLocalStorage("cur_user", userData);
     currentForm.reset();
     location.href = "/index.html";
   } catch (error) {
+    console.log(object);
     showAlert({ status: "error", message: error?.message });
   } finally {
     hideLoading();

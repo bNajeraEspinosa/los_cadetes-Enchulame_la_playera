@@ -1,4 +1,5 @@
 import { addProductToCart } from "../services/local-cart.service.js";
+import { formatCurrency } from "../utils/format-currency.js";
 
 const list_element = document.getElementById("items");
 
@@ -78,12 +79,14 @@ export const paginationButton = (page, items) => {
   return button;
 };
 
-const createProductCard = ({ id, name, img, price }) => {
+const createProductCard = ({ id, name, image, price }) => {
   document.addEventListener("click", function (e) {
     if (e.target && e.target.id === `btnAddToCart-${id}`) {
       addProductToCart(id);
     }
   });
+
+  const priceFormatted = formatCurrency({ amount: price, format: "mxn" });
 
   return `
     <div class="d-flex flex-column px-3 col-12 col-sm-6 col-lg-4">
@@ -94,11 +97,11 @@ const createProductCard = ({ id, name, img, price }) => {
         <a href="/html/producto-info.html?id=${id}" class="link-light text-decoration-none">
           <div class="card-body p-0">
             <img
-              src="${img}"
+              src="${image}"
               alt="${name}-img"
               class="card-img-top w-50 my-3 img-fluid"
             />
-            <p class="fs-4 fw-bold">${price}</p>
+            <p class="fs-4 fw-bold">${priceFormatted}</p>
           </div>
         </a>
         <div class="card-footer d-flex flex-column gap-2 flex-md-row">

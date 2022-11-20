@@ -32,7 +32,9 @@ const showProductInfo = (productData) => {
   const productTitle = document.getElementById("product-name");
   const productPrice = document.getElementById("product-price");
 
-  productImg.src = productData.img;
+  console.log(productData);
+
+  productImg.src = productData.image;
   productTitle.textContent = productData.name;
   productPrice.textContent = productData.price;
 };
