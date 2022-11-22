@@ -1,3 +1,6 @@
-# los_cadetes-Enchulame_la_playera
+# Enchulame la playera
 
-Repositorio del proyecto e-comerce
+Repositorio Frontend del proyecto e-comerce
+
+### Direccion del repositorio Backend del proyecto e-commerce
+https://github.com/alaanescobedo/proyecto-integrador-api
